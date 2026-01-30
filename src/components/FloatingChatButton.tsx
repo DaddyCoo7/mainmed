@@ -68,7 +68,7 @@ const FloatingChatButton: React.FC<FloatingChatButtonProps> = ({ onOpen }) => {
         >
           <div className="relative z-10">
             <img
-              src="/assets/medchatlogo copy.svg"
+              src="/medchatlogo.svg"
               alt="MedChat AI"
               className="w-full h-full object-contain drop-shadow-xl"
             />

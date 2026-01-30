@@ -8,7 +8,6 @@ import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { ArrowRight, CheckCircle, TrendingUp, Users, Award, Star, Shield, Clock, Zap, Target, Calendar, Calculator, Headphones, DollarSign, FileText, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import AnimatedCounter from './AnimatedCounter';
-import VerticalDoctorsGroup from '../assets/VerticalDoctorsGroup.jpg';
 
 // Import Swiper styles
 import 'swiper/css';

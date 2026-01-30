@@ -140,7 +140,7 @@ const VirtualReceptionist: React.FC = () => {
           {/* Image with floating elements */}
           <AnimatedSection animation="slideRight" className="relative">
             <motion.img
-              src="/assets/assistantsmall.png"
+              src="/assistantsmall.png"
               alt="Professional virtual receptionist with headset"
               className="w-full h-auto rounded-2xl"
               loading="lazy"
