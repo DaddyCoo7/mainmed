@@ -17,6 +17,7 @@ import {
 import SEOHead from '../components/SEOHead';
 import RegionBanner from '../components/RegionBanner';
 import AnimatedSection from '../components/AnimatedSection';
+import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
 import { getRegionByCode, RegionConfig } from '../config/regions';
 
@@ -148,6 +149,7 @@ const CareersPage: React.FC = () => {
         canonical={`https://medtransic.com${regionCode === 'us' ? '/careers' : `/${regionCode}/careers`}`}
         keywords={`careers ${region.name}, jobs ${region.name}, medical billing jobs, healthcare careers, RCM careers, Medtransic jobs`}
       />
+      <OrganizationSchema />
 
       <RegionBanner region={region} />
 

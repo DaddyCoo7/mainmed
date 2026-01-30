@@ -23,6 +23,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const CredentialingPage: React.FC = () => {
@@ -166,6 +167,12 @@ const CredentialingPage: React.FC = () => {
         canonical="https://medtransic.com/services/credentialing"
         keywords="provider credentialing, medical credentialing, payer enrollment, provider enrollment, credentialing services"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Credentialing"
+        description="Provider credentialing completing CAQH profiles, primary source verification, and payer applications in 60-90 days. Navigate PECOS, NPPES, state licensing, and commercial insurance enrollment efficiently."
+        url="https://medtransic.com/services/credentialing"
+        serviceType="Medical Billing Service"
       />
       <HeroSection
         badge={{ icon: Shield, text: 'Payer Enrollment Services' }}

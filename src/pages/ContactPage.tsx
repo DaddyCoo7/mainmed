@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Calendar, Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
 
 const ContactPage: React.FC = () => {
@@ -140,6 +141,7 @@ const ContactPage: React.FC = () => {
         keywords="contact medtransic, medical billing consultation, RCM consultation, billing services contact, healthcare billing quote, free consultation"
         ogType="website"
       />
+      <OrganizationSchema />
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-no-repeat bg-contain" style={{
           backgroundImage: `url('/medtransic-logomark1.svg')`

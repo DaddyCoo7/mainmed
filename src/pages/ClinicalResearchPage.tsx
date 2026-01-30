@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const ClinicalResearchPage: React.FC = () => {
@@ -172,6 +173,11 @@ const ClinicalResearchPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/clinical-research"
         keywords="clinical research billing, research study billing, clinical trial billing, research protocol billing, investigational billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Clinical Research"
+        description="Clinical research billing separating standard of care from investigational services. Navigate Medicare coverage analysis, protocol billing, and sponsor reimbursement vs patient billing complexities."
+        url="https://medtransic.com/specialties/clinical-research"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

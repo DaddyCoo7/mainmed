@@ -5,6 +5,7 @@ import { MapPin, Phone, TrendingUp, CheckCircle2, ArrowRight, DollarSign, Shield
 import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
+import LocationSchema from '../components/LocationSchema';
 
 interface StatePageData {
   state_name: string;
@@ -113,6 +114,12 @@ export default function StateBillingPage() {
         title={pageData.meta_title}
         description={pageData.meta_description}
         canonicalUrl={`https://medtransic.com/medical-billing-services/${pageData.slug}`}
+      />
+      <LocationSchema
+        locationName={pageData.state_name}
+        locationType="state"
+        description={pageData.meta_description}
+        url={`https://medtransic.com/medical-billing-services/${pageData.slug}`}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">

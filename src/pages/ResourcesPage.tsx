@@ -16,6 +16,7 @@ import {
   Scale
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 
@@ -123,6 +124,7 @@ const ResourcesPage: React.FC = () => {
         keywords="medical billing resources, billing guides, healthcare billing information, billing education"
         ogType="website"
       />
+      <OrganizationSchema />
       <motion.div
         className="absolute inset-0 opacity-20"
         animate={{

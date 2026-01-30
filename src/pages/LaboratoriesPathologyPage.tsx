@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const LaboratoriesPathologyPage: React.FC = () => {
@@ -170,6 +171,11 @@ const LaboratoriesPathologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/laboratories-pathology"
         keywords="laboratory billing, pathology billing, lab billing services, diagnostic testing billing, clinical lab billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Laboratories Pathology"
+        description="Professional laboratory and pathology billing services. Expert coding for diagnostic testing, pathology services, and lab procedures."
+        url="https://medtransic.com/specialties/laboratories-pathology"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

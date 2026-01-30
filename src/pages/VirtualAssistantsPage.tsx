@@ -22,6 +22,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const VirtualAssistantsPage: React.FC = () => {
@@ -59,6 +60,12 @@ const VirtualAssistantsPage: React.FC = () => {
         description="Professional virtual medical assistants for appointment scheduling, call management, insurance verification, and patient communication. Reduce costs while improving efficiency."
         keywords="virtual medical assistant, remote medical receptionist, healthcare virtual assistant, medical answering service, appointment scheduling service, patient communication"
         canonicalUrl="https://www.medtransic.com/services/virtual-assistants"
+      />
+      <ServiceSchema
+        name="Virtual Assistants"
+        description="Professional virtual medical assistants for appointment scheduling, call management, insurance verification, and patient communication. Reduce costs while improving efficiency."
+        url="https://medtransic.com/services/virtualassistants"
+        serviceType="Medical Billing Service"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">

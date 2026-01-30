@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PharmacyBillingSpecialtyPage: React.FC = () => {
@@ -170,6 +171,11 @@ const PharmacyBillingSpecialtyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/pharmacy-billing"
         keywords="pharmacy billing, specialty pharmacy billing, pharmaceutical billing, pharmacy claim processing, medication billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Pharmacy Billing Specialty"
+        description="Specialized pharmacy billing for specialty and retail pharmacies. Expert billing for medication management and pharmaceutical services."
+        url="https://medtransic.com/specialties/pharmacy-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

@@ -27,6 +27,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const InfectiousDiseasePage: React.FC = () => {
@@ -170,6 +171,11 @@ const InfectiousDiseasePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/infectious-disease"
         keywords="infectious disease billing, ID billing services, infection management billing, infectious disease specialist billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Infectious Disease"
+        description="Infectious disease billing for HIV/AIDS management, antibiotic therapy, infectious consultations, and complex infection treatments. Handle hospitalist consultations and long-term antimicrobial management billing."
+        url="https://medtransic.com/specialties/infectious-disease"
       />
 
       <HeroSection

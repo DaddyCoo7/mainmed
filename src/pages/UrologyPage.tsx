@@ -29,6 +29,7 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const UrologyPage: React.FC = () => {
   const painPoints = [
@@ -171,6 +172,11 @@ const UrologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/urology"
         keywords="urology billing, urological billing services, cystoscopy billing, kidney stone billing, urologic surgery billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Urology"
+        description="Professional urology billing services for surgical and diagnostic procedures. Expert coding for cystoscopy, TURP, kidney stone treatment, and urologic oncology."
+        url="https://medtransic.com/specialties/urology"
       />
 
       <HeroSection

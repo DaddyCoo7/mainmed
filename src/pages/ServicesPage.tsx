@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calculator, FileText, Shield, Headphones, Search, TrendingUp, ArrowRight, DollarSign, CreditCard, MessageCircle, Guitar as Hospital, FlaskConical, Armchair as Wheelchair, Stethoscope, Monitor, Archive, Bot, Briefcase, BarChart2, PhoneCall, Globe, ClipboardCheck, Handshake, FileWarning, Calendar, Database, GraduationCap, X, FileCheck, Clock } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import ROICalculator from '../components/ROICalculator';
@@ -404,6 +405,7 @@ const ServicesPage: React.FC = () => {
         keywords="medical billing services, RCM services, medical coding, credentialing services, denial management, AR management, practice management, telehealth billing"
         ogType="website"
       />
+      <OrganizationSchema />
       {/* Logo background overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"

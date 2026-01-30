@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const RCMAutomationPage: React.FC = () => {
@@ -150,6 +151,12 @@ const RCMAutomationPage: React.FC = () => {
         canonical="https://medtransic.com/services/rcm-automation"
         keywords="RCM automation, revenue cycle automation, billing automation, healthcare automation, medical billing technology"
         ogType="article"
+      />
+      <ServiceSchema
+        name="R C M Automation"
+        description="AI-powered RCM automation reduces manual tasks 60%, achieves 99.8% accuracy, processes claims 75% faster. 40% labor cost savings. Robotic eligibility checks, smart denial prediction, auto-posting!"
+        url="https://medtransic.com/services/rcm-automation"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

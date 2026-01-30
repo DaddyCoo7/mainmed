@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const DiagnosticImagingRadiologyPage: React.FC = () => {
@@ -172,6 +173,11 @@ const DiagnosticImagingRadiologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/diagnostic-imaging-radiology"
         keywords="radiology billing, diagnostic imaging billing, MRI billing, CT scan billing, X-ray billing, ultrasound billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Diagnostic Imaging Radiology"
+        description="Expert radiology and diagnostic imaging billing services. Specialized coding for X-rays, CT, MRI, ultrasound, and nuclear medicine."
+        url="https://medtransic.com/specialties/diagnostic-imaging-radiology"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

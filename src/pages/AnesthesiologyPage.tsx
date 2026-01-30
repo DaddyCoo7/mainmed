@@ -29,6 +29,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const AnesthesiologyPage: React.FC = () => {
@@ -172,6 +173,11 @@ const AnesthesiologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/anesthesiology"
         keywords="anesthesiology billing, anesthesia billing services, CRNA billing, anesthesia coding, time-based billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Anesthesiology"
+        description="Expert anesthesiology billing with precise time-based and base unit coding. Comprehensive billing for anesthesia services and pain management."
+        url="https://medtransic.com/specialties/anesthesiology"
       />
 
       <HeroSection

@@ -29,6 +29,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OrthopedicsPage: React.FC = () => {
@@ -172,6 +173,11 @@ const OrthopedicsPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/orthopedics"
         keywords="orthopedic billing, orthopedics billing services, orthopedic surgery billing, fracture care billing, joint replacement billing, sports medicine billing, workers comp orthopedic billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Orthopedics"
+        description="Comprehensive orthopedic billing for total joint arthroplasties, arthroscopic procedures, and fracture treatment with global period management. Expert coding for bilateral procedures, hardware removal, and revision surgeries with proper modifier application (50, 51, 59, 78, 79). Handle workers' comp, personal injury liens, and implant billing. Increase surgical revenue 32% with orthopedic-certified specialists."
+        url="https://medtransic.com/specialties/orthopedics"
       />
       <HeroSection
         badge={{

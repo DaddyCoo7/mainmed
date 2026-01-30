@@ -5,6 +5,7 @@ import { Award, Users, TrendingUp, CheckCircle, ArrowRight, Shield, Clock, Heart
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import OrganizationSchema from '../components/OrganizationSchema';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -96,6 +97,7 @@ const AboutPage: React.FC = () => {
         keywords="about medtransic, medical billing company, RCM company, healthcare billing experts, medical billing partner, revenue cycle management company, certified medical billers"
         ogType="website"
       />
+      <OrganizationSchema />
       {/* Logo background overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"

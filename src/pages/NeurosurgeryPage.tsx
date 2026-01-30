@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const NeurosurgeryPage: React.FC = () => {
@@ -171,6 +172,11 @@ const NeurosurgeryPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/neurosurgery"
         keywords="neurosurgery billing, brain surgery billing, spine surgery billing, neurosurgeon billing services, neurological surgery billing, spinal fusion billing, craniotomy billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Neurosurgery"
+        description="High-value neurosurgery billing for craniotomies, spinal fusions, and neuroendoscopy procedures. Navigate bundling rules for multi-level spine surgery, surgical approach modifiers, and intraoperative neuromonitoring (95940-95941). Certified coders ensure proper documentation for awake craniotomies and stereotactic procedures. Maximize reimbursement for $50K+ procedures with 99.1% clean claim rate."
+        url="https://medtransic.com/specialties/neurosurgery"
       />
 
       <HeroSection

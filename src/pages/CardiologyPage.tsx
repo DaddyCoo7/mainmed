@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const CardiologyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const CardiologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/cardiology"
         keywords="cardiology billing, cardiac billing services, interventional cardiology billing, cardiology coding, EKG billing, echocardiogram billing, pacemaker billing, ICD billing, cardiac catheterization billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Cardiology"
+        description="Specialized cardiology medical billing services with expert coders for cardiac procedures, device implantations, and interventional cardiology. Increase revenue by 25% with our certified billing specialists."
+        url="https://medtransic.com/specialties/cardiology"
       />
       <HeroSection
         badge={{

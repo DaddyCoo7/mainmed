@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const RespiratoryTherapyPage: React.FC = () => {
@@ -170,6 +171,11 @@ const RespiratoryTherapyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/respiratory-therapy"
         keywords="respiratory therapy billing, RT billing services, breathing treatment billing, pulmonary rehabilitation billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Respiratory Therapy"
+        description="Professional respiratory therapy billing services. Expert coding for breathing treatments, pulmonary rehabilitation, and RT procedures."
+        url="https://medtransic.com/specialties/respiratory-therapy"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

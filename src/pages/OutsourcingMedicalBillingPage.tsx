@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import CostComparisonTool from '../components/CostComparisonTool';
+import ServiceSchema from '../components/ServiceSchema';
 import {
   TrendingUp,
   DollarSign,
@@ -219,6 +220,12 @@ export default function OutsourcingMedicalBillingPage() {
         keywords="outsourcing medical billing services, medical billing outsourcing, outsource medical billing, end-to-end RCM, complete RCM services, healthcare billing services, medical billing companies, RCM outsourcing, billing service providers"
         canonical="https://medtransic.com/services/outsourcing-medical-billing"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Outsourcing Medical Billing"
+        description="Reduce costs by 30-50% and increase revenue by 15-25% with expert outsourced medical billing and RCM services. Full end-to-end revenue cycle management. HIPAA-compliant, 98% collection rate. Free assessment."
+        url="https://medtransic.com/services/outsourcing-medical-billing"
+        serviceType="Medical Billing Service"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">

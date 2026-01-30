@@ -31,6 +31,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PainManagementPage: React.FC = () => {
@@ -174,6 +175,11 @@ const PainManagementPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/pain-management"
         keywords="pain management billing, pain clinic billing, interventional pain billing, injection billing, chronic pain billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Pain Management"
+        description="Expert pain management billing for interventional procedures, injections, and chronic pain treatment. Specialized coding for pain clinic services."
+        url="https://medtransic.com/specialties/pain-management"
       />
       <HeroSection
         badge={{ icon: Zap, text: "Pain Management Billing Specialists" }}

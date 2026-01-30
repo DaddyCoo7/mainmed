@@ -28,6 +28,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OccupationalTherapyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const OccupationalTherapyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/occupational-therapy"
         keywords="occupational therapy billing, OT billing services, therapeutic activity billing, rehabilitation billing, occupational therapist billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Occupational Therapy"
+        description="Professional occupational therapy billing with expert OT coding. Comprehensive billing for therapeutic activities and rehabilitation services."
+        url="https://medtransic.com/specialties/occupational-therapy"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

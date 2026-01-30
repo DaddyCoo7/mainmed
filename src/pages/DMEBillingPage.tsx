@@ -22,6 +22,7 @@ import {
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const DMEBillingPage: React.FC = () => {
   const painPoints = [
@@ -148,6 +149,11 @@ const DMEBillingPage: React.FC = () => {
         canonical="https://medtransic.com/services/dme-billing"
         keywords="DMEPOS billing, DME claims processing, prior authorization management, DME rental billing, certificate of medical necessity, medical equipment suppliers"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="D M E Billing"
+        description="Specialized DMEPOS billing for medical equipment suppliers. Expert prior authorization management, CMN documentation, and rental billing compliance. 92% PA approval rate."
+        url="https://medtransic.com/services/dme-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

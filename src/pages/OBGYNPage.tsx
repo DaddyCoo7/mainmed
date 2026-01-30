@@ -27,6 +27,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OBGYNPage: React.FC = () => {
@@ -170,6 +171,11 @@ const OBGYNPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/obgyn"
         keywords="OBGYN billing, obstetrics billing, gynecology billing, maternity billing, women's health billing, prenatal care billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="O B G Y N"
+        description="Expert OBGYN billing services for obstetrics and gynecology practices. Global maternity billing, surgical procedure coding, and comprehensive women's health billing."
+        url="https://medtransic.com/specialties/obgyn"
       />
       <HeroSection
         badge={{ icon: Heart, text: "OB/GYN & Women's Health Billing Specialists" }}

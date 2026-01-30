@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const ComplianceHIPAAAuditsPage: React.FC = () => {
@@ -150,6 +151,12 @@ const ComplianceHIPAAAuditsPage: React.FC = () => {
         canonical="https://medtransic.com/services/compliance-hipaa-audits"
         keywords="HIPAA compliance, healthcare compliance, HIPAA audits, compliance services, regulatory compliance"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Compliance H I P A A Audits"
+        description="Comprehensive HIPAA audits prevent fines up to $50K per incident. 100% staff training, security risk assessments, breach response planning. Zero violations guaranteed. Free compliance assessment!"
+        url="https://medtransic.com/services/compliance-hipaa-audits"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

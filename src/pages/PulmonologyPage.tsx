@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PulmonologyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const PulmonologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/pulmonology"
         keywords="pulmonology billing, respiratory billing, lung specialist billing, pulmonary function test billing, bronchoscopy billing, sleep study billing, CPAP billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Pulmonology"
+        description="Complete pulmonology billing for bronchoscopy with EBUS, pulmonary function testing interpretation, and sleep study billing (95782-95783). Navigate complex BiPAP/CPAP documentation requirements, home oxygen therapy orders, and pulmonary rehabilitation coding. Expert handling of interventional procedures including TBNA and thoracentesis. Reduce denial rates 38% with respiratory-certified billing specialists."
+        url="https://medtransic.com/specialties/pulmonology"
       />
 
       <HeroSection

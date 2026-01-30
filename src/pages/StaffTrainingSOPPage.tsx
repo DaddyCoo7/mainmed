@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const StaffTrainingSOPPage: React.FC = () => {
@@ -150,6 +151,12 @@ const StaffTrainingSOPPage: React.FC = () => {
         canonical="https://medtransic.com/services/staff-training-sop"
         keywords="medical billing training, staff training, billing education, SOP development, billing team training"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Staff Training S O P"
+        description="Comprehensive billing staff training reduces errors 45%, accelerates onboarding 60%, boosts productivity 35%. Role-specific curriculum, documented SOPs, quality standards. Certification support!"
+        url="https://medtransic.com/services/staff-training-sop"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

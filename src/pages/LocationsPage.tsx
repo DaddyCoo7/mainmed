@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Search, X, Building2, TrendingUp } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
+import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
 
 interface StateData {
@@ -59,6 +60,7 @@ const LocationsPage: React.FC = () => {
         keywords="medical billing by state, medical billing by city, local medical billing services, state medical billing, city medical billing"
         canonicalUrl="https://medtransic.com/locations"
       />
+      <OrganizationSchema />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-gray-50">
         <section className="pt-32 pb-16 px-4">

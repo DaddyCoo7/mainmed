@@ -30,6 +30,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PathologyPage: React.FC = () => {
@@ -173,6 +174,11 @@ const PathologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/pathology"
         keywords="pathology billing, pathologist billing services, surgical pathology billing, clinical pathology billing, anatomic pathology billing, molecular pathology billing, cytopathology billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Pathology"
+        description="Specialized pathology billing for TC/PC splits, frozen sections, and complex immunostaining panels. Navigate PAMA requirements, LCD restrictions, and molecular diagnostic CPT codes. Expert handling of NGS testing, FISH analysis, and flow cytometry billing. Reduce claim denials 35% with pathology-certified coders who understand specimen-specific requirements."
+        url="https://medtransic.com/specialties/pathology"
       />
 
       <HeroSection

@@ -27,6 +27,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const FamilyMedicinePage: React.FC = () => {
@@ -170,6 +171,11 @@ const FamilyMedicinePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/family-medicine"
         keywords="family medicine billing, primary care billing, family practice billing, preventive care billing, general practice billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Family Medicine"
+        description="Comprehensive family medicine billing for primary care practices. Expert coding for preventive care, chronic disease management, and family practice services."
+        url="https://medtransic.com/specialties/family-medicine"
       />
 
       <HeroSection

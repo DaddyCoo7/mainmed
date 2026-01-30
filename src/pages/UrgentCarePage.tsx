@@ -29,6 +29,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const UrgentCarePage: React.FC = () => {
@@ -172,6 +173,11 @@ const UrgentCarePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/urgent-care"
         keywords="urgent care billing, walk-in clinic billing, emergency medicine billing, after-hours billing, urgent care coding"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Urgent Care"
+        description="High-volume urgent care billing services with fast turnaround. Expert E&M coding, after-hours billing, and efficient claim processing for urgent care centers."
+        url="https://medtransic.com/specialties/urgent-care"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

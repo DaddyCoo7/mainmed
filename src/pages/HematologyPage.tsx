@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const HematologyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const HematologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/hematology"
         keywords="hematology billing, blood disorder billing, coagulation billing, hematologist billing services, blood disease billing, transfusion billing, factor replacement billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Hematology"
+        description="Navigate complex hematology billing for transfusions, coagulation studies, and biologic therapy. Certified coders ensure accurate J-code billing for factor replacement and immunoglobulin infusions, reducing denials by 40%. Expertise in bone marrow biopsy coding and hematologic malignancy management."
+        url="https://medtransic.com/specialties/hematology"
       />
 
       <HeroSection

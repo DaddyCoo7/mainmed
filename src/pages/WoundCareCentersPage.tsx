@@ -25,6 +25,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const WoundCareCentersPage: React.FC = () => {
@@ -168,6 +169,11 @@ const WoundCareCentersPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/wound-care"
         keywords="wound care billing, wound center billing, chronic wound billing, hyperbaric oxygen billing, wound management billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Wound Care Centers"
+        description="Expert wound care center billing for chronic wound management. Specialized coding for hyperbaric oxygen therapy and advanced wound treatments."
+        url="https://medtransic.com/specialties/wound-care"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

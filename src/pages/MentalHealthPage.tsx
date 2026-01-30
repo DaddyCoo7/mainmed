@@ -29,6 +29,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const MentalHealthPage: React.FC = () => {
@@ -172,6 +173,11 @@ const MentalHealthPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/mental-health"
         keywords="mental health billing, behavioral health billing, psychiatry billing, psychotherapy billing, counseling billing, telehealth mental health"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Mental Health"
+        description="Specialized mental health and behavioral health billing services. Expert coding for psychotherapy, psychiatric services, and counseling. HIPAA-compliant telehealth billing."
+        url="https://medtransic.com/specialties/mental-health"
       />
       <HeroSection
         badge={{ icon: Brain, text: "Mental & Behavioral Health Billing Specialists" }}

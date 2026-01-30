@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Activity, Brain, Home, FlaskConical, Armchair as Wheelchair, Heart, Bluetooth as Tooth, Users, Zap, Eye, Baby, Bone, Settings as Lungs, Droplets, Pill, User, Dna, Stethoscope, Armchair, Ear, Footprints, Syringe, Monitor, Handshake, Activity as Run, ScanLine, MessageCircle, Moon, Radiation, Wind, Droplet, Skull, Zap as Ribs, TestTube, Brush as Virus, Ban as Bandage, Crosshair, Microscope, Building2, Ambulance, Briefcase, ArrowRight, CheckCircle, Award, TrendingUp, Sparkles, Search, X } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 
@@ -931,6 +932,7 @@ const SpecialtiesPage: React.FC = () => {
         keywords="medical billing specialties, specialty billing, cardiology billing, orthopedics billing, mental health billing, specialty medical billing services"
         ogType="website"
       />
+      <OrganizationSchema />
       {/* Logo background overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"

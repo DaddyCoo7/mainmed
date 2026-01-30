@@ -29,6 +29,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PodiatryPage: React.FC = () => {
@@ -172,6 +173,11 @@ const PodiatryPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/podiatry"
         keywords="podiatry billing, foot care billing, podiatrist billing services, foot surgery billing, ankle procedure billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Podiatry"
+        description="Podiatry billing for diabetic foot care, bunion surgery, toenail procedures, and orthotic fittings. Accurately code foot surgery, wound care, and routine foot care for Medicare diabetic patients."
+        url="https://medtransic.com/specialties/podiatry"
       />
       <HeroSection
         badge={{ icon: Footprints, text: "Podiatry Billing Specialists" }}

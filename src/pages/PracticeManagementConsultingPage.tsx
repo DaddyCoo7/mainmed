@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PracticeManagementConsultingPage: React.FC = () => {
@@ -150,6 +151,12 @@ const PracticeManagementConsultingPage: React.FC = () => {
         canonical="https://medtransic.com/services/practice-management-consulting"
         keywords="practice management consulting 2025, medical practice consulting, healthcare consulting, practice optimization, business consulting, workflow optimization, practice assessment"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Practice Management Consulting"
+        description="Healthcare consulting experts optimize workflows & increase profitability. 35% efficiency gains, 25% cost reduction, proven strategies. Free practice assessment for medical practices!"
+        url="https://medtransic.com/services/practice-management-consulting"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

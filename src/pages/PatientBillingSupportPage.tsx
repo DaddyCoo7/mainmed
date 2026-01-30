@@ -24,6 +24,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PatientBillingSupportPage: React.FC = () => {
@@ -151,6 +152,12 @@ const PatientBillingSupportPage: React.FC = () => {
         canonical="https://medtransic.com/services/patient-billing-support"
         keywords="patient billing, patient statements, patient collections, patient payment services, patient billing support"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Patient Billing Support"
+        description="Increase patient collections 45% with clear statements and flexible payment plans. 85% satisfaction rate, reduce call volume 60%. Multilingual support, online portal, financial counseling 24/7!"
+        url="https://medtransic.com/services/patient-billing-support"
+        serviceType="Medical Billing Service"
       />
 
       <HeroSection

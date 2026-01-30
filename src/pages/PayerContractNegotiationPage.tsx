@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PayerContractNegotiationPage: React.FC = () => {
@@ -150,6 +151,12 @@ const PayerContractNegotiationPage: React.FC = () => {
         canonical="https://medtransic.com/services/payer-contract-negotiation"
         keywords="payer contract negotiation, insurance contract negotiation, reimbursement optimization, contract analysis"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Payer Contract Negotiation"
+        description="Expert negotiators increase rates 12-18% with $150K average annual impact. 85% success rate, market benchmark analysis. Contingency-based pricing. Optimize payer contracts, maximize revenue!"
+        url="https://medtransic.com/services/payer-contract-negotiation"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

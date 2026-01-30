@@ -24,6 +24,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PaymentReconciliationPage: React.FC = () => {
@@ -151,6 +152,12 @@ const PaymentReconciliationPage: React.FC = () => {
         canonical="https://medtransic.com/services/payment-reconciliation"
         keywords="payment reconciliation, payment processing, payment posting, EOB reconciliation, remittance processing"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Payment Reconciliation"
+        description="Automated variance detection identifies underpayments before they're lost. Recover $45K annually with contract verification. 85% appeal success rate, 100% claims audited. Audit-ready reports!"
+        url="https://medtransic.com/services/payment-reconciliation"
+        serviceType="Medical Billing Service"
       />
 
       <HeroSection

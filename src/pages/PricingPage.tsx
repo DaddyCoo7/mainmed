@@ -16,6 +16,7 @@ import {
   Star
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import ROICalculator from '../components/ROICalculator';
@@ -82,6 +83,7 @@ const PricingPage: React.FC = () => {
         keywords="medical billing pricing, RCM pricing, medical billing cost, billing services rates, affordable medical billing, billing packages"
         ogType="website"
       />
+      <OrganizationSchema />
       {/* Logo background overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"

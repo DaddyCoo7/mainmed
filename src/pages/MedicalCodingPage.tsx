@@ -23,6 +23,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const MedicalCodingPage: React.FC = () => {
@@ -166,6 +167,12 @@ const MedicalCodingPage: React.FC = () => {
         canonical="https://medtransic.com/services/medical-coding"
         keywords="medical coding services 2025, professional medical coding, CPT coding, ICD-10 coding, certified professional coders, HCPCS coding, medical coding audit, CPC coders"
         ogType="website"
+      />
+      <ServiceSchema
+        name="Medical Coding"
+        description="Professional medical coders boost revenue 18% with accurate ICD-10, CPT & HCPCS coding. 24-hour turnaround, 100% compliant, all specialties. Free coding audit for your practice!"
+        url="https://medtransic.com/services/medical-coding"
+        serviceType="Medical Billing Service"
       />
       <HeroSection
         badge={{ icon: FileText, text: 'Certified Coding Excellence' }}

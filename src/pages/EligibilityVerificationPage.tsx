@@ -24,6 +24,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const EligibilityVerificationPage: React.FC = () => {
@@ -167,6 +168,12 @@ const EligibilityVerificationPage: React.FC = () => {
         canonical="https://medtransic.com/services/eligibility-verification"
         keywords="eligibility verification, insurance verification, benefits verification, coverage verification, insurance eligibility check"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Eligibility Verification"
+        description="Real-time eligibility checks reduce denials 85% with 98% accuracy. Verify coverage, deductibles, prior auth in under 10 seconds. Increase upfront collections 40%. Free verification audit!"
+        url="https://medtransic.com/services/eligibility-verification"
+        serviceType="Medical Billing Service"
       />
 
       <HeroSection

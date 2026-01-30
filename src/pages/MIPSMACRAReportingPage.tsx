@@ -23,6 +23,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const MIPSMACRAReportingPage: React.FC = () => {
@@ -150,6 +151,12 @@ const MIPSMACRAReportingPage: React.FC = () => {
         canonical="https://medtransic.com/services/mips-macra-reporting"
         keywords="MIPS reporting, MACRA reporting, quality payment program, MIPS services, merit-based incentive"
         ogType="article"
+      />
+      <ServiceSchema
+        name="MIPS MACRA Reporting"
+        description="MIPS experts achieve 85+ average score, avoid 9% penalties, earn $12K bonus per provider. 95% on-time submission, automated data collection. Strategic measure selection maximizes incentives!"
+        url="https://medtransic.com/services/mips-macra-reporting"
+        serviceType="Medical Support Service"
       />
 
       <HeroSection

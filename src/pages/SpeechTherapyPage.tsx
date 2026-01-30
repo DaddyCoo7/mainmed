@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const SpeechTherapyPage: React.FC = () => {
@@ -172,6 +173,11 @@ const SpeechTherapyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/speech-therapy"
         keywords="speech therapy billing, SLP billing services, speech pathology billing, language therapy billing, speech therapist billing, dysphagia billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Speech Therapy"
+        description="Professional speech-language pathology billing services with expert CPT coding for speech therapy evaluations, treatment sessions, and dysphagia management. Maximize reimbursement for your SLP practice."
+        url="https://medtransic.com/specialties/speech-therapy"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

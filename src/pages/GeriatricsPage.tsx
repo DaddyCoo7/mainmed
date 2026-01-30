@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const GeriatricsPage: React.FC = () => {
@@ -171,6 +172,11 @@ const GeriatricsPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/geriatrics"
         keywords="geriatrics billing, senior care billing, elderly care billing, geriatrician billing services, aging care billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Geriatrics"
+        description="Geriatrics billing for annual wellness visits, cognitive assessments, transitional care management, and dementia care. Maximize Medicare geriatric care management and complex chronic care coordination codes."
+        url="https://medtransic.com/specialties/geriatrics"
       />
       <HeroSection
         badge={{ icon: Users, text: "Geriatric Surgery Billing Specialists" }}

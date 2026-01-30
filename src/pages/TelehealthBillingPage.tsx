@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const TelehealthBillingPage: React.FC = () => {
   const painPoints = [
@@ -149,6 +150,11 @@ const TelehealthBillingPage: React.FC = () => {
         canonical="https://medtransic.com/services/telehealth-billing"
         keywords="telehealth billing, telemedicine billing, virtual visit billing, remote patient monitoring billing, online consultation billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Telehealth Billing"
+        description="Specialized telehealth and telemedicine billing services. Expert coding for virtual visits and remote patient monitoring."
+        url="https://medtransic.com/services/telehealth-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

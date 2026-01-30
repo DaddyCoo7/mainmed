@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const CallCenterSchedulingPage: React.FC = () => {
@@ -150,6 +151,12 @@ const CallCenterSchedulingPage: React.FC = () => {
         canonical="https://medtransic.com/services/call-center-scheduling"
         keywords="medical call center, patient scheduling, appointment scheduling, call center services, healthcare call center"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Call Center Scheduling"
+        description="Professional medical call center and patient scheduling services. Improve patient experience with responsive scheduling support."
+        url="https://medtransic.com/services/call-center-scheduling"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

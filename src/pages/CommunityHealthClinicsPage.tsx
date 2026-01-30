@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const CommunityHealthClinicsPage: React.FC = () => {
@@ -172,6 +173,11 @@ const CommunityHealthClinicsPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/community-health-clinics"
         keywords="community health clinic billing, FQHC billing, community health center billing, safety-net billing, CHC billing services"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Community Health Clinics"
+        description="Professional billing for community health clinics and FQHCs. Expert coding for safety-net providers and community healthcare centers."
+        url="https://medtransic.com/specialties/community-health-clinics"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

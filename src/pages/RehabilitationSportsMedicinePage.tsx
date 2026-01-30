@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const RehabilitationSportsMedicinePage: React.FC = () => {
@@ -172,6 +173,11 @@ const RehabilitationSportsMedicinePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/rehabilitation-sports-medicine"
         keywords="sports medicine billing, rehabilitation billing, sports injury billing, athletic training billing, sports rehab billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Rehabilitation Sports Medicine"
+        description="Specialized sports medicine and rehabilitation billing services. Expert coding for sports injuries, athletic training, and rehab programs."
+        url="https://medtransic.com/specialties/rehabilitation-sports-medicine"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

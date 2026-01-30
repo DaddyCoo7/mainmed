@@ -11,6 +11,7 @@ import {
   ChevronUp
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import { supabase } from '../lib/supabase';
 
@@ -118,6 +119,7 @@ const BillingGlossaryPage: React.FC = () => {
         keywords="medical billing glossary, billing terms, healthcare definitions, billing terminology, medical billing dictionary, RCM terms"
         ogType="website"
       />
+      <OrganizationSchema />
       <motion.div
         className="absolute inset-0 opacity-20"
         animate={{

@@ -3,6 +3,7 @@ import { CheckCircle2, Rocket, FileText, Shield, DollarSign, Users, Stethoscope,
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
@@ -228,6 +229,12 @@ const PracticeLaunchPage: React.FC = () => {
         description="Complete guide to launching your medical practice: credentialing timeline, billing setup, compliance requirements, financial projections, and avoiding common startup mistakes. Free expert consultation."
         keywords="start medical practice, medical practice startup, physician practice launch, credentialing new practice, medical billing setup, practice startup checklist, new practice credentialing, medical practice business plan, healthcare startup guide"
         canonical="https://medtransic.com/practice-launch"
+      />
+      <ServiceSchema
+        name="Practice Launch"
+        description="Complete guide to launching your medical practice: credentialing timeline, billing setup, compliance requirements, financial projections, and avoiding common startup mistakes. Free expert consultation."
+        url="https://medtransic.com/practice-launch"
+        serviceType="Medical Billing Service"
       />
 
       <div className="pt-16 bg-gradient-to-br from-blue-50 via-white to-blue-50">

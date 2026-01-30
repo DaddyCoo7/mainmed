@@ -27,6 +27,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const ChiropracticPage: React.FC = () => {
@@ -170,6 +171,11 @@ const ChiropracticPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/chiropractic"
         keywords="chiropractic billing, chiropractor billing services, spinal adjustment billing, chiropractic coding, DC billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Chiropractic"
+        description="Chiropractic billing for spinal manipulations, therapeutic exercises, and physical modalities. Navigate Medicare limited coverage rules and proper documentation for adjustment billing codes 98940-98943."
+        url="https://medtransic.com/specialties/chiropractic"
       />
       <HeroSection
         badge={{ icon: Zap, text: "Chiropractic Billing Specialists" }}

@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const RheumatologyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const RheumatologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/rheumatology"
         keywords="rheumatology billing, arthritis billing, autoimmune disease billing, infusion therapy billing, joint injection billing, biologic drug billing, J-code billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Rheumatology"
+        description="Specialized rheumatology billing for high-cost biologic infusions (Remicade, Orencia, Actemra) with precise J-code submission and buy-and-bill management. Expert coding for multiple joint injections (20600-20611) with anatomic site documentation and viscosupplementation. Handle prior authorizations for specialty medications, infusion therapy supervision, and arthrocentesis procedures. Optimize reimbursement for $30K+ annual biologic patients."
+        url="https://medtransic.com/specialties/rheumatology"
       />
 
       <HeroSection

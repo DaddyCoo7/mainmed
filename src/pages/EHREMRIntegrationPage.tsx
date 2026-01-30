@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const EHREMRIntegrationPage: React.FC = () => {
@@ -150,6 +151,12 @@ const EHREMRIntegrationPage: React.FC = () => {
         canonical="https://medtransic.com/services/ehr-emr-integration"
         keywords="EHR integration 2025, EMR integration, medical software integration, practice management integration, billing system integration, HL7 integration, FHIR integration, EHR EMR services"
         ogType="article"
+      />
+      <ServiceSchema
+        name="E H R E M R Integration"
+        description="Seamless EHR/EMR integration with Epic, Cerner, Athenahealth, eClinicalWorks using HL7/FHIR standards. Real-time charge capture, automated demographic updates, and bidirectional claim status feeds."
+        url="https://medtransic.com/services/ehr-emr-integration"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

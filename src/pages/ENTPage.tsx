@@ -29,6 +29,7 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const ENTPage: React.FC = () => {
   const painPoints = [
@@ -171,6 +172,11 @@ const ENTPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/ent"
         keywords="ENT billing, otolaryngology billing, ear nose throat billing, sinus surgery billing, ENT coding services"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="E N T"
+        description="Specialized ENT billing for otolaryngology procedures. Expert coding for sinus surgery, tonsillectomy, hearing tests, and head and neck procedures."
+        url="https://medtransic.com/specialties/ent"
       />
 
       <HeroSection

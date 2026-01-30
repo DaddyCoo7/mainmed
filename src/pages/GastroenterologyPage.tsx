@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const GastroenterologyPage: React.FC = () => {
@@ -171,6 +172,11 @@ const GastroenterologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/gastroenterology"
         keywords="gastroenterology billing, GI billing, endoscopy billing, colonoscopy billing, gastrointestinal billing, digestive health billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Gastroenterology"
+        description="Specialized gastroenterology billing for endoscopy procedures, colonoscopies, and GI treatments. Expert coding for complex gastrointestinal procedures."
+        url="https://medtransic.com/specialties/gastroenterology"
       />
       <HeroSection
         badge={{

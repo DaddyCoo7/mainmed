@@ -28,6 +28,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PediatricsPage: React.FC = () => {
@@ -171,6 +172,11 @@ const PediatricsPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/pediatrics"
         keywords="pediatric billing, children's healthcare billing, pediatrician billing, well-child visit billing, pediatric coding"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Pediatrics"
+        description="Professional pediatric billing services for primary care and specialty pediatrics. Expert coding for well-child visits, immunizations, and pediatric procedures."
+        url="https://medtransic.com/specialties/pediatrics"
       />
       <HeroSection
         badge={{

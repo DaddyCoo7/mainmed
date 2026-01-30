@@ -28,6 +28,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PrimaryCarePracticesPage: React.FC = () => {
@@ -171,6 +172,11 @@ const PrimaryCarePracticesPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/primary-care-practices"
         keywords="primary care billing, general practice billing, internal medicine billing, preventive care billing, PCP billing services"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Primary Care Practices"
+        description="Comprehensive primary care billing for general practice and internal medicine. Expert coding for preventive care and chronic disease management."
+        url="https://medtransic.com/specialties/primary-care-practices"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

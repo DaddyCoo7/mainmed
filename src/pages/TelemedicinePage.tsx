@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const TelemedicinePage: React.FC = () => {
@@ -172,6 +173,11 @@ const TelemedicinePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/telemedicine"
         keywords="telemedicine billing, telehealth billing, virtual visit billing, remote patient monitoring billing, online consultation billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Telemedicine"
+        description="Telehealth billing for virtual consultations, remote patient monitoring, and e-visits. Navigate place of service codes, telehealth modifiers 95/GT, and synchronous vs asynchronous service documentation."
+        url="https://medtransic.com/specialties/telemedicine"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

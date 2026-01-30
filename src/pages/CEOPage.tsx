@@ -58,7 +58,7 @@ const CEOPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <SEOHead
-        title="Meet Our CEO | Healthcare Revenue Cycle Management Leadership | Medtransic"
+        title="Meet Our CEO | Healthcare RCM Leadership | Medtransic"
         description="Meet the Medtransic CEO and learn about our company leadership, vision for healthcare revenue cycle management, and commitment to transforming medical billing services."
         canonical="https://medtransic.com/ceo"
         keywords="CEO, company leadership, about our CEO, executive team, healthcare leadership, RCM vision"

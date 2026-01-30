@@ -24,6 +24,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const LaboratoryBillingPage: React.FC = () => {
@@ -167,6 +168,11 @@ const LaboratoryBillingPage: React.FC = () => {
         canonical="https://medtransic.com/services/laboratory-billing"
         keywords="laboratory billing, clinical lab billing, lab billing services, pathology billing, diagnostic lab billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Laboratory Billing"
+        description="Professional laboratory billing services for clinical and diagnostic labs. Expert coding for lab tests and pathology services."
+        url="https://medtransic.com/services/laboratory-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

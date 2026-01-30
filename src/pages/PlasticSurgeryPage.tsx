@@ -27,6 +27,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PlasticSurgeryPage: React.FC = () => {
@@ -170,6 +171,11 @@ const PlasticSurgeryPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/plastic-surgery"
         keywords="plastic surgery billing, cosmetic surgery billing, reconstructive surgery billing, aesthetic procedure billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Plastic Surgery"
+        description="Expert plastic surgery billing for cosmetic and reconstructive procedures. Specialized coding for aesthetic surgery, reconstructive surgery, and cash-pay procedures."
+        url="https://medtransic.com/specialties/plastic-surgery"
       />
 
       <HeroSection

@@ -5,6 +5,7 @@ import { MapPin, Phone, TrendingUp, CheckCircle2, ArrowRight, DollarSign, Shield
 import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
+import LocationSchema from '../components/LocationSchema';
 
 interface CityPageData {
   state_slug: string;
@@ -134,6 +135,13 @@ export default function CityBillingPage() {
         title={pageData.meta_title}
         description={pageData.meta_description}
         canonicalUrl={`https://medtransic.com/medical-billing-services/${pageData.state_slug}/${pageData.city_slug}`}
+      />
+      <LocationSchema
+        locationName={pageData.city_name}
+        locationType="city"
+        description={pageData.meta_description}
+        url={`https://medtransic.com/medical-billing-services/${pageData.state_slug}/${pageData.city_slug}`}
+        state={stateData.state_name}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">

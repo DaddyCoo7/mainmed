@@ -29,6 +29,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const NephrologyPage: React.FC = () => {
@@ -172,6 +173,11 @@ const NephrologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/nephrology"
         keywords="nephrology billing, dialysis billing, kidney disease billing, renal care billing, nephrologist billing services, ESRD billing, hemodialysis billing, peritoneal dialysis billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Nephrology"
+        description="Maximize dialysis reimbursement with bundled payment expertise and ESRD coding specialists. Handle in-center hemodialysis (MCP), home dialysis, and transitional care management. Expert vascular access procedure coding and Medicare ESRD compliance. Increase collections 30% with our nephrology-certified billing team."
+        url="https://medtransic.com/specialties/nephrology"
       />
 
       <HeroSection

@@ -30,6 +30,7 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const OncologyPage: React.FC = () => {
   const painPoints = [
@@ -172,6 +173,11 @@ const OncologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/oncology"
         keywords="oncology billing, cancer care billing, chemotherapy billing, radiation oncology billing, medical oncology billing, immunotherapy billing, J-code billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Oncology"
+        description="Comprehensive oncology billing for chemotherapy administration (96413-96417), immunotherapy infusions, and oral anti-cancer agents. Expert J-code selection, drug wastage documentation, and OCM (Oncology Care Model) reporting. Handle complex radiation oncology billing with IMRT, IGRT, and brachytherapy coding. Increase revenue 28% with oncology-specific denial management."
+        url="https://medtransic.com/specialties/oncology"
       />
 
       <HeroSection

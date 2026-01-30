@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const PhysicianBillingPage: React.FC = () => {
   const painPoints = [
@@ -149,6 +150,11 @@ const PhysicianBillingPage: React.FC = () => {
         canonical="https://medtransic.com/services/physician-billing"
         keywords="physician billing, doctor billing, medical practice billing, physician billing services, practice billing solutions"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Physician Billing"
+        description="Expert physician billing for solo and multispecialty practices. Comprehensive coding, claims, and collections with dedicated support."
+        url="https://medtransic.com/services/physician-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

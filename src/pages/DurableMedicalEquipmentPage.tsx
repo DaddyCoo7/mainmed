@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const DurableMedicalEquipmentPage: React.FC = () => {
@@ -170,6 +171,11 @@ const DurableMedicalEquipmentPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/durable-medical-equipment"
         keywords="medical equipment billing, DME provider billing, HCPCS coding, durable medical equipment, diabetic supply billing, mobility equipment billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Durable Medical Equipment"
+        description="Complete medical equipment billing for DME providers. Expert HCPCS coding, rental vs purchase billing, diabetic supplies, mobility equipment. 95% clean claim rate."
+        url="https://medtransic.com/specialties/durable-medical-equipment"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

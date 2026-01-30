@@ -24,6 +24,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const DenialManagementPage: React.FC = () => {
@@ -167,6 +168,12 @@ const DenialManagementPage: React.FC = () => {
         canonical="https://medtransic.com/services/denial-management"
         keywords="denial management, claim denials, denial appeals, claim rejections, denial prevention, revenue recovery, appeal management, claim rework, denial resolution"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Denial Management"
+        description="Denial management recovering 63% of denied claims through root cause analysis, strategic appeals, and prevention workflows. Cut denial rates from 15% to under 5% industry-leading performance."
+        url="https://medtransic.com/services/denial-management"
+        serviceType="Medical Billing Service"
       />
       <HeroSection
         badge={{ icon: FileWarning, text: 'Denial Prevention & Recovery' }}

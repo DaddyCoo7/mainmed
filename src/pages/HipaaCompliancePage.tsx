@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import ServiceSchema from '../components/ServiceSchema';
 import { Shield, Lock, FileCheck, Users, AlertTriangle, CheckCircle, Award, Eye } from 'lucide-react';
 
 const HipaaCompliancePage: React.FC = () => {
@@ -35,6 +36,12 @@ const HipaaCompliancePage: React.FC = () => {
         canonical="https://medtransic.com/hipaa-compliance"
         keywords="HIPAA compliance, healthcare compliance, patient data security, HIPAA compliant billing, PHI protection, 256-bit encryption"
         ogType="website"
+      />
+      <ServiceSchema
+        name="HIPAA Compliance Services"
+        description="HIPAA-compliant medical billing services with 256-bit encryption and comprehensive security. Learn about our commitment to patient data security, healthcare compliance, and PHI protection standards."
+        url="https://medtransic.com/hipaa-compliance"
+        serviceType="Medical Support Service"
       />
       {/* Logo background overlay */}
       <div className="absolute inset-0 opacity-20">

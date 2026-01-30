@@ -30,6 +30,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const DermatologyPage: React.FC = () => {
@@ -173,6 +174,11 @@ const DermatologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/dermatology"
         keywords="dermatology billing, skin care billing, Mohs surgery billing, dermatology coding, cosmetic dermatology billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Dermatology"
+        description="Expert dermatology billing for medical and cosmetic procedures. Specialized coding for Mohs surgery, biopsies, laser treatments, and dermatologic procedures."
+        url="https://medtransic.com/specialties/dermatology"
       />
       <HeroSection
         badge={{

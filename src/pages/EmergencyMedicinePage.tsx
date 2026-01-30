@@ -30,6 +30,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const EmergencyMedicinePage: React.FC = () => {
@@ -173,6 +174,11 @@ const EmergencyMedicinePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/emergency-medicine"
         keywords="emergency medicine billing, ER billing services, emergency room billing, emergency department billing, EM billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Emergency Medicine"
+        description="Comprehensive emergency medicine billing for ER and urgent care. Expert E&M coding for emergency department services."
+        url="https://medtransic.com/specialties/emergency-medicine"
       />
 
       <HeroSection

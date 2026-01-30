@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const SleepMedicinePage: React.FC = () => {
@@ -172,6 +173,11 @@ const SleepMedicinePage: React.FC = () => {
         canonical="https://medtransic.com/specialties/sleep-medicine"
         keywords="sleep medicine billing, sleep study billing, polysomnography billing, sleep disorder billing, CPAP billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Sleep Medicine"
+        description="Specialized sleep medicine billing for sleep studies and disorders. Expert coding for polysomnography, CPAP management, and sleep consultations."
+        url="https://medtransic.com/specialties/sleep-medicine"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

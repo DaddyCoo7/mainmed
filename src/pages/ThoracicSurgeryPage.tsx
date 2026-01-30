@@ -26,6 +26,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const ThoracicSurgeryPage: React.FC = () => {
@@ -169,6 +170,11 @@ const ThoracicSurgeryPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/thoracic-surgery"
         keywords="thoracic surgery billing, chest surgery billing, lung surgery billing, cardiothoracic billing, thoracic surgeon billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Thoracic Surgery"
+        description="Thoracic surgery billing for VATS procedures, lung resections, esophageal surgery, and mediastinal procedures. Handle complex cardiothoracic CPT codes with appropriate surgical modifiers."
+        url="https://medtransic.com/specialties/thoracic-surgery"
       />
 
       <HeroSection

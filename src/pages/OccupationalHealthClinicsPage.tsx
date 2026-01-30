@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OccupationalHealthClinicsPage: React.FC = () => {
@@ -172,6 +173,11 @@ const OccupationalHealthClinicsPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/occupational-health-clinics"
         keywords="occupational health billing, workplace health billing, workers comp billing, employee health billing, occupational medicine billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Occupational Health Clinics"
+        description="Professional occupational health clinic billing for workplace medicine. Expert coding for workers' compensation and employee health services."
+        url="https://medtransic.com/specialties/occupational-health-clinics"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

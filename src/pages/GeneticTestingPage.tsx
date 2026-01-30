@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const GeneticTestingPage: React.FC = () => {
@@ -170,6 +171,11 @@ const GeneticTestingPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/genetic-testing"
         keywords="genetic testing billing, genomic billing, molecular diagnostics billing, genetic counseling billing, DNA testing billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Genetic Testing"
+        description="Genetic testing billing for BRCA analysis, carrier screening, pharmacogenomics, and whole exome sequencing. Handle complex molecular pathology codes and genetic counseling session billing."
+        url="https://medtransic.com/specialties/genetic-testing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

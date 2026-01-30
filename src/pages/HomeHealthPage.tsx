@@ -28,6 +28,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const HomeHealthPage: React.FC = () => {
@@ -171,6 +172,11 @@ const HomeHealthPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/home-health"
         keywords="home health billing, home healthcare billing, visiting nurse billing, home care billing, OASIS billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Home Health"
+        description="Home health billing with OASIS assessments, LUPA prevention, and PDGM grouping. Optimize 30-day period payments, therapy thresholds, and RAP billing for home health agencies."
+        url="https://medtransic.com/specialties/home-health"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

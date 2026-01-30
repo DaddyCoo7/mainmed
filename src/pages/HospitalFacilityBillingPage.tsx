@@ -24,6 +24,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const HospitalFacilityBillingPage: React.FC = () => {
@@ -167,6 +168,11 @@ const HospitalFacilityBillingPage: React.FC = () => {
         canonical="https://medtransic.com/services/hospital-facility-billing"
         keywords="hospital billing, facility billing, inpatient billing, outpatient billing, hospital RCM services"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Hospital Facility Billing"
+        description="Comprehensive hospital and facility billing services for inpatient and outpatient care. Expert coding for hospital procedures and services."
+        url="https://medtransic.com/services/hospital-facility-billing"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

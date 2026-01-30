@@ -23,6 +23,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OldARCleanupPage: React.FC = () => {
@@ -150,6 +151,12 @@ const OldARCleanupPage: React.FC = () => {
         canonical="https://medtransic.com/services/old-ar-cleanup"
         keywords="old AR cleanup, aged accounts recovery, AR recovery services, outstanding balance recovery, old debt collection"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Old A R Cleanup"
+        description="Recover 15-25% of aged A/R over 120 days with dedicated recovery team. $85K average project recovery in 90 days. Strategic appeals, patient collection. 100% contingency-based pricing!"
+        url="https://medtransic.com/services/old-ar-cleanup"
+        serviceType="Medical Billing Service"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

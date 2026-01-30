@@ -25,6 +25,7 @@ import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import ARAgingVisualization from '../components/ARAgingVisualization';
+import ServiceSchema from '../components/ServiceSchema';
 
 const ARManagementPage: React.FC = () => {
   const painPoints = [
@@ -167,6 +168,12 @@ const ARManagementPage: React.FC = () => {
         canonical="https://medtransic.com/services/ar-management"
         keywords="AR management, accounts receivable management, claim follow-up, AR follow-up services, aging accounts management, collections services"
         ogType="article"
+      />
+      <ServiceSchema
+        name="A R Management"
+        description="Expert AR management reducing Days in AR by 35% through systematic aging analysis, aggressive payer follow-up, and proven collection strategies. Transform A/R over 120 days into recovered revenue for your practice."
+        url="https://medtransic.com/services/ar-management"
+        serviceType="Medical Billing Service"
       />
       <HeroSection
         badge={{ icon: DollarSign, text: 'A/R Optimization' }}

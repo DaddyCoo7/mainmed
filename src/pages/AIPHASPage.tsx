@@ -2,6 +2,7 @@ import React from 'react';
 import { Shield, TrendingUp, Zap, FileSearch, Database, CheckCircle2, BarChart3, Network, Lock, Layers } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
+import ServiceSchema from '../components/ServiceSchema';
 
 const AIPHASPage: React.FC = () => {
   const features = [
@@ -87,6 +88,12 @@ const AIPHASPage: React.FC = () => {
         title="AIPHAS Platform - AI-Powered RCM Audit Analytics | Medtransic"
         description="Transform your revenue cycle with AIPHAS - an AI-powered audit analytics platform. Join the Beta for deep billing analysis, compliance auditing, and revenue optimization insights."
         canonical="https://medtransic.com/aiphas"
+      />
+      <ServiceSchema
+        name="AI PHAS Solutions"
+        description="Transform your revenue cycle with AIPHAS - an AI-powered audit analytics platform. Join the Beta for deep billing analysis, compliance auditing, and revenue optimization insights."
+        url="https://medtransic.com/aiphas"
+        serviceType="Medical Support Service"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

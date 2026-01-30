@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const AllergyImmunologyPage: React.FC = () => {
@@ -172,6 +173,11 @@ const AllergyImmunologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/allergy-immunology"
         keywords="allergy billing, immunology billing, allergy testing billing, immunotherapy billing, allergist billing services"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Allergy Immunology"
+        description="Allergy and immunology billing for skin testing, venom immunotherapy, food allergy testing, and desensitization treatments. Accurately code multiple allergen testing and maintenance immunotherapy visits."
+        url="https://medtransic.com/specialties/allergy-immunology"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

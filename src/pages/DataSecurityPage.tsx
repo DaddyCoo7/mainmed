@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 import {
   Shield,
@@ -68,6 +69,12 @@ const DataSecurityPage: React.FC = () => {
         canonical="https://medtransic.com/data-security"
         keywords="data security, healthcare data security, medical information protection, secure billing, 256-bit encryption, HIPAA security, SOC 2"
         ogType="website"
+      />
+      <ServiceSchema
+        name="Data Security & Compliance"
+        description="Enterprise-level data security for medical billing with military-grade 256-bit encryption. HIPAA-compliant infrastructure, SOC 2 certified, and comprehensive security measures to protect patient information 24/7."
+        url="https://medtransic.com/data-security"
+        serviceType="Medical Support Service"
       />
       {/* Logo background overlay */}
       <div className="absolute inset-0 opacity-20">

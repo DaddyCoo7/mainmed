@@ -28,6 +28,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const PriorAuthorizationPage: React.FC = () => {
@@ -177,6 +178,12 @@ const PriorAuthorizationPage: React.FC = () => {
         canonical="https://medtransic.com/services/prior-authorization"
         keywords="prior authorization, pre-authorization, medical authorization, authorization management, insurance authorization, pre-cert services, authorization tracking, retroactive authorization, retro auth"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Prior Authorization"
+        description="Expert authorization management with 98% approval rates including proactive prior auth and retroactive recovery. Comprehensive tracking, submission, and emergency authorization services."
+        url="https://medtransic.com/services/prior-authorization"
+        serviceType="Medical Billing Service"
       />
       <HeroSection
         badge={{ icon: ClipboardCheck, text: 'Authorization Excellence' }}

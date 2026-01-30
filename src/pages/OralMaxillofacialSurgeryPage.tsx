@@ -29,6 +29,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const OralMaxillofacialSurgeryPage: React.FC = () => {
@@ -172,6 +173,11 @@ const OralMaxillofacialSurgeryPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/oral-maxillofacial-surgery"
         keywords="oral surgery billing, maxillofacial surgery billing, oral surgeon billing, jaw surgery billing, facial surgery billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Oral Maxillofacial Surgery"
+        description="Specialized oral and maxillofacial surgery billing services. Expert medical-dental crosswalk coding for complex oral surgical procedures."
+        url="https://medtransic.com/specialties/oral-maxillofacial-surgery"
       />
       <motion.div
         className="absolute inset-0 opacity-20"

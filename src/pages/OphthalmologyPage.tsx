@@ -28,6 +28,7 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import HeroSection from '../components/HeroSection';
+import SpecialtySchema from '../components/SpecialtySchema';
 
 const OphthalmologyPage: React.FC = () => {
   const painPoints = [
@@ -170,6 +171,11 @@ const OphthalmologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/ophthalmology"
         keywords="ophthalmology billing, eye care billing, optometry billing, cataract surgery billing, vision care billing, retinal billing, refractive surgery billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Ophthalmology"
+        description="Specialized ophthalmology billing services for routine and medical eye care. Expert coding for cataract surgery, refractive procedures, and retinal treatments."
+        url="https://medtransic.com/specialties/ophthalmology"
       />
 
       <HeroSection

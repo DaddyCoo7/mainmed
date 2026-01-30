@@ -27,6 +27,7 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const InterventionalRadiologyPage: React.FC = () => {
@@ -170,6 +171,11 @@ const InterventionalRadiologyPage: React.FC = () => {
         canonical="https://medtransic.com/specialties/interventional-radiology"
         keywords="interventional radiology billing, IR billing services, minimally invasive procedure billing, image-guided billing"
         ogType="article"
+      />
+      <SpecialtySchema
+        specialtyName="Interventional Radiology"
+        description="Specialized interventional radiology billing for minimally invasive procedures. Expert coding for IR procedures and image-guided interventions."
+        url="https://medtransic.com/specialties/interventional-radiology"
       />
       {/* Logo background overlay */}
       <motion.div 

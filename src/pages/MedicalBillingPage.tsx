@@ -173,7 +173,7 @@ const MedicalBillingPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Professional Medical Billing Solutions | Certified Coders | 99% Accuracy"
+        title="Medical Billing Solutions | Certified Coders | 99% Rate"
         description="Expert medical billing services with CPC-certified coders increase revenue 25%. Accurate CPT/ICD-10 coding, under 5% denial rate, 60% faster payments. HIPAA-compliant. Free billing analysis!"
         canonical="https://medtransic.com/services/medical-billing"
         keywords="professional medical billing, healthcare billing solutions, medical billing companies, certified medical coders, CPT coding, ICD-10 coding, medical claims processing, practice billing services"

@@ -3,6 +3,7 @@ import { Eye, Target, Clock, MessageSquare, Layers, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
+import ServiceSchema from '../components/ServiceSchema';
 
 export default function WebsiteDesignPage() {
   return (
@@ -11,6 +12,12 @@ export default function WebsiteDesignPage() {
         title="Website Design Philosophy | User-Centered Healthcare Web Design | Medtransic"
         description="Learn about Medtransic's intentional approach to website design - structured, simple, and focused on clear communication for busy healthcare professionals."
         canonicalUrl="https://medtransic.com/about-website-design"
+      />
+      <ServiceSchema
+        name="Website Design"
+        description="Learn about Medtransic's intentional approach to website design - structured, simple, and focused on clear communication for busy healthcare professionals."
+        url="https://medtransic.com/services/websitedesign"
+        serviceType="Medical Billing Service"
       />
 
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">

@@ -24,6 +24,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const ChargeEntryPaymentPostingPage: React.FC = () => {
@@ -167,6 +168,12 @@ const ChargeEntryPaymentPostingPage: React.FC = () => {
         canonical="https://medtransic.com/services/charge-entry-payment-posting"
         keywords="charge entry, payment posting, charge capture, payment processing, EOB posting, medical billing processing"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Charge Entry Payment Posting"
+        description="Same-day charge entry with 99.8% accuracy accelerates cash flow 35%. Automated ERA posting, variance analysis recovers $120K annually. Expert reconciliation eliminates posting backlogs!"
+        url="https://medtransic.com/services/charge-entry-payment-posting"
+        serviceType="Medical Billing Service"
       />
 
       <HeroSection

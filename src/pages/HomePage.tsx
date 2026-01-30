@@ -1,5 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import OrganizationSchema from '../components/OrganizationSchema';
 import Hero from '../components/Hero';
 import AsSeenOnBanner from '../components/AsSeenOnBanner';
 import AboutUsSection from '../components/AboutUsSection';
@@ -15,12 +16,13 @@ const HomePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Medical Billing Services 2025 | 99% Clean Claims Rate | Expert RCM Solutions"
+        title="Medical Billing Services 2025 | 99% Clean Claims | RCM"
         description="Boost revenue by 30% with certified medical billing experts. HIPAA-compliant RCM solutions, 99% clean claims, faster payments. Free consultation for healthcare practices nationwide. Call 888-777-0860!"
         canonical="https://medtransic.com/"
         keywords="medical billing services 2025, revenue cycle management, RCM, medical coding, healthcare billing, practice management, denial management, provider credentialing, HIPAA compliance, certified medical billers"
         ogType="website"
       />
+      <OrganizationSchema />
       <h1 className="sr-only">Expert Medical Billing Services 2025 - Medtransic</h1>
       <Hero />
       <AsSeenOnBanner />

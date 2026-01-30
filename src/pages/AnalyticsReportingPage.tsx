@@ -24,6 +24,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
 
 const AnalyticsReportingPage: React.FC = () => {
@@ -151,6 +152,12 @@ const AnalyticsReportingPage: React.FC = () => {
         canonical="https://medtransic.com/services/analytics-reporting"
         keywords="medical billing analytics, RCM reporting, financial analytics, practice analytics, billing reports, revenue analytics"
         ogType="article"
+      />
+      <ServiceSchema
+        name="Analytics Reporting"
+        description="Real-time dashboards track KPIs with 100% data accuracy. Automated reports save 15+ hours weekly. Custom analytics identify denial trends, payer performance, revenue opportunities. 24/7 access!"
+        url="https://medtransic.com/services/analytics-reporting"
+        serviceType="Medical Billing Service"
       />
 
       <HeroSection
