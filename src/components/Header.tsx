@@ -312,7 +312,7 @@ const Header: React.FC = () => {
             >
               <Link to="/" className="flex items-center">
                 <img
-                  src={isDarkMode ? "/medtransiclogolight.png" : "/medtransiclogolightbk.png"}
+                  src={isDarkMode ? "/logo_png_dark_white_text.png" : "/medtransiclogolightbk.png"}
                   alt="Medtransic Logo"
                   className="h-6 sm:h-7 lg:h-8 w-auto object-contain"
                 />
@@ -537,7 +537,7 @@ const Header: React.FC = () => {
                 {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-100 dark:border-gray-700">
                   <img
-                    src={isDarkMode ? "/medtransiclogolight.png" : "/medtransiclogolightbk.png"}
+                    src={isDarkMode ? "/logo_png_dark_white_text.png" : "/medtransiclogolightbk.png"}
                     alt="Medtransic Logo"
                     className="h-6 w-auto"
                   />
