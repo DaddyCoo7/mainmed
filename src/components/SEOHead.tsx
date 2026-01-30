@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { getCanonicalUrl } from '../utils/urlNormalizer';
 
 interface SEOHeadProps {
   title: string;
@@ -24,7 +25,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const siteUrl = 'https://medtransic.com';
   const fullTitle = title.includes('Medtransic') ? title : `${title} | Medtransic`;
-  const canonicalUrl = canonical || `${siteUrl}${window.location.pathname}`;
+  const canonicalUrl = canonical || getCanonicalUrl();
 
   return (
     <Helmet>

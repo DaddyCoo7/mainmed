@@ -8,6 +8,7 @@ import FloatingChatButton from './components/FloatingChatButton';
 import ChatBot from './components/ChatBot';
 import OrganizationSchema from './components/OrganizationSchema';
 import GeoRedirect from './components/GeoRedirect';
+import { redirectRules } from './config/redirects';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PakistanHomePage = lazy(() => import('./pages/PakistanHomePage'));
@@ -116,6 +117,7 @@ const PriorAuthorizationPage = lazy(() => import('./pages/PriorAuthorizationPage
 const VirtualAssistantsPage = lazy(() => import('./pages/VirtualAssistantsPage'));
 const LocationsPage = lazy(() => import('./pages/LocationsPage'));
 const AIPHASPage = lazy(() => import('./pages/AIPHASPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -246,6 +248,16 @@ function App() {
             <Route path="/comparisons" element={<ComparisonsListPage />} />
             <Route path="/comparisons/:slug" element={<ComparisonPage />} />
             <Route path="/about-website-design" element={<WebsiteDesignPage />} />
+
+            {redirectRules.map((rule) => (
+              <Route
+                key={rule.from}
+                path={rule.from}
+                element={<Navigate to={rule.to} replace />}
+              />
+            ))}
+
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           </Suspense>
         </ScrollToTop>

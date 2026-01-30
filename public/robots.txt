@@ -25,6 +25,17 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /*.json$
 
+# Ignore common query parameters to prevent duplicate content
+Disallow: /*?replytocom=*
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?_ga=*
+Disallow: /*?sort=*
+Disallow: /*?filter=*
+
 # Allow crawling of assets
 Allow: /assets/
 Allow: /*.css$
