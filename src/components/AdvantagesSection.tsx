@@ -109,7 +109,7 @@ const AdvantagesSection: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
             <img
-              src="/doctors_copy.png"
+              src="/doctors.png"
               alt="Healthcare professional consulting with patient"
               className="w-full h-auto rounded-2xl shadow-large"
               loading="lazy"
