@@ -165,10 +165,10 @@ const DurableMedicalEquipmentPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="DME Billing Services | Durable Medical Equipment Billing"
-        description="Expert DME billing services for durable medical equipment suppliers. Comprehensive billing for medical supplies and equipment."
+        title="Medical Equipment Billing Services | DME Providers & Suppliers"
+        description="Complete medical equipment billing for DME providers. Expert HCPCS coding, rental vs purchase billing, diabetic supplies, mobility equipment. 95% clean claim rate."
         canonical="https://medtransic.com/specialties/durable-medical-equipment"
-        keywords="DME billing, durable medical equipment billing, medical equipment billing, medical supply billing, DME coding"
+        keywords="medical equipment billing, DME provider billing, HCPCS coding, durable medical equipment, diabetic supply billing, mobility equipment billing"
         ogType="article"
       />
       <motion.div

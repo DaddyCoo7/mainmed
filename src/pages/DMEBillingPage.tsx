@@ -143,10 +143,10 @@ const DMEBillingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="DME Billing Services | Durable Medical Equipment Billing Solutions"
-        description="Expert DME billing services for durable medical equipment suppliers. Comprehensive billing for medical equipment and supplies."
+        title="DMEPOS Billing Services | DME Claims Processing & Prior Authorization"
+        description="Specialized DMEPOS billing for medical equipment suppliers. Expert prior authorization management, CMN documentation, and rental billing compliance. 92% PA approval rate."
         canonical="https://medtransic.com/services/dme-billing"
-        keywords="DME billing, durable medical equipment billing, medical equipment billing, DME claim processing, medical supply billing"
+        keywords="DMEPOS billing, DME claims processing, prior authorization management, DME rental billing, certificate of medical necessity, medical equipment suppliers"
         ogType="article"
       />
       <motion.div
