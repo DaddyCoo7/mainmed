@@ -56,7 +56,7 @@ const VirtualAssistantsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Virtual Medical Assistants | Remote Administrative Support Services"
+        title="Virtual Medical Assistants | Remote Support"
         description="Professional virtual medical assistants for appointment scheduling, call management, insurance verification, and patient communication. Reduce costs while improving efficiency."
         keywords="virtual medical assistant, remote medical receptionist, healthcare virtual assistant, medical answering service, appointment scheduling service, patient communication"
         canonicalUrl="https://www.medtransic.com/services/virtual-assistants"

@@ -77,7 +77,7 @@ const PricingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient dark:bg-gray-900 relative overflow-hidden pt-20">
       <SEOHead
-        title="Medical Billing Pricing | Affordable RCM Solutions & Packages"
+        title="Medical Billing Pricing | Affordable Packages"
         description="Transparent medical billing pricing with flexible packages. Get comprehensive RCM services starting at just $800/month. No hidden fees, cancel anytime. Free consultation available."
         canonical="https://medtransic.com/pricing"
         keywords="medical billing pricing, RCM pricing, medical billing cost, billing services rates, affordable medical billing, billing packages"

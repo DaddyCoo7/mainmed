@@ -91,7 +91,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient dark:bg-gray-900 relative overflow-hidden pt-20">
       <SEOHead
-        title="About Medtransic | Expert Medical Billing & RCM Company Since 2015"
+        title="About Medtransic | Expert Medical Billing Since 2015"
         description="Learn about Medtransic's mission to revolutionize healthcare revenue cycle management. Trusted medical billing partner serving 500+ practices nationwide with expert billing, certified coding, and comprehensive RCM solutions."
         canonical="https://medtransic.com/about"
         keywords="about medtransic, medical billing company, RCM company, healthcare billing experts, medical billing partner, revenue cycle management company, certified medical billers"

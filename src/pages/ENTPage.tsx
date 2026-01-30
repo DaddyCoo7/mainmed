@@ -167,7 +167,7 @@ const ENTPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="ENT Billing Services | Otolaryngology Medical Billing & Coding"
+        title="ENT Billing | Otolaryngology Coding & Claims"
         description="Specialized ENT billing for otolaryngology procedures. Expert coding for sinus surgery, tonsillectomy, hearing tests, and head and neck procedures."
         canonical="https://medtransic.com/specialties/ent"
         keywords="ENT billing, otolaryngology billing, ear nose throat billing, sinus surgery billing, ENT coding services"

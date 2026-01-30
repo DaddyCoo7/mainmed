@@ -85,7 +85,7 @@ const AIPHASPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="AIPHAS Platform - AI-Powered RCM Audit Analytics | Medtransic"
+        title="AIPHAS | AI-Powered RCM Audit Analytics Platform"
         description="Transform your revenue cycle with AIPHAS - an AI-powered audit analytics platform. Join the Beta for deep billing analysis, compliance auditing, and revenue optimization insights."
         canonical="https://medtransic.com/aiphas"
       />

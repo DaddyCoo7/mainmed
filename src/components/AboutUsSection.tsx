@@ -206,7 +206,7 @@ const AboutUsSection: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <img
-                src="/rcm copy.png"
+                src="/02_Your Comprehensive Medical Billing Partner.png"
                 alt="The Revenue Cycle - Complete management from utilization review through collections"
                 className="w-full h-auto object-contain"
                 loading="lazy"

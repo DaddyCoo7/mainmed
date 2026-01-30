@@ -36,7 +36,7 @@ const MipsCompliance: React.FC = () => {
           {/* Image with floating element */}
           <AnimatedSection animation="slideLeft" className="relative">
             <motion.img
-              src="/05_expert_mips_reporting_&_compliance_solutions copy.png"
+              src="/compliance.png"
               alt="Healthcare professional analyzing compliance regulations and standards"
               className="w-full h-auto rounded-2xl"
               loading="lazy"

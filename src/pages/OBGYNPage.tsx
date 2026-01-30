@@ -166,7 +166,7 @@ const OBGYNPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="OBGYN Billing Services | Obstetrics & Gynecology Medical Billing"
+        title="OBGYN Billing | Obstetrics & Gynecology Coding"
         description="Expert OBGYN billing services for obstetrics and gynecology practices. Global maternity billing, surgical procedure coding, and comprehensive women's health billing."
         canonical="https://medtransic.com/specialties/obgyn"
         keywords="OBGYN billing, obstetrics billing, gynecology billing, maternity billing, women's health billing, prenatal care billing"
