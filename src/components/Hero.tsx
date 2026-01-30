@@ -190,18 +190,17 @@ const Hero: React.FC = () => {
                   style={slide.flipImage ? { transform: 'scaleX(-1)' } : undefined}
                   loading={index === 0 ? 'eager' : 'lazy'}
                 />
-                {/* Enhanced gradient mesh overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/40 to-transparent dark:from-slate-950/80 dark:via-blue-950/60"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-emerald-500/10 dark:from-blue-800/30 dark:to-emerald-700/15"></div>
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/25 via-blue-900/15 to-transparent dark:from-slate-950/40 dark:via-blue-950/25"></div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      {/* Enhanced main overlay with sophisticated gradient mesh */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-blue-900/30 to-transparent dark:from-slate-950/85 dark:via-blue-950/40 z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent dark:from-slate-950/60 z-10"></div>
+      {/* Subtle text readability overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 via-blue-900/10 to-transparent dark:from-slate-950/55 dark:via-blue-950/20 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent dark:from-slate-950/30 z-10"></div>
 
       {/* Custom Navigation Buttons */}
       <button
