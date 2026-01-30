@@ -167,7 +167,7 @@ const NeurosurgeryPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden">
       <SEOHead
-        title="Neurosurgery Billing | Complex Brain & Spine Procedure Coding Experts"
+        title="Neurosurgery Billing | Brain & Spine Coding"
         description="High-value neurosurgery billing for craniotomies, spinal fusions, and neuroendoscopy procedures. Navigate bundling rules for multi-level spine surgery, surgical approach modifiers, and intraoperative neuromonitoring (95940-95941). Certified coders ensure proper documentation for awake craniotomies and stereotactic procedures. Maximize reimbursement for $50K+ procedures with 99.1% clean claim rate."
         canonical="https://medtransic.com/specialties/neurosurgery"
         keywords="neurosurgery billing, brain surgery billing, spine surgery billing, neurosurgeon billing services, neurological surgery billing, spinal fusion billing, craniotomy billing"

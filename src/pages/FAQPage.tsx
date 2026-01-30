@@ -164,7 +164,7 @@ const FAQPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
       <SEOHead
-        title="Medical Billing FAQ | Common Healthcare Billing Questions & Answers 2025"
+        title="Medical Billing FAQ | 100+ Answers"
         description="Get answers to 100+ medical billing questions. Comprehensive FAQ covering CPT codes, modifiers, denials, E/M coding, claims, insurance, and more. Expert answers from certified Medtransic billing specialists."
         canonical="https://medtransic.com/faq"
         keywords="medical billing FAQ, billing questions, CPT codes FAQ, modifier questions, claim denials, billing help, E/M coding questions, healthcare billing answers"

@@ -193,7 +193,7 @@ const PayerEnrollmentPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Payer Enrollment Services | Insurance Credentialing & Enrollment - Medtransic"
+        title="Payer Enrollment | 98% Approval in 60-90 Days"
         description="Expert payer enrollment services for healthcare providers. Fast-track Medicare, Medicaid, and commercial insurance enrollment. 98% approval rate, 60-90 day turnaround. Get in-network faster."
         keywords="payer enrollment services, insurance enrollment, provider enrollment, Medicare enrollment, Medicaid enrollment, CAQH enrollment, PECOS enrollment, commercial insurance credentialing, insurance panel enrollment, payer credentialing"
         canonical="https://medtransic.com/services/payer-enrollment"

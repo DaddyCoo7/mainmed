@@ -146,7 +146,7 @@ const OldARCleanupPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="Old AR Cleanup Services | Aged Accounts Receivable Recovery"
+        title="Old AR Cleanup | Recover 15-25% of Aged A/R"
         description="Recover 15-25% of aged A/R over 120 days with dedicated recovery team. $85K average project recovery in 90 days. Strategic appeals, patient collection. 100% contingency-based pricing!"
         canonical="https://medtransic.com/services/old-ar-cleanup"
         keywords="old AR cleanup, aged accounts recovery, AR recovery services, outstanding balance recovery, old debt collection"

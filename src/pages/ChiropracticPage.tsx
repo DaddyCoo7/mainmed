@@ -166,7 +166,7 @@ const ChiropracticPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Chiropractic Billing Services | Chiropractic Medical Billing & Coding"
+        title="Chiropractic Billing | Spinal Manipulation"
         description="Chiropractic billing for spinal manipulations, therapeutic exercises, and physical modalities. Navigate Medicare limited coverage rules and proper documentation for adjustment billing codes 98940-98943."
         canonical="https://medtransic.com/specialties/chiropractic"
         keywords="chiropractic billing, chiropractor billing services, spinal adjustment billing, chiropractic coding, DC billing"

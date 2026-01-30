@@ -162,7 +162,7 @@ const MedicalCodingPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Medical Coding Services 2025 | 99.2% Accuracy | CPC-Certified Experts"
+        title="Medical Coding | 99.2% Accuracy CPC Certified"
         description="Professional medical coders boost revenue 18% with accurate ICD-10, CPT & HCPCS coding. 24-hour turnaround, 100% compliant, all specialties. Free coding audit for your practice!"
         canonical="https://medtransic.com/services/medical-coding"
         keywords="medical coding services 2025, professional medical coding, CPT coding, ICD-10 coding, certified professional coders, HCPCS coding, medical coding audit, CPC coders"

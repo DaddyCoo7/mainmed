@@ -144,7 +144,7 @@ const DMEBillingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="DMEPOS Billing Services | DME Claims Processing & Prior Authorization"
+        title="DMEPOS Billing | 92% PA Approval Rate"
         description="Specialized DMEPOS billing for medical equipment suppliers. Expert prior authorization management, CMN documentation, and rental billing compliance. 92% PA approval rate."
         canonical="https://medtransic.com/services/dme-billing"
         keywords="DMEPOS billing, DME claims processing, prior authorization management, DME rental billing, certificate of medical necessity, medical equipment suppliers"

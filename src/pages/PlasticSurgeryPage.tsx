@@ -166,7 +166,7 @@ const PlasticSurgeryPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden">
       <SEOHead
-        title="Plastic Surgery Billing Services | Cosmetic & Reconstructive Billing"
+        title="Plastic Surgery Billing | Cosmetic & Reconstructive"
         description="Expert plastic surgery billing for cosmetic and reconstructive procedures. Specialized coding for aesthetic surgery, reconstructive surgery, and cash-pay procedures."
         canonical="https://medtransic.com/specialties/plastic-surgery"
         keywords="plastic surgery billing, cosmetic surgery billing, reconstructive surgery billing, aesthetic procedure billing"

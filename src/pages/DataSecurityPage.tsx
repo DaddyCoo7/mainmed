@@ -64,7 +64,7 @@ const DataSecurityPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="Data Security | Secure Healthcare Information Protection | 256-Bit Encryption"
+        title="Data Security | 256-Bit Encryption & SOC 2"
         description="Enterprise-level data security for medical billing with military-grade 256-bit encryption. HIPAA-compliant infrastructure, SOC 2 certified, and comprehensive security measures to protect patient information 24/7."
         canonical="https://medtransic.com/data-security"
         keywords="data security, healthcare data security, medical information protection, secure billing, 256-bit encryption, HIPAA security, SOC 2"

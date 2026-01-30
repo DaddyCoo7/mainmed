@@ -192,7 +192,7 @@ const RCMPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Revenue Cycle Management 2025 | Increase Collections 30% | Expert RCM"
+        title="RCM Services | Increase Collections 30%"
         description="End-to-end RCM services: 99% clean claims, 50% faster payments, 24/7 monitoring. Certified billing specialists reduce denials & maximize revenue. Free RCM assessment available!"
         canonical="https://medtransic.com/services/rcm"
         keywords="revenue cycle management 2025, RCM services, revenue cycle solutions, healthcare RCM, medical RCM services, RCM optimization, revenue cycle consulting"

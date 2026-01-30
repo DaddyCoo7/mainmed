@@ -166,7 +166,7 @@ const DentalPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Dental Billing Services | Dental Practice Medical Billing & CDT Coding"
+        title="Dental Billing | CDT & Medical Crossover"
         description="Dental billing combining CDT codes for dental insurance and CPT medical crossover billing. Handle oral surgery, periodontics, and medically necessary dental procedures with proper insurance coordination."
         canonical="https://medtransic.com/specialties/dental"
         keywords="dental billing services, dental practice billing, CDT coding, dental insurance billing, oral surgery billing, dental claims processing"

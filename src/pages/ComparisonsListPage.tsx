@@ -41,7 +41,7 @@ export default function ComparisonsListPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <SEOHead
-        title="Medical Billing Service Comparisons | Compare Options & Make Informed Decisions"
+        title="Medical Billing Comparisons | Expert Analysis"
         description="Compare medical billing services, software, and strategies side-by-side. In-depth analysis of in-house vs outsourced billing, EHR vs PM systems, and more to help you choose the right solution."
         canonicalUrl="https://medtransic.com/comparisons"
       />

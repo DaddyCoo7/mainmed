@@ -167,7 +167,7 @@ const PulmonologyPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Pulmonology Billing | Sleep Study, Bronchoscopy & PFT Coding Experts"
+        title="Pulmonology Billing | Sleep & PFT Coding"
         description="Complete pulmonology billing for bronchoscopy with EBUS, pulmonary function testing interpretation, and sleep study billing (95782-95783). Navigate complex BiPAP/CPAP documentation requirements, home oxygen therapy orders, and pulmonary rehabilitation coding. Expert handling of interventional procedures including TBNA and thoracentesis. Reduce denial rates 38% with respiratory-certified billing specialists."
         canonical="https://medtransic.com/specialties/pulmonology"
         keywords="pulmonology billing, respiratory billing, lung specialist billing, pulmonary function test billing, bronchoscopy billing, sleep study billing, CPAP billing"

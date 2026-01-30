@@ -173,7 +173,7 @@ const PriorAuthorizationPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Prior Authorization Management Services | Medical Authorization Experts"
+        title="Prior Authorization | 98% Approval Rate"
         description="Expert authorization management with 98% approval rates including proactive prior auth and retroactive recovery. Comprehensive tracking, submission, and emergency authorization services."
         canonical="https://medtransic.com/services/prior-authorization"
         keywords="prior authorization, pre-authorization, medical authorization, authorization management, insurance authorization, pre-cert services, authorization tracking, retroactive authorization, retro auth"

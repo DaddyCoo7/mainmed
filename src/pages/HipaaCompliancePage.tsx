@@ -31,7 +31,7 @@ const HipaaCompliancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="HIPAA Compliance | Secure Medical Billing Services | Data Protection Standards"
+        title="HIPAA Compliance | 256-Bit Encrypted Billing"
         description="HIPAA-compliant medical billing services with 256-bit encryption and comprehensive security. Learn about our commitment to patient data security, healthcare compliance, and PHI protection standards."
         canonical="https://medtransic.com/hipaa-compliance"
         keywords="HIPAA compliance, healthcare compliance, patient data security, HIPAA compliant billing, PHI protection, 256-bit encryption"

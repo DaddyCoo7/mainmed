@@ -168,7 +168,7 @@ const OralMaxillofacialSurgeryPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="Oral Surgery Billing Services | Maxillofacial Surgery Medical Billing"
+        title="Oral Surgery Billing | Maxillofacial Billing"
         description="Specialized oral and maxillofacial surgery billing services. Expert medical-dental crosswalk coding for complex oral surgical procedures."
         canonical="https://medtransic.com/specialties/oral-maxillofacial-surgery"
         keywords="oral surgery billing, maxillofacial surgery billing, oral surgeon billing, jaw surgery billing, facial surgery billing"

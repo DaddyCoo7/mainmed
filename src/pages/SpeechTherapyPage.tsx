@@ -168,7 +168,7 @@ const SpeechTherapyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
-        title="Speech Therapy Billing Services | SLP Medical Billing & Coding Solutions"
+        title="Speech Therapy Billing | SLP Medical Billing"
         description="Professional speech-language pathology billing services with expert CPT coding for speech therapy evaluations, treatment sessions, and dysphagia management. Maximize reimbursement for your SLP practice."
         canonical="https://medtransic.com/specialties/speech-therapy"
         keywords="speech therapy billing, SLP billing services, speech pathology billing, language therapy billing, speech therapist billing, dysphagia billing"

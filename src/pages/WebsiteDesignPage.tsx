@@ -9,7 +9,7 @@ export default function WebsiteDesignPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <SEOHead
-        title="Website Design Philosophy | User-Centered Healthcare Web Design | Medtransic"
+        title="Website Design | User-Centered Approach"
         description="Learn about Medtransic's intentional approach to website design - structured, simple, and focused on clear communication for busy healthcare professionals."
         canonicalUrl="https://medtransic.com/about-website-design"
       />

@@ -82,7 +82,7 @@ export default function IndexNowAdminPage() {
     return (
       <>
         <SEOHead
-          title="IndexNow Admin | Real-Time Search Indexing | Medtransic"
+          title="IndexNow Admin | Search Indexing Dashboard"
           description="Administrative dashboard for managing IndexNow API submissions to Bing, Google, and Yandex. Monitor submission status, track indexing success rates, and instantly notify search engines of new content for faster discovery and ranking."
           canonical="https://medtransic.com/admin/indexnow"
           noindex={true}
@@ -90,6 +90,9 @@ export default function IndexNowAdminPage() {
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
           <main className="pt-24 pb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h1 className="text-4xl font-bold text-slate-900 mb-4">
+                IndexNow Administration
+              </h1>
               <div className="flex items-center justify-center min-h-[60vh]">
                 <div className="text-center">
                   <RefreshCw className="w-12 h-12 text-blue-600 animate-spin mx-auto mb-4" />
@@ -106,7 +109,7 @@ export default function IndexNowAdminPage() {
   return (
     <>
       <SEOHead
-        title="IndexNow Admin Dashboard | Manage Search Engine Indexing | Medtransic"
+        title="IndexNow Admin | Search Engine Indexing"
         description="Administrative dashboard for managing IndexNow API submissions to Bing, Google, and Yandex. Monitor submission status, track indexing success rates, and instantly notify search engines of new content."
         canonical="https://medtransic.com/admin/indexnow"
         noindex={true}

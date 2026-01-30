@@ -8,7 +8,7 @@ const PhilippinesHomePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Philippines Medical Billing Services | Expert Healthcare RCM Solutions"
+        title="Medical Billing Philippines | 99% Clean Claims"
         description="Premier medical billing company serving Philippines healthcare providers. HIPAA-compliant RCM services with 99% clean claim rates. Expert coding, credentialing, and revenue optimization. Free consultation available!"
         canonical="https://medtransic.com/ph"
         keywords="medical billing Philippines, healthcare RCM Philippines, medical coding Philippines, revenue cycle management Philippines, Philippines medical billing services, healthcare billing solutions Philippines"

@@ -167,7 +167,7 @@ const CardiologyPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Cardiology Medical Billing Services | Expert Cardiac Billing & Coding"
+        title="Cardiology Billing | Cardiac Procedures & Devices"
         description="Specialized cardiology medical billing services with expert coders for cardiac procedures, device implantations, and interventional cardiology. Increase revenue by 25% with our certified billing specialists."
         canonical="https://medtransic.com/specialties/cardiology"
         keywords="cardiology billing, cardiac billing services, interventional cardiology billing, cardiology coding, EKG billing, echocardiogram billing, pacemaker billing, ICD billing, cardiac catheterization billing"

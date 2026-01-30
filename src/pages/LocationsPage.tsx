@@ -55,7 +55,7 @@ const LocationsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Medical Billing Services by Location - State & City Coverage | Medtransic"
+        title="Medical Billing By Location | 50 States"
         description="Find expert medical billing services in your state or city. Medtransic provides comprehensive RCM solutions across all 50 states with local expertise and national support."
         keywords="medical billing by state, medical billing by city, local medical billing services, state medical billing, city medical billing"
         canonicalUrl="https://medtransic.com/locations"
