@@ -68,8 +68,8 @@ function generateStateHTML(stateData: StatePageData, baseHTML: string): string {
   // Add/update meta description
   if (html.includes('<meta name="description"')) {
     html = html.replace(
-      /<meta name="description" content=".*?">/,
-      `<meta name="description" content="${stateData.meta_description}">`
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${stateData.meta_description}" />`
     );
   } else {
     html = html.replace(
@@ -141,8 +141,8 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
   // Add/update meta description
   if (html.includes('<meta name="description"')) {
     html = html.replace(
-      /<meta name="description" content=".*?">/,
-      `<meta name="description" content="${cityData.meta_description}">`
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${cityData.meta_description}" />`
     );
   } else {
     html = html.replace(
@@ -217,7 +217,7 @@ const STATIC_ROUTES = [
   { path: 'resources', title: 'Medical Billing Resources & Guides | Medtransic', description: 'Free medical billing resources, guides, and tools to help healthcare practices optimize revenue cycle management.' },
   { path: 'faq', title: 'Medical Billing FAQs | Common RCM Questions Answered', description: 'Get answers to common questions about medical billing, revenue cycle management, coding, and healthcare reimbursement.' },
   { path: 'careers', title: 'Careers at Medtransic | Medical Billing Jobs', description: 'Join our team of medical billing experts. Explore career opportunities in revenue cycle management and healthcare billing.' },
-  { path: 'resources/billing-glossary', title: 'Medical Billing Glossary | RCM Terms & Definitions', description: 'Comprehensive glossary of medical billing and revenue cycle management terms, codes, and healthcare industry terminology.' },
+  { path: 'resources/billing-glossary', title: 'Medical Billing Glossary | RCM Terms & Definitions', description: 'Comprehensive medical billing glossary with 200+ essential terms, codes, and healthcare acronyms. Expert definitions for billing, coding, RCM, and healthcare compliance terminology.' },
   { path: 'privacy', title: 'Privacy Policy | Medtransic', description: 'Medtransic privacy policy outlining how we protect your personal information and maintain HIPAA compliance.' },
   { path: 'terms-of-service', title: 'Terms of Service | Medtransic', description: 'Terms and conditions for using Medtransic medical billing services and website.' },
   { path: 'hipaa-compliance', title: 'HIPAA Compliance | Secure Medical Billing | Medtransic', description: 'Learn how Medtransic ensures HIPAA compliance and protects patient health information in all billing operations.' },
@@ -233,18 +233,125 @@ const STATIC_ROUTES = [
   { path: 'ph', title: 'Medical Billing Services Philippines | Medtransic', description: 'Medtransic Philippines office offering expert medical billing and revenue cycle management services.' },
 ];
 
-// Service page routes
-const SERVICE_ROUTES = [
-  'rcm', 'medical-billing', 'ar-management', 'medical-coding', 'denial-management',
-  'eligibility-verification', 'credentialing', 'charge-entry-payment-posting',
-  'patient-billing-support', 'hospital-facility-billing', 'laboratory-billing',
-  'dme-billing', 'physician-billing', 'telehealth-billing', 'old-ar-cleanup',
-  'rcm-automation', 'practice-management-consulting', 'analytics-reporting',
-  'call-center-scheduling', 'payment-reconciliation', 'payer-contract-negotiation',
-  'compliance-hipaa-audits', 'mips-macra-reporting', 'ehr-emr-integration',
-  'staff-training-sop', 'virtual-assistants', 'prior-authorization',
-  'payer-enrollment', 'outsourcing-medical-billing'
-];
+// Service page routes with specific metadata
+const SERVICE_ROUTES = {
+  'rcm': {
+    title: 'Revenue Cycle Management Services | End-to-End RCM Solutions',
+    description: 'End-to-end RCM services: 99% clean claims, 50% faster payments, 24/7 monitoring. Certified billing specialists reduce denials & maximize revenue. Free RCM assessment available!'
+  },
+  'medical-billing': {
+    title: 'Medical Billing Services | Professional Healthcare Billing',
+    description: 'Professional medical billing services with 99% clean claims rate. Expert coding, claims management, and denial resolution. Increase revenue and reduce administrative burden.'
+  },
+  'ar-management': {
+    title: 'Accounts Receivable Management | AR Collection Services',
+    description: 'Comprehensive AR management services reduce aging accounts by 60%. Expert follow-up, claims tracking, and payment posting. Accelerate cash flow for your practice.'
+  },
+  'medical-coding': {
+    title: 'Medical Coding Services | Certified Professional Coders',
+    description: 'Certified medical coding services ensure accurate claim submissions. ICD-10, CPT, HCPCS coding by experienced professionals. Reduce denials and maximize reimbursements.'
+  },
+  'denial-management': {
+    title: 'Denial Management Services | Claims Appeal Experts',
+    description: 'Expert denial management reduces claim denials by 45%. Proactive denial prevention, root cause analysis, and strategic appeals. Recover lost revenue with 85% success rate.'
+  },
+  'eligibility-verification': {
+    title: 'Insurance Eligibility Verification | Real-Time Coverage Checks',
+    description: 'Real-time eligibility checks reduce denials 85% with 98% accuracy. Verify coverage, deductibles, prior auth in under 10 seconds. Increase upfront collections 40%. Free verification audit!'
+  },
+  'credentialing': {
+    title: 'Provider Credentialing Services | Fast-Track Enrollment',
+    description: 'Streamlined provider credentialing gets you enrolled 40% faster. Expert handling of CAQH, insurance applications, and re-credentialing. Start billing sooner with zero errors.'
+  },
+  'charge-entry-payment-posting': {
+    title: 'Charge Entry & Payment Posting | Accurate Billing Services',
+    description: 'Accurate charge entry and payment posting services with 99.8% accuracy. Same-day posting, detailed reconciliation, and variance detection. Improve cash flow visibility.'
+  },
+  'patient-billing-support': {
+    title: 'Patient Billing Support Services | Patient Statement Services',
+    description: 'Increase patient collections 45% with clear statements and flexible payment plans. 85% satisfaction rate, reduce call volume 60%. Multilingual support, online portal, financial counseling 24/7!'
+  },
+  'hospital-facility-billing': {
+    title: 'Hospital & Facility Billing Services | Inpatient & Outpatient RCM',
+    description: 'Specialized hospital and facility billing for inpatient, outpatient, and emergency services. Expert DRG coding, charge capture, and compliance monitoring. Reduce claim errors by 65%.'
+  },
+  'laboratory-billing': {
+    title: 'Laboratory Billing Services | Clinical Lab RCM Solutions',
+    description: 'Specialized laboratory billing services for clinical labs and pathology practices. Expert handling of complex LCD requirements, ABN processes, and modifier usage. Increase lab revenue 25%.'
+  },
+  'dme-billing': {
+    title: 'DME Billing Services | Durable Medical Equipment RCM',
+    description: 'Specialized DMEPOS billing for medical equipment suppliers. Expert prior authorization management, CMN documentation, and rental billing compliance. 92% PA approval rate.'
+  },
+  'physician-billing': {
+    title: 'Physician Billing Services | Independent Practice RCM',
+    description: 'Comprehensive physician billing services for solo and group practices. Maximize collections with expert E/M coding, modifier usage, and insurance follow-up. Reduce overhead by 30%.'
+  },
+  'telehealth-billing': {
+    title: 'Telehealth Billing Services | Virtual Care RCM Solutions',
+    description: 'Specialized telehealth and telemedicine billing services. Navigate complex virtual care regulations, modifiers, and reimbursement rules. Ensure compliant billing for all platforms.'
+  },
+  'old-ar-cleanup': {
+    title: 'Old AR Cleanup | Recover 15-25% of Aged A/R',
+    description: 'Recover 15-25% of aged A/R over 120 days with dedicated recovery team. $85K average project recovery in 90 days. Strategic appeals, patient collection. 100% contingency-based pricing!'
+  },
+  'rcm-automation': {
+    title: 'RCM Automation Services | AI-Powered Revenue Cycle',
+    description: 'AI-powered RCM automation reduces manual tasks by 70%. Automated eligibility checks, claims scrubbing, and payment posting. Increase efficiency while reducing operational costs 40%.'
+  },
+  'practice-management-consulting': {
+    title: 'Practice Management Consulting | Healthcare Operations Experts',
+    description: 'Healthcare consulting experts optimize workflows & increase profitability. 35% efficiency gains, 25% cost reduction, proven strategies. Free practice assessment for medical practices!'
+  },
+  'analytics-reporting': {
+    title: 'Medical Billing Analytics & Reporting | Data-Driven Insights',
+    description: 'Comprehensive analytics and reporting services provide actionable insights. Track KPIs, identify revenue trends, and optimize performance. Real-time dashboards and custom reports.'
+  },
+  'call-center-scheduling': {
+    title: 'Call Center & Scheduling Services | Virtual Receptionist',
+    description: 'Professional call center and patient scheduling services. 24/7 coverage, appointment reminders, and insurance verification. Reduce no-shows by 40% and improve patient satisfaction.'
+  },
+  'payment-reconciliation': {
+    title: 'Payment Reconciliation Services | Medical Payment Processing',
+    description: 'Automated variance detection identifies underpayments before they\'re lost. Recover $45K annually with contract verification. 85% appeal success rate, 100% claims audited. Audit-ready reports!'
+  },
+  'payer-contract-negotiation': {
+    title: 'Payer Contract Negotiation | Maximize Reimbursement Rates',
+    description: 'Expert payer contract negotiation increases reimbursement rates 15-25%. Strategic analysis, leverage competitive data, and negotiate favorable terms with insurance companies.'
+  },
+  'compliance-hipaa-audits': {
+    title: 'HIPAA Compliance & Audits | Healthcare Security Services',
+    description: 'Comprehensive HIPAA compliance audits and security assessments. Identify vulnerabilities, implement safeguards, and maintain ongoing compliance. Reduce audit risk and avoid penalties.'
+  },
+  'mips-macra-reporting': {
+    title: 'MIPS & MACRA Reporting Services | Quality Payment Program',
+    description: 'Expert MIPS and MACRA reporting maximizes quality payment incentives. Navigate complex requirements, submit accurate data, and achieve positive payment adjustments. Avoid penalties.'
+  },
+  'ehr-emr-integration': {
+    title: 'EHR/EMR Integration 2025 | Seamless Data Flow | Zero Data Loss',
+    description: 'Seamless EHR/EMR integration with Epic, Cerner, Athenahealth, eClinicalWorks using HL7/FHIR standards. Real-time charge capture, automated demographic updates, and bidirectional claim status feeds.'
+  },
+  'staff-training-sop': {
+    title: 'Medical Billing Staff Training & SOP Services | Billing Education',
+    description: 'Comprehensive billing staff training reduces errors 45%, accelerates onboarding 60%, boosts productivity 35%. Role-specific curriculum, documented SOPs, quality standards. Certification support!'
+  },
+  'virtual-assistants': {
+    title: 'Medical Virtual Assistant Services | Remote Healthcare Support',
+    description: 'Professional medical virtual assistants for administrative tasks, scheduling, and patient communication. Reduce overhead costs by 50% while maintaining quality service and support.'
+  },
+  'prior-authorization': {
+    title: 'Prior Authorization Services | Fast-Track PA Approvals',
+    description: 'Expert prior authorization services achieve 92% approval rate. Navigate complex payer requirements, expedite submissions, and reduce treatment delays. Real-time tracking and status updates.'
+  },
+  'payer-enrollment': {
+    title: 'Payer Enrollment Services | Insurance Credentialing',
+    description: 'Fast-track payer enrollment with Medicare, Medicaid, and commercial insurance plans. Expert application management, follow-up, and credential verification. Start billing 40% faster.'
+  },
+  'outsourcing-medical-billing': {
+    title: 'Outsourcing Medical Billing Services | Full-Service RCM',
+    description: 'Reduce costs by 30-50% and increase revenue by 15-25% with expert outsourced billing services. Complete revenue cycle management, dedicated account managers, and transparent reporting.'
+  }
+};
 
 // Specialty page routes
 const SPECIALTY_ROUTES = [
@@ -272,8 +379,8 @@ function generateStaticPageHTML(route: { path: string; title: string; descriptio
   // Update meta description
   if (html.includes('<meta name="description"')) {
     html = html.replace(
-      /<meta name="description" content=".*?">/,
-      `<meta name="description" content="${route.description}">`
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${route.description}" />`
     );
   } else {
     html = html.replace(
@@ -307,11 +414,21 @@ function generateStaticPageHTML(route: { path: string; title: string; descriptio
 }
 
 function generateServicePageHTML(serviceSlug: string, baseHTML: string): string {
-  const serviceName = serviceSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-  const title = `${serviceName} Services | Medical Billing Solutions | Medtransic`;
-  const description = `Expert ${serviceName.toLowerCase()} services for healthcare practices. Optimize your revenue cycle with professional medical billing support.`;
+  const serviceData = SERVICE_ROUTES[serviceSlug as keyof typeof SERVICE_ROUTES];
 
-  return generateStaticPageHTML({ path: `services/${serviceSlug}`, title, description }, baseHTML);
+  if (!serviceData) {
+    // Fallback for services not in the mapping
+    const serviceName = serviceSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    const title = `${serviceName} Services | Medical Billing Solutions | Medtransic`;
+    const description = `Expert ${serviceName.toLowerCase()} services for healthcare practices. Optimize your revenue cycle with professional medical billing support.`;
+    return generateStaticPageHTML({ path: `services/${serviceSlug}`, title, description }, baseHTML);
+  }
+
+  return generateStaticPageHTML({
+    path: `services/${serviceSlug}`,
+    title: serviceData.title,
+    description: serviceData.description
+  }, baseHTML);
 }
 
 function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): string {
@@ -501,7 +618,7 @@ async function prerenderPages() {
   let serviceSuccess = 0;
   let serviceError = 0;
 
-  for (const serviceSlug of SERVICE_ROUTES) {
+  for (const serviceSlug of Object.keys(SERVICE_ROUTES)) {
     try {
       console.log(`🔄 Generating HTML for: services/${serviceSlug}...`);
       const pageHTML = generateServicePageHTML(serviceSlug, baseHTML);
