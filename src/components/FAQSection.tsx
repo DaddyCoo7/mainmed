@@ -298,8 +298,8 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs, specialtyName }) => {
                     className="w-full px-6 py-5 flex items-start justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                     aria-expanded={isExpanded}
                   >
-                    <div className="flex-1 pr-4">
-                      <div className="flex items-center gap-2 mb-2">
+                    <span className="flex-1 pr-4">
+                      <span className="flex items-center gap-2 mb-2">
                         <span
                           className="text-xs font-semibold px-3 py-1 rounded-full"
                           style={{
@@ -309,18 +309,18 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs, specialtyName }) => {
                         >
                           {getCategoryLabel(faq.category)}
                         </span>
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 leading-tight">
+                      </span>
+                      <span className="block text-lg font-bold text-gray-900 dark:text-gray-100 leading-tight">
                         {faq.question}
-                      </h3>
-                    </div>
-                    <motion.div
+                      </span>
+                    </span>
+                    <motion.span
                       animate={{ rotate: isExpanded ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="flex-shrink-0 mt-1"
+                      className="flex-shrink-0 mt-1 inline-block"
                     >
                       <ChevronDown className="w-6 h-6 text-gray-400" />
-                    </motion.div>
+                    </motion.span>
                   </button>
 
                   <AnimatePresence>
