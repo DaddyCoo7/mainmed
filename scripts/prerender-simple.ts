@@ -118,6 +118,11 @@ function generateStateHTML(stateData: StatePageData, baseHTML: string): string {
     `  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>\n  </head>`
   );
 
+  // Add static H1 and content for SEO crawlers (screen reader only technique)
+  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${stateData.hero_title}</h1><p>${stateData.hero_description}</p></div></div>`;
+
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
+
   // Add a preload tag for state data to speed up client-side hydration
   const stateDataScript = `
   <script id="state-data-${stateData.slug}" type="application/json">
@@ -194,6 +199,11 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
     '</head>',
     `  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>\n  </head>`
   );
+
+  // Add static H1 and content for SEO crawlers (screen reader only technique)
+  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${cityData.hero_title}</h1><p>${cityData.hero_description}</p></div></div>`;
+
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
   // Add city data for client-side hydration
   const cityDataScript = `
@@ -409,6 +419,14 @@ function generateStaticPageHTML(route: { path: string; title: string; descriptio
   <meta name="twitter:description" content="${route.description}">`;
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
+
+  // Extract H1 from title (remove " | Medtransic" suffix if present)
+  const h1Text = route.title.replace(/ \| Medtransic$/, '');
+
+  // Add static H1 and content for SEO crawlers (screen reader only technique)
+  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${h1Text}</h1><p>${route.description}</p></div></div>`;
+
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
   return html;
 }
