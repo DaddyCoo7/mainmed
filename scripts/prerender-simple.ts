@@ -99,6 +99,45 @@ function generateStateHTML(stateData: StatePageData, baseHTML: string): string {
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
+  // Add meta robots tag
+  if (!html.includes('<meta name="robots"')) {
+    html = html.replace(
+      '</head>',
+      '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n  </head>'
+    );
+  }
+
+  // Add breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://medtransic.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Medical Billing Services",
+        "item": "https://medtransic.com/medical-billing-services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": stateData.state_name,
+        "item": canonicalURL
+      }
+    ]
+  };
+
+  html = html.replace(
+    '</head>',
+    `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n  </head>`
+  );
+
   // Add structured data for the state page
   const structuredData = {
     "@context": "https://schema.org",
@@ -176,6 +215,51 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
   <meta name="twitter:description" content="${cityData.meta_description}">`;
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
+
+  // Add meta robots tag
+  if (!html.includes('<meta name="robots"')) {
+    html = html.replace(
+      '</head>',
+      '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n  </head>'
+    );
+  }
+
+  // Add breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://medtransic.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Medical Billing Services",
+        "item": "https://medtransic.com/medical-billing-services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": stateData.state_name,
+        "item": `https://medtransic.com/medical-billing-services/${cityData.state_slug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": cityData.city_name,
+        "item": canonicalURL
+      }
+    ]
+  };
+
+  html = html.replace(
+    '</head>',
+    `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n  </head>`
+  );
 
   // Add structured data for the city page
   const structuredData = {
@@ -571,7 +655,16 @@ const SPECIALTY_ROUTES = {
   }
 };
 
-function generateStaticPageHTML(route: { path: string; title: string; description: string }, baseHTML: string): string {
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+function generateStaticPageHTML(
+  route: { path: string; title: string; description: string },
+  baseHTML: string,
+  breadcrumbs?: BreadcrumbItem[]
+): string {
   let html = baseHTML;
 
   // Update title
@@ -619,6 +712,25 @@ function generateStaticPageHTML(route: { path: string; title: string; descriptio
     );
   }
 
+  // Add Breadcrumb Schema if breadcrumbs provided
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.name,
+        "item": item.url
+      }))
+    };
+
+    html = html.replace(
+      '</head>',
+      `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n  </head>`
+    );
+  }
+
   // Extract H1 from title (remove " | Medtransic" suffix if present)
   const h1Text = route.title.replace(/ \| Medtransic$/, '');
 
@@ -638,21 +750,36 @@ function generateServicePageHTML(serviceSlug: string, baseHTML: string): string 
     const serviceName = serviceSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const title = `${serviceName} Services | Medical Billing Solutions | Medtransic`;
     const description = `Expert ${serviceName.toLowerCase()} services for healthcare practices. Optimize your revenue cycle with professional medical billing support.`;
-    return generateStaticPageHTML({ path: `services/${serviceSlug}`, title, description }, baseHTML);
+
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', url: 'https://medtransic.com/' },
+      { name: 'Services', url: 'https://medtransic.com/services' },
+      { name: serviceName, url: `https://medtransic.com/services/${serviceSlug}` }
+    ];
+
+    return generateStaticPageHTML({ path: `services/${serviceSlug}`, title, description }, baseHTML, breadcrumbs);
   }
 
-  // Generate HTML with service-specific structured data
+  // Create breadcrumbs
+  const serviceName = serviceData.title.split('|')[0].trim();
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: 'Home', url: 'https://medtransic.com/' },
+    { name: 'Services', url: 'https://medtransic.com/services' },
+    { name: serviceName, url: `https://medtransic.com/services/${serviceSlug}` }
+  ];
+
+  // Generate HTML with service-specific structured data and breadcrumbs
   let html = generateStaticPageHTML({
     path: `services/${serviceSlug}`,
     title: serviceData.title,
     description: serviceData.description
-  }, baseHTML);
+  }, baseHTML, breadcrumbs);
 
   // Add Service schema
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": serviceData.title.split('|')[0].trim(),
+    "name": serviceName,
     "description": serviceData.description,
     "provider": {
       "@type": "MedicalBusiness",
@@ -682,21 +809,36 @@ function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): str
     const specialtyName = specialtySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const title = `${specialtyName} Medical Billing Services | RCM Solutions | Medtransic`;
     const description = `Specialized medical billing services for ${specialtyName.toLowerCase()} practices. Expert revenue cycle management tailored to your specialty.`;
-    return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML);
+
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', url: 'https://medtransic.com/' },
+      { name: 'Specialties', url: 'https://medtransic.com/specialties' },
+      { name: specialtyName, url: `https://medtransic.com/specialties/${specialtySlug}` }
+    ];
+
+    return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML, breadcrumbs);
   }
 
-  // Generate HTML with specialty-specific structured data
+  // Create breadcrumbs
+  const specialtyName = specialtyData.title.split('|')[0].trim();
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: 'Home', url: 'https://medtransic.com/' },
+    { name: 'Specialties', url: 'https://medtransic.com/specialties' },
+    { name: specialtyName, url: `https://medtransic.com/specialties/${specialtySlug}` }
+  ];
+
+  // Generate HTML with specialty-specific structured data and breadcrumbs
   let html = generateStaticPageHTML({
     path: `specialties/${specialtySlug}`,
     title: specialtyData.title,
     description: specialtyData.description
-  }, baseHTML);
+  }, baseHTML, breadcrumbs);
 
   // Add MedicalSpecialty schema
   const specialtySchema = {
     "@context": "https://schema.org",
     "@type": "MedicalSpecialty",
-    "name": specialtyData.title.split('|')[0].trim(),
+    "name": specialtyName,
     "description": specialtyData.description,
     "url": `https://medtransic.com/specialties/${specialtySlug}`,
     "provider": {
@@ -863,7 +1005,15 @@ async function prerenderPages() {
   for (const route of STATIC_ROUTES) {
     try {
       console.log(`🔄 Generating HTML for: ${route.path}...`);
-      const pageHTML = generateStaticPageHTML(route, baseHTML);
+
+      // Create breadcrumbs for static pages
+      const pageName = route.title.split('|')[0].trim();
+      const breadcrumbs: BreadcrumbItem[] = [
+        { name: 'Home', url: 'https://medtransic.com/' },
+        { name: pageName, url: `https://medtransic.com/${route.path}` }
+      ];
+
+      const pageHTML = generateStaticPageHTML(route, baseHTML, breadcrumbs);
 
       const pagePath = join(distPath, route.path);
       mkdirSync(pagePath, { recursive: true });
