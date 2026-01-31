@@ -363,22 +363,213 @@ const SERVICE_ROUTES = {
   }
 };
 
-// Specialty page routes
-const SPECIALTY_ROUTES = [
-  'cardiology', 'physical-therapy', 'mental-health', 'orthopedics', 'dental',
-  'ophthalmology', 'obgyn', 'gastroenterology', 'urology', 'urgent-care',
-  'dermatology', 'allergy-immunology', 'pain-management', 'pediatrics', 'ent',
-  'pulmonology', 'plastic-surgery', 'family-medicine', 'chiropractic', 'nephrology',
-  'occupational-therapy', 'podiatry', 'anesthesiology', 'oncology', 'home-health',
-  'laboratories-pathology', 'durable-medical-equipment', 'pharmacy-billing',
-  'genetic-testing', 'respiratory-therapy', 'rheumatology', 'neurosurgery',
-  'thoracic-surgery', 'hematology', 'endocrinology', 'infectious-disease',
-  'wound-care', 'interventional-radiology', 'geriatrics', 'telemedicine',
-  'community-health-clinics', 'primary-care-practices', 'rehabilitation-sports-medicine',
-  'diagnostic-imaging-radiology', 'speech-therapy', 'sleep-medicine', 'pathology',
-  'emergency-medicine', 'occupational-health-clinics', 'oral-maxillofacial-surgery',
-  'clinical-research'
-];
+// Specialty page routes with detailed descriptions
+const SPECIALTY_ROUTES = {
+  'cardiology': {
+    title: 'Cardiology Billing Services | Heart Care RCM Experts | Medtransic',
+    description: 'Expert cardiology billing for CPT 93000-93799 codes. Specialized in ECG, stress tests, echocardiography, cardiac catheterization. Handle complex cardiovascular procedures, nuclear imaging, and EP studies. Maximize reimbursement for interventional cardiology.'
+  },
+  'physical-therapy': {
+    title: 'Physical Therapy Billing | PT RCM Services | Medtransic',
+    description: 'Specialized PT billing for CPT 97000-97799 codes. Expert handling of therapeutic procedures, manual therapy, modalities, and evaluations. Navigate Medicare therapy caps, KX modifiers, and functional reporting. Increase PT practice revenue 25%.'
+  },
+  'mental-health': {
+    title: 'Mental Health Billing Services | Behavioral Health RCM | Medtransic',
+    description: 'Expert mental health billing for psychiatry, psychology, counseling. Specialized in CPT 90791-90899 codes, telepsychiatry, group therapy, and complex E/M services. Handle commercial, Medicare, Medicaid with 95% clean claim rate.'
+  },
+  'orthopedics': {
+    title: 'Orthopedic Billing Services | Orthopedic Surgery RCM | Medtransic',
+    description: 'Specialized orthopedic billing for CPT 20000-29999 codes. Expert in joint replacements, arthroscopy, fracture care, spine surgery. Handle global periods, modifier 25/59 usage, DME billing. Maximize surgical and E/M reimbursements.'
+  },
+  'dental': {
+    title: 'Dental Billing Services | Dental Insurance Claims | Medtransic',
+    description: 'Comprehensive dental billing services for general, cosmetic, and specialty dentistry. Expert CDT code submission, insurance verification, treatment planning. Handle PPO, HMO, Medicaid dental plans. Increase collections 30%.'
+  },
+  'ophthalmology': {
+    title: 'Ophthalmology Billing | Eye Care RCM Services | Medtransic',
+    description: 'Expert ophthalmology billing for CPT 65000-68899 codes. Specialized in cataract surgery, LASIK, glaucoma care, retinal procedures. Handle medical vs. vision billing, refractive surgery, and complex eye exams. Optimize ASC billing.'
+  },
+  'obgyn': {
+    title: 'OB/GYN Billing Services | Women\'s Health RCM | Medtransic',
+    description: 'Specialized OB/GYN billing for prenatal care, deliveries, gynecological surgery. Expert CPT 59000-59899, 56000-58999 codes. Handle global maternity packages, infertility treatments, office procedures. Maximize reimbursement for women\'s health services.'
+  },
+  'gastroenterology': {
+    title: 'Gastroenterology Billing | GI RCM Services | Medtransic',
+    description: 'Expert GI billing for CPT 43000-49999 codes. Specialized in endoscopy, colonoscopy, EGD procedures, biopsies. Handle ASC billing, multiple procedures, sedation codes. Optimize facility and professional fee billing. Increase revenue 28%.'
+  },
+  'urology': {
+    title: 'Urology Billing Services | Urologic Surgery RCM | Medtransic',
+    description: 'Specialized urology billing for CPT 50000-55899 codes. Expert in cystoscopy, TURP, lithotripsy, prostate procedures. Handle office-based procedures, ASC services, oncology care. Maximize reimbursement for urological services.'
+  },
+  'urgent-care': {
+    title: 'Urgent Care Billing Services | Urgent Care RCM | Medtransic',
+    description: 'Fast-paced urgent care billing services. Expert E/M coding 99281-99285, laceration repairs, X-rays, occupational medicine. Handle workers\' comp, no-fault auto insurance, after-hours care. Reduce claim turnaround time 40%.'
+  },
+  'dermatology': {
+    title: 'Dermatology Billing Services | Skin Care RCM | Medtransic',
+    description: 'Expert dermatology billing for CPT 10000-11999 codes. Specialized in biopsies, excisions, Mohs surgery, cosmetic procedures. Handle medical vs. cosmetic billing, pathology integration, multiple lesion procedures. Increase dermatology revenue 30%.'
+  },
+  'allergy-immunology': {
+    title: 'Allergy & Immunology Billing | Allergy Testing RCM | Medtransic',
+    description: 'Specialized allergy billing for CPT 95004-95199 codes. Expert in skin testing, immunotherapy, pulmonary function tests, venom therapy. Handle multiple allergen codes, dose adjustments, and immunology services. Optimize allergy practice revenue.'
+  },
+  'pain-management': {
+    title: 'Pain Management Billing | Interventional Pain RCM | Medtransic',
+    description: 'Expert pain management billing for CPT 62000-64999 codes. Specialized in epidurals, nerve blocks, radiofrequency ablation, trigger point injections. Handle ASC procedures, fluoroscopy guidance, multiple injections. Maximize interventional pain revenue.'
+  },
+  'pediatrics': {
+    title: 'Pediatric Billing Services | Children\'s Health RCM | Medtransic',
+    description: 'Comprehensive pediatric billing for well-child visits, sick visits, immunizations. Expert E/M coding, preventive services, developmental screenings. Handle CHIP, Medicaid, VFC programs. Specialized in pediatric procedure coding and vaccine administration.'
+  },
+  'ent': {
+    title: 'ENT Billing Services | Otolaryngology RCM | Medtransic',
+    description: 'Expert ENT billing for CPT 69000-69979 codes. Specialized in sinus surgery, tonsillectomy, adenoidectomy, audiology services. Handle office procedures, allergy testing, sleep apnea devices. Maximize reimbursement for ENT and audiology services.'
+  },
+  'pulmonology': {
+    title: 'Pulmonology Billing Services | Respiratory Care RCM | Medtransic',
+    description: 'Specialized pulmonology billing for CPT 94010-94799 codes. Expert in PFTs, bronchoscopy, sleep studies, ventilation management. Handle critical care, hospital consults, COPD management. Optimize pulmonary function testing and procedure billing.'
+  },
+  'plastic-surgery': {
+    title: 'Plastic Surgery Billing | Cosmetic & Reconstructive RCM | Medtransic',
+    description: 'Expert plastic surgery billing for CPT 15000-17999 codes. Specialized in reconstructive procedures, cosmetic surgery, burn care, flaps. Navigate medical necessity requirements, modifier usage, before/after documentation. Maximize insurance reimbursements.'
+  },
+  'family-medicine': {
+    title: 'Family Medicine Billing | Primary Care RCM | Medtransic',
+    description: 'Comprehensive family medicine billing for all ages. Expert E/M coding 99202-99215, preventive services, chronic care management. Handle Medicare AWVs, TCM, care coordination. Maximize reimbursement for primary care services and quality programs.'
+  },
+  'chiropractic': {
+    title: 'Chiropractic Billing Services | Chiropractic RCM | Medtransic',
+    description: 'Specialized chiropractic billing for CPT 98940-98943 codes. Expert in spinal manipulation, therapy modalities, evaluations. Handle Medicare limitations, PI cases, workers\' comp. Navigate AT modifier requirements and documentation. Increase collections 35%.'
+  },
+  'nephrology': {
+    title: 'Nephrology Billing Services | Kidney Care RCM | Medtransic',
+    description: 'Expert nephrology billing for CPT 90935-90999 codes. Specialized in dialysis services, kidney disease management, vascular access. Handle ESRD bundles, home dialysis, transplant care. Maximize reimbursement for nephrology and dialysis services.'
+  },
+  'occupational-therapy': {
+    title: 'Occupational Therapy Billing | OT RCM Services | Medtransic',
+    description: 'Specialized OT billing for CPT 97000-97799 codes. Expert in ADL training, cognitive therapy, hand therapy, evaluations. Navigate Medicare caps, KX modifiers, functional reporting. Handle pediatric and adult OT services. Increase OT revenue 28%.'
+  },
+  'podiatry': {
+    title: 'Podiatry Billing Services | Foot & Ankle Care RCM | Medtransic',
+    description: 'Expert podiatry billing for CPT 28000-28899 codes. Specialized in foot surgery, wound care, diabetic foot care, orthotics. Handle routine foot care limitations, medical necessity, LOPS documentation. Maximize reimbursement for podiatric services.'
+  },
+  'anesthesiology': {
+    title: 'Anesthesiology Billing Services | Anesthesia RCM | Medtransic',
+    description: 'Specialized anesthesiology billing with time-based unit calculations. Expert in base units, modifying units, physical status codes. Handle MAC, regional anesthesia, pain management, critical care. Maximize anesthesia reimbursement with accurate documentation.'
+  },
+  'oncology': {
+    title: 'Oncology Billing Services | Cancer Care RCM | Medtransic',
+    description: 'Expert oncology billing for chemotherapy, radiation therapy, infusion services. Specialized in J-codes, HCPCS drugs, OCM program. Handle complex medication billing, clinical trials, supportive care. Maximize oncology practice revenue and OCM bonuses.'
+  },
+  'home-health': {
+    title: 'Home Health Billing Services | Home Care RCM | Medtransic',
+    description: 'Comprehensive home health billing for Medicare, Medicaid, commercial insurance. Expert OASIS assessments, PDGM billing, HHRGs. Handle skilled nursing, PT, OT, aide services. Maximize reimbursement for home health agencies with 98% clean claim rate.'
+  },
+  'laboratories-pathology': {
+    title: 'Laboratory & Pathology Billing | Lab RCM Services | Medtransic',
+    description: 'Specialized laboratory billing for CPT 80000-89999 codes. Expert in clinical lab, anatomic pathology, molecular testing. Handle LCD compliance, ABNs, limited coverage policies. Maximize lab reimbursement with proper modifier usage and documentation.'
+  },
+  'durable-medical-equipment': {
+    title: 'DME Billing Services | Medical Equipment RCM | Medtransic',
+    description: 'Expert DME billing for wheelchairs, oxygen, CPAP, orthotics, prosthetics. Specialized in prior authorizations, CMNs, rental billing, purchase options. Handle competitive bidding, replacement schedules. Maximize DME supplier revenue with 92% PA approval rate.'
+  },
+  'pharmacy-billing': {
+    title: 'Pharmacy Billing Services | Specialty Pharmacy RCM | Medtransic',
+    description: 'Specialized pharmacy billing for specialty medications, compounding, infusion pharmacy. Expert NDC codes, DAW codes, prior authorizations. Handle 340B programs, manufacturer copay assistance, reimbursement optimization. Increase pharmacy revenue 25%.'
+  },
+  'genetic-testing': {
+    title: 'Genetic Testing Billing | Molecular Diagnostics RCM | Medtransic',
+    description: 'Expert genetic testing billing for molecular diagnostics, hereditary cancer panels, PGx testing. Navigate complex LCD requirements, medical necessity documentation, ABNs. Handle commercial payers, Medicare, Medicaid. Maximize genetic lab reimbursement.'
+  },
+  'respiratory-therapy': {
+    title: 'Respiratory Therapy Billing | RT Services RCM | Medtransic',
+    description: 'Specialized respiratory therapy billing for CPT 94002-94799 codes. Expert in ventilator management, aerosol treatments, pulmonary rehab, sleep studies. Handle hospital-based and outpatient RT services. Optimize respiratory care billing and documentation.'
+  },
+  'rheumatology': {
+    title: 'Rheumatology Billing Services | Arthritis Care RCM | Medtransic',
+    description: 'Expert rheumatology billing for autoimmune diseases, arthritis care, infusion therapy. Specialized in biologic medications, joint injections, imaging. Handle prior authorizations, specialty drug billing, complex E/M services. Maximize rheumatology practice revenue.'
+  },
+  'neurosurgery': {
+    title: 'Neurosurgery Billing Services | Brain & Spine Surgery RCM | Medtransic',
+    description: 'Specialized neurosurgery billing for CPT 61000-64999 codes. Expert in cranial procedures, spine surgery, peripheral nerve surgery. Handle complex surgical coding, critical care, global periods. Maximize neurosurgical reimbursement with accurate documentation.'
+  },
+  'thoracic-surgery': {
+    title: 'Thoracic Surgery Billing | Cardiothoracic RCM | Medtransic',
+    description: 'Expert thoracic surgery billing for CPT 32000-33999 codes. Specialized in lung surgery, cardiac surgery, esophageal procedures. Handle CABG, valve replacements, thoracoscopy. Maximize reimbursement for cardiothoracic and thoracic surgical services.'
+  },
+  'hematology': {
+    title: 'Hematology Billing Services | Blood Disorder RCM | Medtransic',
+    description: 'Specialized hematology billing for blood disorders, coagulation management, transfusion services. Expert in factor replacement, anticoagulation clinics, bone marrow procedures. Handle complex drug billing, infusion services, laboratory integration. Optimize hematology revenue.'
+  },
+  'endocrinology': {
+    title: 'Endocrinology Billing Services | Diabetes & Hormone Care RCM | Medtransic',
+    description: 'Expert endocrinology billing for diabetes management, thyroid care, hormone disorders. Specialized in continuous glucose monitoring, insulin pumps, bone density testing. Handle diabetes education, nutrition counseling, endocrine procedures. Maximize endocrinology revenue.'
+  },
+  'infectious-disease': {
+    title: 'Infectious Disease Billing | ID Specialist RCM | Medtransic',
+    description: 'Specialized infectious disease billing for hospital consults, HIV care, antimicrobial management. Expert in prolonged services, complex E/M coding, infusion therapy. Handle hepatitis C treatment, travel medicine, infection prevention services. Optimize ID physician revenue.'
+  },
+  'wound-care': {
+    title: 'Wound Care Billing Services | Wound Center RCM | Medtransic',
+    description: 'Expert wound care billing for CPT 11000-11999 codes. Specialized in debridement, biologics, hyperbaric oxygen, skin substitutes. Handle outpatient wound centers, HOPD billing, product billing. Maximize reimbursement for advanced wound care services.'
+  },
+  'interventional-radiology': {
+    title: 'Interventional Radiology Billing | IR Procedures RCM | Medtransic',
+    description: 'Specialized IR billing for CPT 36000-37799 codes. Expert in catheter procedures, embolization, biopsies, ablations. Handle professional and technical components, multiple procedures, image guidance. Maximize interventional radiology revenue with accurate coding.'
+  },
+  'geriatrics': {
+    title: 'Geriatrics Billing Services | Senior Care RCM | Medtransic',
+    description: 'Comprehensive geriatrics billing for elderly care, memory care, chronic disease management. Expert in Medicare AWVs, CCM, TCM, home visits. Handle nursing home billing, hospice care, palliative care. Maximize reimbursement for geriatric services.'
+  },
+  'telemedicine': {
+    title: 'Telemedicine Billing Services | Virtual Care RCM | Medtransic',
+    description: 'Expert telemedicine billing with modifier 95/GT expertise. Navigate telehealth CPT codes, originating/distant site requirements, state regulations. Handle virtual E/M visits, remote monitoring, e-consults. Maximize reimbursement for all telehealth platforms.'
+  },
+  'community-health-clinics': {
+    title: 'Community Health Center Billing | FQHC RCM | Medtransic',
+    description: 'Specialized FQHC billing for community health centers. Expert in PPS rates, scope of services, enabling services, sliding fee scales. Handle UDS reporting, HRSA compliance, wraparound services. Maximize PPS reimbursement and grant reporting.'
+  },
+  'primary-care-practices': {
+    title: 'Primary Care Billing Services | Family Practice RCM | Medtransic',
+    description: 'Comprehensive primary care billing for family medicine, internal medicine, pediatrics. Expert E/M coding, preventive services, chronic care management, quality programs. Handle MIPS, PCMH, value-based care. Maximize primary care revenue and quality bonuses.'
+  },
+  'rehabilitation-sports-medicine': {
+    title: 'Rehabilitation & Sports Medicine Billing | Sports RCM | Medtransic',
+    description: 'Expert sports medicine billing for CPT 97000-97799, 20000-29999 codes. Specialized in orthopedic rehabilitation, sports injuries, athletic training services. Handle PT, OT, chiropractic services. Maximize sports medicine and rehabilitation revenue.'
+  },
+  'diagnostic-imaging-radiology': {
+    title: 'Radiology Billing Services | Imaging Center RCM | Medtransic',
+    description: 'Specialized radiology billing for CPT 70000-79999 codes. Expert in X-ray, CT, MRI, ultrasound, mammography. Handle professional and technical components, contrast billing, multiple views. Maximize imaging center and radiology practice revenue.'
+  },
+  'speech-therapy': {
+    title: 'Speech Therapy Billing | Speech-Language Pathology RCM | Medtransic',
+    description: 'Expert speech therapy billing for CPT 92507-92609 codes. Specialized in evaluations, individual therapy, group therapy, swallowing studies. Navigate Medicare caps, KX modifiers, functional reporting. Handle pediatric and adult SLP services. Increase revenue 30%.'
+  },
+  'sleep-medicine': {
+    title: 'Sleep Medicine Billing Services | Sleep Study RCM | Medtransic',
+    description: 'Specialized sleep medicine billing for CPT 95800-95811 codes. Expert in polysomnography, home sleep tests, CPAP management, split-night studies. Handle facility and professional fees, DMEPOS billing. Maximize sleep center revenue with accurate documentation.'
+  },
+  'pathology': {
+    title: 'Pathology Billing Services | Anatomic Pathology RCM | Medtransic',
+    description: 'Expert pathology billing for CPT 88000-88399 codes. Specialized in surgical pathology, cytology, molecular pathology, immunohistochemistry. Handle TC/PC components, specimen types, additional studies. Maximize pathology lab reimbursement with proper coding.'
+  },
+  'emergency-medicine': {
+    title: 'Emergency Medicine Billing | ED Physician RCM | Medtransic',
+    description: 'Fast-paced emergency medicine billing for CPT 99281-99288 codes. Expert in critical care, trauma care, observation services, procedures. Handle modifier 25 usage, facility fees, professional services. Maximize EM physician revenue with accurate documentation.'
+  },
+  'occupational-health-clinics': {
+    title: 'Occupational Health Billing | Workers\' Comp RCM | Medtransic',
+    description: 'Specialized occupational health billing for workers\' compensation, DOT physicals, drug screening, immunizations. Expert in state-specific workers\' comp billing, fee schedules, authorization requirements. Handle employer contracts, surveillance exams. Increase revenue 28%.'
+  },
+  'oral-maxillofacial-surgery': {
+    title: 'Oral Surgery Billing | Maxillofacial Surgery RCM | Medtransic',
+    description: 'Expert oral surgery billing for CPT/CDT codes. Specialized in dental extractions, wisdom teeth, dental implants, jaw surgery, TMJ treatment. Navigate medical vs. dental billing, medical necessity, anesthesia billing. Maximize oral surgeon revenue.'
+  },
+  'clinical-research': {
+    title: 'Clinical Research Billing | Clinical Trial RCM | Medtransic',
+    description: 'Specialized clinical research billing for sponsored trials, investigator-initiated studies. Expert in Medicare clinical trial policy, standard of care vs. research costs, protocol billing grids. Handle sponsor invoicing, patient billing separation, compliance documentation.'
+  }
+};
 
 function generateStaticPageHTML(route: { path: string; title: string; description: string }, baseHTML: string): string {
   let html = baseHTML;
@@ -450,11 +641,21 @@ function generateServicePageHTML(serviceSlug: string, baseHTML: string): string 
 }
 
 function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): string {
-  const specialtyName = specialtySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-  const title = `${specialtyName} Medical Billing Services | RCM Solutions | Medtransic`;
-  const description = `Specialized medical billing services for ${specialtyName.toLowerCase()} practices. Expert revenue cycle management tailored to your specialty.`;
+  const specialtyData = SPECIALTY_ROUTES[specialtySlug as keyof typeof SPECIALTY_ROUTES];
 
-  return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML);
+  if (!specialtyData) {
+    // Fallback for specialties not in the mapping
+    const specialtyName = specialtySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    const title = `${specialtyName} Medical Billing Services | RCM Solutions | Medtransic`;
+    const description = `Specialized medical billing services for ${specialtyName.toLowerCase()} practices. Expert revenue cycle management tailored to your specialty.`;
+    return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML);
+  }
+
+  return generateStaticPageHTML({
+    path: `specialties/${specialtySlug}`,
+    title: specialtyData.title,
+    description: specialtyData.description
+  }, baseHTML);
 }
 
 async function prerenderPages() {
@@ -669,7 +870,7 @@ async function prerenderPages() {
   let specialtySuccess = 0;
   let specialtyError = 0;
 
-  for (const specialtySlug of SPECIALTY_ROUTES) {
+  for (const specialtySlug of Object.keys(SPECIALTY_ROUTES)) {
     try {
       console.log(`🔄 Generating HTML for: specialties/${specialtySlug}...`);
       const pageHTML = generateSpecialtyPageHTML(specialtySlug, baseHTML);

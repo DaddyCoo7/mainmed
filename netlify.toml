@@ -1,12 +1,14 @@
 [build]
 publish = "dist"
-command = "npx vite build"
+command = "npm run build"
 
+# Serve prerendered HTML files first, then fall back to SPA for client-side routes
 [[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
 force = false
+conditions = {Kind = ["document"]}
 
 [[headers]]
 for = "/*"
