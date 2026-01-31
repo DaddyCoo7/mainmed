@@ -465,6 +465,762 @@ export function generateStaticPageContent(def: PageDefinition): any {
           </div>
         </section>
       `
+    },
+    'contact': {
+      title: 'Contact Medtransic | Free Medical Billing Consultation | (866) 261-5711',
+      metaDescription: 'Contact Medtransic for expert medical billing services. Free consultation, custom ROI analysis, fast response. Call (866) 261-5711 or submit online inquiry.',
+      h1: 'Contact Medtransic for Expert Medical Billing Solutions',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Ready to transform your practice revenue? Our medical billing experts are here to answer your questions, discuss your specific needs, and provide a comprehensive analysis of how Medtransic can improve your practice financial performance.</p>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;text-align:center;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Call Us Today</h2>
+          <p style="font-size:2.5rem;font-weight:bold;color:#2563eb;margin-bottom:0.5rem;">(866) 261-5711</p>
+          <p style="color:#374151;">Monday - Friday: 8:00 AM - 6:00 PM EST</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">What to Expect When You Contact Us</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Free Consultation (30 Minutes)</h3>
+              <p style="color:#374151;">Discuss your practice challenges, billing concerns, and revenue goals with an RCM expert. No obligation, no pressure—just valuable insights.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Practice Revenue Analysis</h3>
+              <p style="color:#374151;">Receive detailed analysis of your current billing performance including collection rates, denial rates, AR aging, and specific improvement opportunities.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Custom ROI Calculation</h3>
+              <p style="color:#374151;">Get personalized ROI projection showing exactly how much additional revenue you could collect and cost savings you could achieve with our services.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f5f3ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#5b21b6;">Transparent Pricing Proposal</h3>
+              <p style="color:#374151;">Receive clear, detailed pricing information with no hidden fees. We explain exactly what services are included and what results you can expect.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Frequently Asked Questions</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.5rem;color:#1f2937;">How quickly will you respond?</h3>
+              <p style="color:#4b5563;">We respond to all inquiries within 2-4 business hours. For urgent matters, please call us directly at (866) 261-5711.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Is the consultation really free?</h3>
+              <p style="color:#4b5563;">Yes, absolutely. There is no cost and no obligation for the initial consultation and revenue analysis. We want to understand your needs and show you what's possible.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.5rem;color:#1f2937;">What information should I have ready?</h3>
+              <p style="color:#4b5563;">Basic information helpful for consultation includes: practice specialty, number of providers, monthly patient volume, current collection challenges, and EHR/PM system in use.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Do you work with practices nationwide?</h3>
+              <p style="color:#4b5563;">Yes, we serve healthcare practices in all 50 states. Our team handles billing across all state-specific requirements and regulations.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Office Information</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;color:#1f2937;">Medtransic - Corporate Headquarters</h3>
+            <p style="color:#374151;margin-bottom:0.5rem;"><strong>Phone:</strong> (866) 261-5711</p>
+            <p style="color:#374151;margin-bottom:0.5rem;"><strong>Email:</strong> info@medtransic.com</p>
+            <p style="color:#374151;margin-bottom:0.5rem;"><strong>Hours:</strong> Monday - Friday, 8:00 AM - 6:00 PM EST</p>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">Ready to Get Started?</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Contact us today to schedule your free consultation and discover how much more revenue your practice could be collecting.</p>
+          <div style="margin-bottom:1.5rem;">
+            <a href="tel:+18662615711" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;font-size:1.25rem;">Call (866) 261-5711</a>
+          </div>
+        </section>
+      `
+    },
+    'services': {
+      title: 'Medical Billing Services | Complete Revenue Cycle Solutions | Medtransic',
+      metaDescription: 'Comprehensive medical billing and RCM services: eligibility verification, coding, claim submission, denial management, AR follow-up, credentialing. 98% clean claim rates.',
+      h1: 'Comprehensive Medical Billing & Revenue Cycle Management Services',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic delivers end-to-end revenue cycle management services that maximize collections, reduce costs, and ensure compliance. Our comprehensive service portfolio covers every aspect of medical billing from patient registration through final payment collection.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Core Revenue Cycle Services</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;"><a href="/services/rcm" style="color:#1e40af;text-decoration:none;">Revenue Cycle Management (RCM)</a></h3>
+              <p style="color:#374151;">Complete end-to-end RCM services managing your entire revenue cycle from patient intake through final payment. Achieve 97-99% collection rates with systematic processes and expert management.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;"><a href="/services/medical-billing" style="color:#047857;text-decoration:none;">Medical Billing Services</a></h3>
+              <p style="color:#374151;">Expert claim submission, payment posting, and billing management with 98%+ clean claim rates. Accelerate cash flow while reducing administrative burden and costs.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-left:4px solid #dc2626;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;"><a href="/services/medical-coding" style="color:#991b1b;text-decoration:none;">Medical Coding</a></h3>
+              <p style="color:#374151;">Certified coders ensure accurate ICD-10, CPT, and HCPCS coding for maximum compliant reimbursement. Specialty-specific expertise across 40+ medical specialties.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid #eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;"><a href="/services/ar-management" style="color:#854d0e;text-decoration:none;">AR Management & Collections</a></h3>
+              <p style="color:#374151;">Systematic accounts receivable follow-up reduces AR aging to 25-30 days. Proactive claim work-up maximizes collections and minimizes write-offs.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f5f3ff;border-left:4px solid #7c3aed;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#5b21b6;"><a href="/services/denial-management" style="color:#5b21b6;text-decoration:none;">Denial Management</a></h3>
+              <p style="color:#374151;">Reduce denial rates below 5% with proactive claim scrubbing. 70-75% overturn rate on appealed denials with 24-48 hour turnaround on rework.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef7ff;border-left:4px solid #d946ef;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#a21caf;"><a href="/services/eligibility-verification" style="color:#a21caf;text-decoration:none;">Eligibility Verification</a></h3>
+              <p style="color:#374151;">Real-time insurance verification before appointments prevents denials and reduces bad debt. Automated verification integrated with major payers.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Specialized Services</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/credentialing" style="color:#1f2937;text-decoration:none;">Provider Credentialing & Enrollment</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Complete payer credentialing and enrollment management. CAQH profile setup, primary source verification, privileging, and ongoing maintenance.</p>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/prior-authorization" style="color:#1f2937;text-decoration:none;">Prior Authorization Management</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Streamlined prior authorization process reduces delays and improves approval rates. Handle requests, appeals, and peer-to-peer reviews efficiently.</p>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/charge-entry-payment-posting" style="color:#1f2937;text-decoration:none;">Charge Entry & Payment Posting</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Accurate charge capture and daily payment posting with detailed EOB analysis. Contract verification ensures correct reimbursement rates.</p>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/patient-billing-support" style="color:#1f2937;text-decoration:none;">Patient Billing & Support</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Professional patient statements, payment plans, and courteous collections. Multiple payment options improve patient satisfaction and collections.</p>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/compliance-hipaa-audits" style="color:#1f2937;text-decoration:none;">Compliance & HIPAA Audits</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Maintain compliance with HIPAA, Medicare, Medicaid, and commercial payer requirements. Regular internal audits identify and address compliance risks.</p>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/mips-macra-reporting" style="color:#1f2937;text-decoration:none;">MIPS & Quality Reporting</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Maximize MIPS performance and avoid penalties. Quality measure reporting, registry submissions, and performance optimization strategies.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#1e40af;">Technology & Integration Services</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/ehr-emr-integration" style="color:#1f2937;text-decoration:none;">EHR & EMR Integration</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Seamless integration with Epic, Cerner, Athenahealth, AdvancedMD, Kareo, NextGen, eClinicalWorks, and 50+ other systems.</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/rcm-automation" style="color:#1f2937;text-decoration:none;">RCM Automation & AI</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Advanced automation reduces manual work while improving accuracy. AI-powered claim scrubbing, denial prediction, and workflow optimization.</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;"><a href="/services/analytics-reporting" style="color:#1f2937;text-decoration:none;">Analytics & Reporting</a></h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Real-time dashboards with comprehensive KPIs. Track performance, identify trends, and make data-driven decisions with confidence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Discover the Right Services for Your Practice</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Contact us for a free consultation and customized service recommendation based on your practice needs.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Get Free Consultation</a>
+          </div>
+        </section>
+      `
+    },
+    'specialties': {
+      title: 'Medical Billing by Specialty | 40+ Specialties Served | Medtransic',
+      metaDescription: 'Specialized medical billing for 40+ specialties including cardiology, orthopedics, mental health, gastroenterology, urgent care, primary care. Expert specialty-specific coding.',
+      h1: 'Medical Billing Services by Specialty',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic provides specialized medical billing services across 40+ medical specialties. Our certified coders have deep expertise in specialty-specific coding requirements, compliance regulations, and payer policies ensuring maximum reimbursement for your practice.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Why Specialty-Specific Billing Matters</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Complex Coding Requirements</h3>
+              <p style="color:#374151;">Each specialty has unique CPT codes, modifiers, bundling rules, and documentation requirements. Our specialty-trained coders understand these nuances ensuring accurate coding.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Medical Necessity Standards</h3>
+              <p style="color:#374151;">LCD and NCD requirements vary by specialty and procedure. We maintain current knowledge of medical necessity criteria preventing denials before submission.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Payer-Specific Policies</h3>
+              <p style="color:#374151;">Commercial payers have specialty-specific coverage policies, prior authorization requirements, and billing guidelines. We navigate these complexities for maximum reimbursement.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Compliance & Audit Risk</h3>
+              <p style="color:#374151;">OIG and RAC audits often target specific specialties and procedures. Our compliant coding practices reduce audit exposure and protect your practice.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Specialties We Serve</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;">
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/cardiology" style="font-weight:600;color:#1f2937;text-decoration:none;">Cardiology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/orthopedics" style="font-weight:600;color:#1f2937;text-decoration:none;">Orthopedics</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/mental-health" style="font-weight:600;color:#1f2937;text-decoration:none;">Mental Health</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/gastroenterology" style="font-weight:600;color:#1f2937;text-decoration:none;">Gastroenterology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/dermatology" style="font-weight:600;color:#1f2937;text-decoration:none;">Dermatology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/ophthalmology" style="font-weight:600;color:#1f2937;text-decoration:none;">Ophthalmology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/obgyn" style="font-weight:600;color:#1f2937;text-decoration:none;">OB/GYN</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/urology" style="font-weight:600;color:#1f2937;text-decoration:none;">Urology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/urgent-care" style="font-weight:600;color:#1f2937;text-decoration:none;">Urgent Care</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/family-medicine" style="font-weight:600;color:#1f2937;text-decoration:none;">Family Medicine</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/pediatrics" style="font-weight:600;color:#1f2937;text-decoration:none;">Pediatrics</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/physical-therapy" style="font-weight:600;color:#1f2937;text-decoration:none;">Physical Therapy</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/oncology" style="font-weight:600;color:#1f2937;text-decoration:none;">Oncology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/pain-management" style="font-weight:600;color:#1f2937;text-decoration:none;">Pain Management</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/pulmonology" style="font-weight:600;color:#1f2937;text-decoration:none;">Pulmonology</a>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <a href="/specialties/ent" style="font-weight:600;color:#1f2937;text-decoration:none;">ENT</a>
+            </div>
+          </div>
+          <div style="margin-top:1.5rem;text-align:center;">
+            <p style="color:#4b5563;">And 35+ more specialties - <a href="/contact" style="color:#2563eb;text-decoration:underline;">contact us</a> to learn about your specialty</p>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#1e40af;">Specialty-Specific Expertise Delivers Results</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">98-99%</div>
+              <div style="color:#374151;">Clean Claim Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">&lt;4%</div>
+              <div style="color:#374151;">Denial Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">96-98%</div>
+              <div style="color:#374151;">Collection Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">28-32</div>
+              <div style="color:#374151;">Days in A/R</div>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Find Billing Services for Your Specialty</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Our specialty-trained billing experts understand your unique coding and compliance requirements.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Consultation</a>
+          </div>
+        </section>
+      `
+    },
+    'pricing': {
+      title: 'Medical Billing Pricing | Transparent Fees & ROI Calculator | Medtransic',
+      metaDescription: 'Transparent medical billing pricing with 30-40% cost savings vs in-house. Performance-based pricing, no hidden fees. Calculate your ROI and see potential savings.',
+      h1: 'Medical Billing Services Pricing',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic offers transparent, performance-based pricing that saves practices 30-40% compared to in-house billing operations. Our pricing structure is designed to align our success with yours—we only succeed when you collect more revenue.</p>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#047857;">Typical Cost Savings</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">Most practices save 30-40% on billing costs while collecting 15-25% more revenue. Here's how:</p>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Eliminate Staff Costs</h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">No salaries, benefits, payroll taxes, or training expenses. Average billing staff costs $45,000-$65,000 per FTE including overhead.</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">No Software Expenses</h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Eliminate practice management software, clearinghouse fees, and technology infrastructure costs averaging $5,000-$15,000 annually.</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Reduce Denials & Write-Offs</h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Clean claim rates of 98%+ and denial rates below 5% mean more money collected. Industry average write-offs are 6-8% vs our 2-3%.</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Faster Collections</h3>
+              <p style="color:#4b5563;margin-top:0.5rem;">Reduce days in AR from 45-50 days to 25-30 days. Faster cash flow improves practice financial health and reduces financing needs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Pricing Models</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Percentage of Collections</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;">Most common model: Pay only on what we collect. Typical rates range from 4-8% depending on specialty, volume, and services included.</p>
+              <p style="color:#4b5563;font-size:0.875rem;">Best for: Practices wanting aligned incentives and predictable costs tied to revenue.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Per Claim Pricing</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;">Fixed fee per claim submitted. Rates typically $3-$8 per claim based on claim complexity and specialty requirements.</p>
+              <p style="color:#4b5563;font-size:0.875rem;">Best for: High-volume practices with predictable claim counts wanting fixed costs.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid #eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Hybrid Models</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;">Combination of base fee plus percentage or per-claim rates. Customized to match your practice needs and priorities.</p>
+              <p style="color:#4b5563;font-size:0.875rem;">Best for: Large practices or those requiring complex customized service packages.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">What's Included in Our Pricing</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;">
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Insurance Verification</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Medical Coding</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Claim Submission</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Payment Posting</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Denial Management</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">AR Follow-up</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Patient Billing</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Analytics & Reporting</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">Dedicated Account Manager</p>
+            </div>
+            <div style="padding:1rem;background:white;border-radius:0.5rem;">
+              <div style="color:#10b981;margin-bottom:0.5rem;">✓</div>
+              <p style="font-weight:600;color:#1f2937;">No Long-Term Contracts</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Return on Investment (ROI)</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">Most practices see positive ROI within 30-90 days. Here's a typical example:</p>
+          <div style="padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+            <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;color:#1e40af;">Sample Practice: 3-Provider Primary Care</h3>
+            <div style="display:grid;gap:0.5rem;margin-bottom:1.5rem;">
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:white;border-radius:0.25rem;">
+                <span style="color:#374151;">Annual Charges:</span>
+                <span style="font-weight:600;color:#1f2937;">$1,500,000</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:white;border-radius:0.25rem;">
+                <span style="color:#374151;">Current Collection Rate (87%):</span>
+                <span style="font-weight:600;color:#1f2937;">$1,305,000</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:white;border-radius:0.25rem;">
+                <span style="color:#374151;">Medtransic Collection Rate (98%):</span>
+                <span style="font-weight:600;color:#2563eb;">$1,470,000</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:#10b981;color:white;border-radius:0.25rem;">
+                <span style="font-weight:600;">Additional Revenue:</span>
+                <span style="font-weight:bold;">+$165,000</span>
+              </div>
+            </div>
+            <div style="display:grid;gap:0.5rem;">
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:white;border-radius:0.25rem;">
+                <span style="color:#374151;">Medtransic Fees (6%):</span>
+                <span style="color:#1f2937;">$88,200</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:white;border-radius:0.25rem;">
+                <span style="color:#374151;">Current In-House Costs:</span>
+                <span style="color:#1f2937;">$130,000</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:#10b981;color:white;border-radius:0.25rem;font-weight:600;">
+                <span>Annual Savings:</span>
+                <span style="font-weight:bold;">$41,800</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:0.5rem;background:#2563eb;color:white;border-radius:0.25rem;font-weight:bold;font-size:1.125rem;">
+                <span>Total Benefit:</span>
+                <span>+$206,800</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Get Your Custom Pricing & ROI Analysis</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Contact us for transparent pricing tailored to your practice and a detailed ROI calculation showing your specific savings potential.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Request Pricing</a>
+          </div>
+        </section>
+      `
+    },
+    'privacy': {
+      title: 'Privacy Policy | HIPAA Compliance & Data Protection | Medtransic',
+      metaDescription: 'Medtransic privacy policy outlining HIPAA-compliant data protection practices, PHI security measures, and patient information privacy standards.',
+      h1: 'Privacy Policy',
+      content: `
+        <p style="margin-bottom:1.5rem;color:#374151;"><strong>Last Updated:</strong> January 2026</p>
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic is committed to protecting the privacy and security of your protected health information (PHI) and personal data. This Privacy Policy outlines our practices regarding the collection, use, and protection of information in full compliance with HIPAA, HITECH, and applicable privacy regulations.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Information We Collect</h2>
+          <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+            <h3 style="font-weight:600;margin-bottom:1rem;color:#1f2937;">Protected Health Information (PHI)</h3>
+            <p style="color:#374151;margin-bottom:0.5rem;">As a business associate providing medical billing services, we collect and process PHI necessary for billing operations including:</p>
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;margin-top:1rem;">
+              <li style="margin-bottom:0.5rem;">Patient demographics and contact information</li>
+              <li style="margin-bottom:0.5rem;">Insurance coverage details</li>
+              <li style="margin-bottom:0.5rem;">Medical procedures and diagnoses</li>
+              <li style="margin-bottom:0.5rem;">Provider information and practice details</li>
+              <li style="margin-bottom:0.5rem;">Financial and payment information</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">How We Use Your Information</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Treatment, Payment, and Healthcare Operations</h3>
+              <p style="color:#374151;">We use PHI exclusively for permitted purposes including claim submission, payment processing, eligibility verification, and other healthcare operations as authorized under HIPAA.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#047857;">Business Associate Functions</h3>
+              <p style="color:#374151;">PHI is processed only as necessary to provide medical billing and revenue cycle management services to covered entities under executed Business Associate Agreements.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Data Security Measures</h2>
+          <div style="padding:2rem;background:#fef2f2;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;">We implement comprehensive technical, physical, and administrative safeguards:</p>
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.5rem;">256-bit encryption for data at rest and in transit</li>
+              <li style="margin-bottom:0.5rem;">Multi-factor authentication for system access</li>
+              <li style="margin-bottom:0.5rem;">Regular security audits and vulnerability assessments</li>
+              <li style="margin-bottom:0.5rem;">Employee training on HIPAA compliance and data security</li>
+              <li style="margin-bottom:0.5rem;">Secure data centers with restricted physical access</li>
+              <li style="margin-bottom:0.5rem;">Comprehensive backup and disaster recovery procedures</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Your Privacy Rights</h2>
+          <p style="margin-bottom:1rem;color:#374151;">Under HIPAA, you have rights regarding your PHI. Contact your healthcare provider to:</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Access and obtain copies of your health information</li>
+            <li style="margin-bottom:0.5rem;">Request corrections to your health information</li>
+            <li style="margin-bottom:0.5rem;">Receive an accounting of disclosures</li>
+            <li style="margin-bottom:0.5rem;">Request restrictions on certain uses and disclosures</li>
+          </ul>
+        </section>
+
+        <section style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+          <h2 style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Contact Us</h2>
+          <p style="color:#374151;margin-bottom:0.5rem;">For questions about our privacy practices:</p>
+          <p style="color:#374151;"><strong>Email:</strong> privacy@medtransic.com</p>
+          <p style="color:#374151;"><strong>Phone:</strong> (866) 261-5711</p>
+        </section>
+      `
+    },
+    'terms-of-service': {
+      title: 'Terms of Service | Medical Billing Agreement Terms | Medtransic',
+      metaDescription: 'Medtransic terms of service governing medical billing services, client responsibilities, service standards, and contractual agreements.',
+      h1: 'Terms of Service',
+      content: `
+        <p style="margin-bottom:1.5rem;color:#374151;"><strong>Effective Date:</strong> January 2026</p>
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">These Terms of Service govern the provision of medical billing and revenue cycle management services by Medtransic ("Company") to healthcare providers ("Client"). By engaging our services, you agree to these terms.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Services Provided</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Medtransic provides medical billing and revenue cycle management services including but not limited to:</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Insurance eligibility verification</li>
+            <li style="margin-bottom:0.5rem;">Medical coding and charge entry</li>
+            <li style="margin-bottom:0.5rem;">Electronic claim submission</li>
+            <li style="margin-bottom:0.5rem;">Payment posting and reconciliation</li>
+            <li style="margin-bottom:0.5rem;">Denial management and appeals</li>
+            <li style="margin-bottom:0.5rem;">Accounts receivable follow-up</li>
+            <li style="margin-bottom:0.5rem;">Patient billing and collections</li>
+            <li style="margin-bottom:0.5rem;">Analytics and reporting</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Client Responsibilities</h2>
+          <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;">Clients agree to:</p>
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.5rem;">Provide accurate and complete patient information</li>
+              <li style="margin-bottom:0.5rem;">Submit clinical documentation in timely manner</li>
+              <li style="margin-bottom:0.5rem;">Maintain valid payer contracts and credentials</li>
+              <li style="margin-bottom:0.5rem;">Execute required Business Associate Agreement</li>
+              <li style="margin-bottom:0.5rem;">Grant necessary system access for billing operations</li>
+              <li style="margin-bottom:0.5rem;">Respond promptly to information requests</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Service Standards</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Performance Commitments</h3>
+              <p style="color:#374151;">We strive to maintain clean claim rates of 98%+, denial rates below 5%, and AR aging of 28-32 days. Specific performance metrics are detailed in individual service agreements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#047857;">Compliance</h3>
+              <p style="color:#374151;">All services are provided in compliance with HIPAA, Medicare, Medicaid, and applicable federal and state regulations governing medical billing practices.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Fees and Payment</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Service fees are determined by service agreement and may be structured as:</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Percentage of collections</li>
+            <li style="margin-bottom:0.5rem;">Per-claim fees</li>
+            <li style="margin-bottom:0.5rem;">Hybrid models combining fee structures</li>
+          </ul>
+          <p style="color:#374151;margin-top:1rem;">Fees are billed monthly and payment is due within 15 days of invoice date.</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Termination</h2>
+          <p style="color:#374151;">Either party may terminate services with 30-60 days written notice as specified in the service agreement. Transition assistance is provided during termination period.</p>
+        </section>
+
+        <section style="padding:2rem;background:#fef2f2;border-radius:0.5rem;">
+          <h2 style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Questions</h2>
+          <p style="color:#374151;">For questions regarding these terms, contact us at <strong>(866) 261-5711</strong> or <strong>legal@medtransic.com</strong></p>
+        </section>
+      `
+    },
+    'hipaa-compliance': {
+      title: 'HIPAA Compliance | Healthcare Data Security | Medtransic',
+      metaDescription: 'Medtransic HIPAA compliance program including PHI protection, security measures, training, audits, and business associate agreement requirements.',
+      h1: 'HIPAA Compliance',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic maintains comprehensive HIPAA compliance programs ensuring the confidentiality, integrity, and availability of protected health information (PHI). Our commitment to healthcare data security protects our clients and their patients.</p>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#1e40af;">Our Compliance Framework</h2>
+          <p style="color:#374151;">We implement security measures addressing all HIPAA requirements including Privacy Rule, Security Rule, and Breach Notification Rule provisions.</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Administrative Safeguards</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Security Management</h3>
+              <p style="color:#374151;">Designated Privacy Officer and Security Officer oversee compliance program. Regular risk assessments identify and address potential vulnerabilities.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Workforce Training</h3>
+              <p style="color:#374151;">All employees complete comprehensive HIPAA training during onboarding and annual refresher training. Role-specific training addresses particular job functions.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Access Controls</h3>
+              <p style="color:#374151;">Strict access controls ensure employees access only PHI necessary for their job functions. Access is reviewed quarterly and adjusted as needed.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Technical Safeguards</h2>
+          <div style="padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.75rem;"><strong>Encryption:</strong> 256-bit AES encryption for data at rest and TLS 1.3 for data in transit</li>
+              <li style="margin-bottom:0.75rem;"><strong>Authentication:</strong> Multi-factor authentication required for all system access</li>
+              <li style="margin-bottom:0.75rem;"><strong>Audit Trails:</strong> Comprehensive logging of all PHI access and modifications</li>
+              <li style="margin-bottom:0.75rem;"><strong>Transmission Security:</strong> Secure protocols for all data transmissions</li>
+              <li style="margin-bottom:0.75rem;"><strong>Automatic Logoff:</strong> Sessions timeout after period of inactivity</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Physical Safeguards</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Our facilities and data centers maintain strict physical security:</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Controlled facility access with badge authentication</li>
+            <li style="margin-bottom:0.5rem;">Video surveillance of all entry points</li>
+            <li style="margin-bottom:0.5rem;">Secure workstation positioning and privacy screens</li>
+            <li style="margin-bottom:0.5rem;">Visitor logging and escort requirements</li>
+            <li style="margin-bottom:0.5rem;">Secure disposal of PHI-containing materials</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Business Associate Agreements</h2>
+          <p style="color:#374151;margin-bottom:1rem;">We execute comprehensive Business Associate Agreements (BAAs) with all covered entity clients addressing:</p>
+          <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.5rem;">Permitted uses and disclosures of PHI</li>
+              <li style="margin-bottom:0.5rem;">Safeguards to protect PHI</li>
+              <li style="margin-bottom:0.5rem;">Breach notification procedures</li>
+              <li style="margin-bottom:0.5rem;">Subcontractor requirements</li>
+              <li style="margin-bottom:0.5rem;">Termination provisions</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#fef2f2;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#991b1b;">Breach Response</h2>
+          <p style="color:#374151;">We maintain comprehensive incident response procedures ensuring prompt detection, containment, and notification of any potential security incidents or breaches involving PHI.</p>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">HIPAA-Compliant Medical Billing</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Partner with a billing company that takes data security seriously. Contact us to learn about our compliance program.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Contact Us</a>
+          </div>
+        </section>
+      `
+    },
+    'data-security': {
+      title: 'Data Security | Healthcare Information Protection | Medtransic',
+      metaDescription: 'Comprehensive data security measures protecting healthcare information including encryption, access controls, monitoring, audits, and disaster recovery.',
+      h1: 'Data Security & Protection',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic employs enterprise-grade security measures protecting sensitive healthcare and financial data. Our multi-layered security approach ensures data confidentiality, integrity, and availability while maintaining compliance with healthcare regulations.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Encryption & Data Protection</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Data at Rest</h3>
+              <p style="color:#374151;">All stored data is encrypted using 256-bit AES encryption. Database encryption, encrypted file systems, and encrypted backups protect data from unauthorized access.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#047857;">Data in Transit</h3>
+              <p style="color:#374151;">TLS 1.3 encryption protects all data transmissions. VPN connections secure remote access. API communications use certificate-based authentication.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Access Control & Authentication</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.75rem;"><strong>Multi-Factor Authentication (MFA):</strong> Required for all user access</li>
+              <li style="margin-bottom:0.75rem;"><strong>Role-Based Access:</strong> Least privilege principle limits access to necessary data</li>
+              <li style="margin-bottom:0.75rem;"><strong>Password Requirements:</strong> Complex passwords with regular rotation</li>
+              <li style="margin-bottom:0.75rem;"><strong>Account Monitoring:</strong> Automated detection of suspicious activity</li>
+              <li style="margin-bottom:0.75rem;"><strong>Session Management:</strong> Automatic timeout after inactivity periods</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Network Security</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Firewall Protection</h3>
+              <p style="color:#374151;">Next-generation firewalls with intrusion detection and prevention systems monitor and filter all network traffic.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Network Segmentation</h3>
+              <p style="color:#374151;">Isolated network segments separate production, development, and administrative systems preventing lateral movement.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f5f3ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;margin-bottom:0.75rem;color:#5b21b6;">DDoS Protection</h3>
+              <p style="color:#374151;">Distributed denial-of-service mitigation ensures service availability during attacks.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Monitoring & Incident Response</h2>
+          <div style="padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;"><strong>24/7 Security Monitoring:</strong> Security Information and Event Management (SIEM) systems monitor for threats</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Automated Alerts:</strong> Real-time notifications of suspicious activities or security events</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Incident Response Plan:</strong> Documented procedures for containing and resolving security incidents</p>
+            <p style="color:#374151;"><strong>Forensic Capabilities:</strong> Detailed logging enables investigation and root cause analysis</p>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Vulnerability Management</h2>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.75rem;">Quarterly vulnerability scans identify security weaknesses</li>
+            <li style="margin-bottom:0.75rem;">Annual penetration testing by independent security firms</li>
+            <li style="margin-bottom:0.75rem;">Patch management ensures timely security updates</li>
+            <li style="margin-bottom:0.75rem;">Code security reviews during development lifecycle</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Backup & Disaster Recovery</h2>
+          <div style="padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Automated Backups:</strong> Daily encrypted backups with offsite storage</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Recovery Testing:</strong> Regular testing verifies backup integrity and recovery procedures</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Business Continuity:</strong> Redundant systems and failover capabilities ensure service availability</p>
+            <p style="color:#374151;"><strong>RPO/RTO Targets:</strong> Recovery Point Objective of 24 hours, Recovery Time Objective of 4 hours</p>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Your Data is Protected</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Learn more about our comprehensive security measures and compliance certifications.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Contact Security Team</a>
+          </div>
+        </section>
+      `
     }
     // Continue with remaining static pages...
   };
