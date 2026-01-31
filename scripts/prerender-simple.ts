@@ -367,7 +367,7 @@ const SERVICE_ROUTES = {
 const SPECIALTY_ROUTES = {
   'cardiology': {
     title: 'Cardiology Billing Services | Heart Care RCM Experts | Medtransic',
-    description: 'Expert cardiology billing for CPT 93000-93799 codes. Specialized in ECG, stress tests, echocardiography, cardiac catheterization. Handle complex cardiovascular procedures, nuclear imaging, and EP studies. Maximize reimbursement for interventional cardiology.'
+    description: 'Expert cardiology billing for CPT 93000-93799. Specialized in ECG, stress tests, cath lab, EP studies. Maximize cardiovascular reimbursement.'
   },
   'physical-therapy': {
     title: 'Physical Therapy Billing | PT RCM Services | Medtransic',
@@ -611,6 +611,14 @@ function generateStaticPageHTML(route: { path: string; title: string; descriptio
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
+  // Add meta robots tag
+  if (!html.includes('<meta name="robots"')) {
+    html = html.replace(
+      '</head>',
+      '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n  </head>'
+    );
+  }
+
   // Extract H1 from title (remove " | Medtransic" suffix if present)
   const h1Text = route.title.replace(/ \| Medtransic$/, '');
 
@@ -633,11 +641,37 @@ function generateServicePageHTML(serviceSlug: string, baseHTML: string): string 
     return generateStaticPageHTML({ path: `services/${serviceSlug}`, title, description }, baseHTML);
   }
 
-  return generateStaticPageHTML({
+  // Generate HTML with service-specific structured data
+  let html = generateStaticPageHTML({
     path: `services/${serviceSlug}`,
     title: serviceData.title,
     description: serviceData.description
   }, baseHTML);
+
+  // Add Service schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceData.title.split('|')[0].trim(),
+    "description": serviceData.description,
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "Medtransic",
+      "url": "https://medtransic.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": `https://medtransic.com/services/${serviceSlug}`
+  };
+
+  html = html.replace(
+    '</head>',
+    `  <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>\n  </head>`
+  );
+
+  return html;
 }
 
 function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): string {
@@ -651,11 +685,33 @@ function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): str
     return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML);
   }
 
-  return generateStaticPageHTML({
+  // Generate HTML with specialty-specific structured data
+  let html = generateStaticPageHTML({
     path: `specialties/${specialtySlug}`,
     title: specialtyData.title,
     description: specialtyData.description
   }, baseHTML);
+
+  // Add MedicalSpecialty schema
+  const specialtySchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalSpecialty",
+    "name": specialtyData.title.split('|')[0].trim(),
+    "description": specialtyData.description,
+    "url": `https://medtransic.com/specialties/${specialtySlug}`,
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "Medtransic",
+      "url": "https://medtransic.com"
+    }
+  };
+
+  html = html.replace(
+    '</head>',
+    `  <script type="application/ld+json">${JSON.stringify(specialtySchema)}</script>\n  </head>`
+  );
+
+  return html;
 }
 
 async function prerenderPages() {
