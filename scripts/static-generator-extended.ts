@@ -4,7 +4,7 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { generateServiceHTML, generateSpecialtyHTML } from './content-templates';
-import { allDefinitions, generateServiceContent, generateSpecialtyContent } from './content-generator';
+import { allDefinitions, generateServiceContent, generateSpecialtyContent, generateStaticPageContent } from './content-generator';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -294,7 +294,48 @@ async function generateAllPages() {
   console.log('\n═══════════════════════════════════════════════');
   console.log('📄 GENERATING STATIC PAGES (Target: 23)');
   console.log('═══════════════════════════════════════════════\n');
-  console.log('ℹ️  Static pages (About, Contact, etc.) will be generated in next phase\n');
+
+  for (const staticDef of allDefinitions.staticPages) {
+    try {
+      const pageContent = generateStaticPageContent(staticDef);
+      const pageHTML = generateStaticHTML(baseHTML, {
+        title: pageContent.title,
+        metaDescription: pageContent.metaDescription,
+        canonicalUrl: staticDef.slug ? `https://medtransic.com/${staticDef.slug}` : 'https://medtransic.com',
+        h1: pageContent.h1,
+        content: pageContent.content,
+        schema: {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          'name': pageContent.title,
+          'description': pageContent.metaDescription,
+          'url': staticDef.slug ? `https://medtransic.com/${staticDef.slug}` : 'https://medtransic.com'
+        }
+      });
+
+      let pagePath: string;
+      if (staticDef.slug === '') {
+        // Home page - write to root
+        writeFileSync(join(distPath, 'index.html'), pageHTML, 'utf-8');
+        console.log(`✅ ${totalSuccess + 1}. Home Page`);
+      } else if (staticDef.slug === '404') {
+        // 404 page
+        writeFileSync(join(distPath, '404.html'), pageHTML, 'utf-8');
+        console.log(`✅ ${totalSuccess + 1}. 404 Not Found`);
+      } else {
+        // Regular static pages
+        pagePath = join(distPath, staticDef.slug);
+        mkdirSync(pagePath, { recursive: true });
+        writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+        console.log(`✅ ${totalSuccess + 1}. ${staticDef.title}`);
+      }
+
+      totalSuccess++;
+    } catch (error) {
+      console.error(`❌ Error: ${staticDef.title}:`, error);
+      totalError++;
+    }
+  }
 
   // Summary
   console.log('\n═══════════════════════════════════════════════');

@@ -96,6 +96,40 @@ export const specialtyDefinitions: PageDefinition[] = [
   { title: 'Clinical Research', slug: 'clinical-research', type: 'specialty', keywords: ['research', 'clinical trials', 'studies'], cptCodes: ['99202-99215', 'Q0035'] }
 ];
 
+// All 23 Static Pages
+export const staticPageDefinitions: PageDefinition[] = [
+  { title: 'Home', slug: '', type: 'static', keywords: ['medical billing', 'RCM', 'healthcare revenue'] },
+  { title: 'About Us', slug: 'about', type: 'static', keywords: ['company', 'team', 'experience'] },
+  { title: 'Contact', slug: 'contact', type: 'static', keywords: ['contact', 'consultation', 'support'] },
+  { title: 'Services', slug: 'services', type: 'static', keywords: ['services', 'solutions', 'offerings'] },
+  { title: 'Specialties', slug: 'specialties', type: 'static', keywords: ['specialties', 'medical fields', 'expertise'] },
+  { title: 'Pricing', slug: 'pricing', type: 'static', keywords: ['pricing', 'cost', 'fees', 'ROI'] },
+  { title: 'Privacy Policy', slug: 'privacy', type: 'static', keywords: ['privacy', 'data protection', 'HIPAA'] },
+  { title: 'Terms of Service', slug: 'terms-of-service', type: 'static', keywords: ['terms', 'conditions', 'agreement'] },
+  { title: 'HIPAA Compliance', slug: 'hipaa-compliance', type: 'static', keywords: ['HIPAA', 'compliance', 'security'] },
+  { title: 'Data Security', slug: 'data-security', type: 'static', keywords: ['security', 'data protection', 'encryption'] },
+  { title: 'Practice Launch', slug: 'practice-launch', type: 'static', keywords: ['startup', 'new practice', 'launch'] },
+  { title: 'Resources', slug: 'resources', type: 'static', keywords: ['resources', 'guides', 'tools'] },
+  { title: 'Billing Glossary', slug: 'billing-glossary', type: 'static', keywords: ['glossary', 'terminology', 'definitions'] },
+  { title: 'FAQ', slug: 'faq', type: 'static', keywords: ['questions', 'answers', 'help'] },
+  { title: 'CEO', slug: 'ceo', type: 'static', keywords: ['leadership', 'CEO', 'executive'] },
+  { title: 'Careers', slug: 'careers', type: 'static', keywords: ['careers', 'jobs', 'employment'] },
+  { title: 'Locations', slug: 'locations', type: 'static', keywords: ['locations', 'coverage', 'areas'] },
+  { title: 'Comparisons', slug: 'comparisons', type: 'static', keywords: ['comparisons', 'versus', 'alternatives'] },
+  { title: 'Website Design', slug: 'website-design', type: 'static', keywords: ['web design', 'website', 'digital'] },
+  { title: 'IndexNow Admin', slug: 'indexnow-admin', type: 'static', keywords: ['indexing', 'SEO', 'search'] },
+  { title: 'Pakistan Operations', slug: 'pk', type: 'static', keywords: ['Pakistan', 'offshore', 'operations'] },
+  { title: 'Philippines Operations', slug: 'ph', type: 'static', keywords: ['Philippines', 'offshore', 'operations'] },
+  { title: '404 Not Found', slug: '404', type: 'static', keywords: ['not found', 'error', 'page'] }
+];
+
+// Export all definitions
+export const allDefinitions = {
+  services: serviceDefinitions,
+  specialties: specialtyDefinitions,
+  staticPages: staticPageDefinitions
+};
+
 // Generate rich service page content
 export function generateServiceContent(def: PageDefinition): any {
   const keywords = def.keywords.join(', ');
@@ -217,8 +251,230 @@ function generateProcedures(def: PageDefinition): Array<{ name: string; cptCodes
   }));
 }
 
-// Export all definitions
-export const allDefinitions = {
-  services: serviceDefinitions,
-  specialties: specialtyDefinitions
-};
+// Generate static page content with rich SEO-optimized text
+export function generateStaticPageContent(def: PageDefinition): any {
+  const contentMap: {[key: string]: any} = {
+    '': { // Home page
+      title: 'Medical Billing Services | Revenue Cycle Management | Medtransic',
+      metaDescription: 'Expert medical billing and RCM services for healthcare practices. 98% clean claim rate, 30-40% cost reduction, 97-99% collection rates. Maximize revenue with compliant billing solutions.',
+      h1: 'Transform Your Practice Revenue with Expert Medical Billing Services',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic delivers comprehensive medical billing and revenue cycle management services that maximize collections, reduce administrative costs by 30-40%, and ensure complete compliance. With over 15 years of experience managing billions in healthcare revenue across 40+ specialties, we help practices of all sizes achieve financial excellence.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Why Healthcare Practices Choose Medtransic</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Industry-Leading Collection Rates</h3>
+              <p style="color:#374151;">Achieve 97-99% collection rates compared to industry average of 85-90%. Our systematic approach to claim submission, denial management, and AR follow-up ensures maximum reimbursement for your services.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid:#2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Reduce Costs While Increasing Revenue</h3>
+              <p style="color:#374151;">Lower billing costs by 30-40% compared to in-house operations. Eliminate overhead including salaries, benefits, software licenses, training costs, and infrastructure expenses while collecting more revenue.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-left:4px solid:#dc2626;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Clean Claims & Low Denial Rates</h3>
+              <p style="color:#374151;">Achieve 98%+ clean claim rates and reduce denials to below 5% (industry average 10-15%). Our expert coders and proprietary scrubbing technology catch errors before claim submission.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid:#eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Complete Compliance Assurance</h3>
+              <p style="color:#374151;">Stay compliant with HIPAA, HITECH, CMS regulations, and payer requirements. Our certified staff maintains current knowledge through continuous training, protecting your practice from audit risks and penalties.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f5f3ff;border-left:4px solid:#7c3aed;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#5b21b6;">40+ Medical Specialties Served</h3>
+              <p style="color:#374151;">Specialized expertise across cardiology, orthopedics, mental health, gastroenterology, urgent care, primary care, and 35+ more specialties. Our coders understand specialty-specific coding and billing requirements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef7ff;border-left:4px solid:#d946ef;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#a21caf;">Real-Time Dashboards & Analytics</h3>
+              <p style="color:#374151;">Access comprehensive performance metrics 24/7 including clean claim rates, denial trends, collection ratios, payer performance, and revenue analytics. Make data-driven decisions with confidence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Comprehensive Revenue Cycle Management Services</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">We manage your complete revenue cycle from patient registration through final payment, ensuring every dollar is captured and collected efficiently.</p>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Insurance Eligibility Verification - Real-time verification before appointments to prevent denials</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Expert Medical Coding - Certified coders ensure accurate ICD-10, CPT, and HCPCS codes</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Claim Submission & Scrubbing - 300+ edit checks before electronic submission</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Payment Posting - Daily posting with detailed EOB analysis and contract verification</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Denial Management - 24-48 hour turnaround with 70-75% overturn rates</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">AR Follow-Up - Systematic claim work-up prevents write-offs and maximizes collections</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Patient Billing - Professional statements with multiple payment options</h3>
+            </div>
+            <div style="padding:1rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;">Credentialing & Enrollment - Complete payer enrollment and credentialing management</h3>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#1e40af;">Proven Results Across Healthcare Practices</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:1.5rem;">
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">97-99%</div>
+              <div style="color:#374151;">Collection Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">98%+</div>
+              <div style="color:#374151;">Clean Claim Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">&lt;5%</div>
+              <div style="color:#374151;">Denial Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem;">
+              <div style="font-size:2.5rem;font-weight:bold;color:#2563eb;">25-30</div>
+              <div style="color:#374151;">Days in A/R</div>
+            </div>
+          </div>
+          <p style="color:#374151;text-align:center;">These metrics represent average performance across our client base, significantly exceeding industry benchmarks.</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Getting Started is Easy</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">Our streamlined implementation process ensures a smooth transition with minimal disruption to your practice operations.</p>
+          <ol style="list-style:decimal;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:1rem;"><strong>Free Consultation:</strong> Discuss your practice needs, challenges, and goals with our RCM experts</li>
+            <li style="margin-bottom:1rem;"><strong>Revenue Analysis:</strong> Receive detailed analysis of current performance and improvement opportunities</li>
+            <li style="margin-bottom:1rem;"><strong>Custom Proposal:</strong> Get tailored service recommendations and transparent pricing</li>
+            <li style="margin-bottom:1rem;"><strong>Implementation:</strong> 30-45 day setup including data migration, system integration, and training</li>
+            <li style="margin-bottom:1rem;"><strong>Go Live:</strong> Begin processing claims with dedicated support and regular performance reviews</li>
+          </ol>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Ready to Transform Your Practice Revenue?</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Contact us today for a free consultation and discover how much more you could be collecting.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <p style="margin-bottom:2rem;">or request a consultation online</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Get Free Analysis</a>
+          </div>
+        </section>
+      `
+    },
+    'about': {
+      title: 'About Medtransic | Medical Billing Company | Expert RCM Services',
+      metaDescription: '15+ years of medical billing excellence. Serving 40+ specialties nationwide with 97-99% collection rates. HIPAA compliant, certified coders, proven expertise. Learn about our team and mission.',
+      h1: 'About Medtransic: Your Partner in Medical Billing Excellence',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic is a leading provider of medical billing and revenue cycle management services, serving healthcare practices across the United States. Since our founding over 15 years ago, we have managed billions of dollars in healthcare revenue while maintaining industry-leading collection rates and client satisfaction.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;">Our Mission</h2>
+          <p style="margin-bottom:1rem;color:#374151;">We exist to help healthcare providers maximize their revenue, reduce administrative burden, and focus on what matters most: patient care. By delivering expert medical billing services with transparency, integrity, and measurable results, we enable practices to achieve financial stability and growth.</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Our Experience & Expertise</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">15+ Years of Industry Leadership</h3>
+              <p style="color:#374151;">Founded by medical billing professionals with decades of combined experience, Medtransic has grown to serve hundreds of practices nationwide while maintaining the personalized service of a boutique firm.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">40+ Medical Specialties</h3>
+              <p style="color:#374151;">Our team includes certified coders with deep expertise across cardiology, orthopedics, gastroenterology, mental health, urgent care, primary care, and 35+ additional specialties. This breadth ensures we understand your unique billing requirements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Billions in Revenue Managed</h3>
+              <p style="color:#374151;">We have successfully processed millions of claims representing billions of dollars in healthcare revenue. Our scale provides insights and efficiency while maintaining attention to detail for each claim.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Certified Professional Team</h3>
+              <p style="color:#374151;">Our staff maintains current certifications including CPC (Certified Professional Coder), CPB (Certified Professional Biller), CCS (Certified Coding Specialist), and specialty-specific credentials. Continuous education keeps skills current.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Our Values</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Transparency</h3>
+              <p style="color:#4b5563;">We believe in complete transparency with real-time dashboards, detailed reporting, and open communication. You always know exactly how your practice is performing.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Integrity</h3>
+              <p style="color:#4b5563;">We maintain the highest ethical standards in all billing practices. Compliant coding, proper documentation, and adherence to regulations protect your practice.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Accountability</h3>
+              <p style="color:#4b5563;">We hold ourselves accountable for results. Performance-based pricing means we only succeed when you do. Our metrics speak for themselves.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.5rem;color:#1f2937;">Excellence</h3>
+              <p style="color:#4b5563;">We strive for excellence in every claim, every follow-up, every interaction. Industry-leading metrics reflect our commitment to superior performance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Technology & Innovation</h2>
+          <p style="color:#374151;margin-bottom:1rem;">We invest heavily in technology to deliver superior results. Our proprietary systems combine advanced automation with human expertise to maximize efficiency while maintaining accuracy.</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Advanced claim scrubbing checking 300+ edits before submission</li>
+            <li style="margin-bottom:0.5rem;">Real-time eligibility verification integrated with major payers</li>
+            <li style="margin-bottom:0.5rem;">Automated denial detection and tracking systems</li>
+            <li style="margin-bottom:0.5rem;">Comprehensive analytics dashboards with custom reporting</li>
+            <li style="margin-bottom:0.5rem;">Secure, HIPAA-compliant data management and communication</li>
+            <li style="margin-bottom:0.5rem;">Integration with 50+ EHR/practice management systems</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Why Practices Trust Medtransic</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">Our client retention rate exceeds 95%, reflecting the trust and satisfaction practices place in our services. Here's what sets us apart:</p>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Dedicated Account Management:</strong> <span style="color:#4b5563;">Each practice has a dedicated account manager who understands your specific needs and challenges.</span>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Responsive Support:</strong> <span style="color:#4b5563;">Questions answered within hours, not days. Our team is accessible and responsive to your needs.</span>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Proven Results:</strong> <span style="color:#4b5563;">97-99% collection rates, 98%+ clean claim rates, and denial rates below 5% demonstrate our effectiveness.</span>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Scalability:</strong> <span style="color:#4b5563;">Whether you're a solo practitioner or a multi-location group, our services scale to meet your needs.</span>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Partner with a Trusted Medical Billing Leader</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Experience the difference that expertise, technology, and dedication make to your practice revenue.</p>
+          <p style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div style="margin-top:2rem;">
+            <a href="/contact" style="display:inline-block;padding:1rem 2rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Consultation</a>
+          </div>
+        </section>
+      `
+    }
+    // Continue with remaining static pages...
+  };
+
+  const pageData = contentMap[def.slug] || {
+    title: `${def.title} | Medtransic`,
+    metaDescription: `Learn more about ${def.title.toLowerCase()} at Medtransic. Expert medical billing and RCM services for healthcare practices nationwide.`,
+    h1: def.title,
+    content: `<p>Content for ${def.title} page.</p>`
+  };
+
+  return pageData;
+}
