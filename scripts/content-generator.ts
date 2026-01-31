@@ -1221,6 +1221,940 @@ export function generateStaticPageContent(def: PageDefinition): any {
           </div>
         </section>
       `
+    },
+    'resources': {
+      title: 'Medical Billing Resources & Guides | Medtransic',
+      metaDescription: 'Free medical billing resources, guides, articles, and tools. Learn about coding, compliance, revenue cycle management, and practice optimization.',
+      h1: 'Medical Billing Resources & Educational Guides',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Access comprehensive medical billing resources, guides, and educational materials to help you understand and optimize your practice revenue cycle. Our expert team shares insights on coding, compliance, payer policies, and revenue optimization.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Featured Resource Categories</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;"><a href="/billing-glossary" style="color:#047857;text-decoration:none;">Medical Billing Glossary</a></h3>
+              <p style="color:#374151;">Comprehensive definitions of medical billing terms, codes, payer acronyms, and industry terminology. Essential reference for understanding billing communications.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;"><a href="/faq" style="color:#1e40af;text-decoration:none;">Frequently Asked Questions</a></h3>
+              <p style="color:#374151;">Answers to common questions about medical billing, RCM services, pricing, implementation, compliance, and working with billing companies.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-left:4px solid #dc2626;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Coding Guidelines</h3>
+              <p style="color:#374151;">Stay current with ICD-10, CPT, and HCPCS coding guidelines. Understand proper code selection, modifier usage, and documentation requirements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid #eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Compliance Resources</h3>
+              <p style="color:#374151;">HIPAA compliance guides, audit preparation checklists, CMS regulation updates, and OIG compliance program guidance for healthcare practices.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Key Performance Metrics</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">Understanding and tracking these metrics is essential for optimizing your revenue cycle:</p>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.75rem;"><strong>Clean Claim Rate:</strong> Percentage of claims accepted by payers on first submission (target: 95%+)</li>
+              <li style="margin-bottom:0.75rem;"><strong>Collection Rate:</strong> Net collections as percentage of charges (target: 95-98%)</li>
+              <li style="margin-bottom:0.75rem;"><strong>Days in A/R:</strong> Average time to collect payment (target: 30-40 days)</li>
+              <li style="margin-bottom:0.75rem;"><strong>Denial Rate:</strong> Percentage of claims initially denied (target: below 5%)</li>
+              <li style="margin-bottom:0.75rem;"><strong>Cost to Collect:</strong> Administrative cost per dollar collected (target: 3-5%)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Popular Topics</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Revenue Cycle Optimization</h3>
+              <p style="color:#4b5563;font-size:0.875rem;">Best practices for improving cash flow, reducing denials, accelerating payments, and maximizing collections.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Payer Policies & Updates</h3>
+              <p style="color:#4b5563;font-size:0.875rem;">Medicare, Medicaid, and commercial payer policy changes, coverage updates, and billing requirements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Practice Management</h3>
+              <p style="color:#4b5563;font-size:0.875rem;">Financial management, staffing, technology selection, workflow optimization, and practice growth strategies.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.75rem;color:#1f2937;">Technology & Innovation</h3>
+              <p style="color:#4b5563;font-size:0.875rem;">EHR integration, automation, AI in billing, analytics, patient portals, and emerging healthcare technology.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Need Expert Guidance?</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Our medical billing specialists are here to answer your questions and provide personalized recommendations.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Consultation</a>
+          </div>
+        </section>
+      `
+    },
+    'practice-launch': {
+      title: 'New Practice Launch Support | Medical Billing Setup | Medtransic',
+      metaDescription: 'Complete practice launch support including credentialing, billing setup, EHR integration, and revenue cycle implementation. Start collecting revenue from day one.',
+      h1: 'Launch Your Practice with Expert Revenue Cycle Support',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Starting a new medical practice? Medtransic provides comprehensive support to ensure your revenue cycle is optimized from day one. We handle credentialing, billing setup, technology integration, and RCM implementation so you can focus on patient care.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Complete Practice Launch Services</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Provider Credentialing & Enrollment</h3>
+              <p style="color:#374151;">Complete payer credentialing with Medicare, Medicaid, and commercial insurance. CAQH profile setup, application submission, follow-up, and enrollment verification. Typically completed in 90-120 days.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Revenue Cycle Setup</h3>
+              <p style="color:#374151;">Establish complete billing processes including charge entry workflows, payment posting procedures, denial management protocols, AR follow-up systems, and patient billing processes.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">EHR & Technology Integration</h3>
+              <p style="color:#374151;">EHR selection guidance, implementation support, clearinghouse setup, ERA/EOB automation, and integration with practice management systems. Ensure seamless data flow from encounter to payment.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Compliance Program Development</h3>
+              <p style="color:#374151;">HIPAA compliance setup, privacy policies, security procedures, staff training, business associate agreements, and risk assessment documentation to meet regulatory requirements.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Practice Launch Timeline</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <div style="margin-bottom:2rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Months 1-3: Foundation & Credentialing</h3>
+              <p style="color:#4b5563;">NPI application, EIN registration, state medical board licensure, DEA registration, CAQH profile setup, payer credentialing applications, malpractice insurance.</p>
+            </div>
+            <div style="margin-bottom:2rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Months 2-4: Technology & Infrastructure</h3>
+              <p style="color:#4b5563;">EHR selection and implementation, practice management system setup, clearinghouse integration, billing software configuration, security measures implementation.</p>
+            </div>
+            <div style="margin-bottom:2rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Months 3-4: Process Development</h3>
+              <p style="color:#4b5563;">Revenue cycle workflow design, fee schedule development, payer contract negotiation, staff hiring and training, policy and procedure documentation.</p>
+            </div>
+            <div>
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Month 4-5: Testing & Go-Live</h3>
+              <p style="color:#4b5563;">System testing, claim submission test batches, workflow validation, staff practice sessions, soft launch with limited patients, full operational launch.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Common Startup Challenges We Solve</h2>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.75rem;"><strong>Credentialing Delays:</strong> Our experience expedites payer enrollment, avoiding 6+ month delays that postpone revenue</li>
+            <li style="margin-bottom:0.75rem;"><strong>Cash Flow Problems:</strong> Begin collecting revenue immediately, avoiding cash flow gaps that threaten new practices</li>
+            <li style="margin-bottom:0.75rem;"><strong>Technology Confusion:</strong> Expert guidance on EHR selection and implementation prevents costly mistakes</li>
+            <li style="margin-bottom:0.75rem;"><strong>Staffing Costs:</strong> Outsourced billing eliminates need to hire, train, and manage billing staff during startup</li>
+            <li style="margin-bottom:0.75rem;"><strong>Compliance Risks:</strong> Proper setup from the start avoids OIG scrutiny and payer audit problems</li>
+            <li style="margin-bottom:0.75rem;"><strong>Payer Contract Rates:</strong> Negotiation expertise ensures favorable reimbursement rates from the beginning</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Why Start with Medtransic?</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Starting with professional billing services provides significant advantages over building in-house capabilities:</p>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.5rem;">Lower startup costs (no staff, no software licenses, no training)</li>
+            <li style="margin-bottom:0.5rem;">Faster revenue realization with expert claim submission</li>
+            <li style="margin-bottom:0.5rem;">Higher collection rates from experienced professionals</li>
+            <li style="margin-bottom:0.5rem;">Scalable solution that grows with your practice</li>
+            <li style="margin-bottom:0.5rem;">Built-in compliance and quality assurance</li>
+          </ul>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Ready to Launch Your Practice?</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Schedule a consultation to discuss your practice launch timeline and revenue cycle needs.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Start Planning Now</a>
+          </div>
+        </section>
+      `
+    },
+    'billing-glossary': {
+      title: 'Medical Billing Glossary | Healthcare Terms & Definitions | Medtransic',
+      metaDescription: 'Comprehensive medical billing glossary with definitions of billing terms, coding acronyms, payer terminology, and RCM concepts. Essential reference guide.',
+      h1: 'Medical Billing Glossary & Terminology Guide',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Comprehensive reference guide to medical billing terminology, coding systems, payer acronyms, and revenue cycle management concepts. Understanding these terms is essential for effective communication about your practice finances.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Essential Medical Billing Terms</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Accounts Receivable (A/R)</h3>
+              <p style="color:#4b5563;">Outstanding claims and patient balances owed to the practice. Tracked by aging categories (0-30, 31-60, 61-90, 90+ days).</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Clean Claim</h3>
+              <p style="color:#4b5563;">Claim submitted with complete, accurate information that passes payer edits and is accepted for processing without additional information requests.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">Denial</h3>
+              <p style="color:#4b5563;">Claim rejected by payer requiring appeal or resubmission. Common reasons include coding errors, medical necessity, timely filing, or authorization issues.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">EOB (Explanation of Benefits)</h3>
+              <p style="color:#4b5563;">Document from payer explaining claim adjudication including allowed amounts, adjustments, deductibles, coinsurance, and payment amounts.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.5rem;">ERA (Electronic Remittance Advice)</h3>
+              <p style="color:#4b5563;">Electronic version of EOB providing payment information in standardized format (835 transaction) for automated posting.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Coding Systems & Standards</h2>
+          <div style="padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.5rem;">CPT (Current Procedural Terminology)</h3>
+              <p style="color:#374151;">Five-digit codes describing medical, surgical, and diagnostic services. Maintained by AMA and updated annually.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.5rem;">ICD-10-CM (International Classification of Diseases)</h3>
+              <p style="color:#374151;">Alphanumeric diagnosis codes up to seven characters describing patient conditions, signs, symptoms, and reasons for encounter.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.5rem;">HCPCS (Healthcare Common Procedure Coding System)</h3>
+              <p style="color:#374151;">Level II codes for supplies, equipment, drugs, and services not included in CPT. Used for DME, orthotics, drugs, and ambulance services.</p>
+            </div>
+            <div>
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.5rem;">Modifiers</h3>
+              <p style="color:#374151;">Two-character codes appended to CPT/HCPCS codes to provide additional information about service circumstances, locations, or special conditions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Revenue Cycle Terms</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.5rem;">Charge Capture</h3>
+              <p style="color:#374151;">Process of recording billable services, procedures, and supplies performed for patients to ensure complete revenue capture.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.5rem;">Claim Scrubbing</h3>
+              <p style="color:#374151;">Automated review of claims before submission to identify and correct errors, improving clean claim rates and reducing denials.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.5rem;">Payment Posting</h3>
+              <p style="color:#374151;">Recording payments, adjustments, and denials from payers and patients into practice management system for accurate A/R tracking.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.5rem;">Credentialing</h3>
+              <p style="color:#374151;">Process of verifying provider qualifications, obtaining payer enrollment, and maintaining participation in insurance networks.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Payer & Insurance Terms</h2>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.75rem;"><strong>Deductible:</strong> Amount patient must pay before insurance coverage begins</li>
+            <li style="margin-bottom:0.75rem;"><strong>Coinsurance:</strong> Percentage of allowed amount patient pays after deductible</li>
+            <li style="margin-bottom:0.75rem;"><strong>Copayment:</strong> Fixed dollar amount patient pays for specific services</li>
+            <li style="margin-bottom:0.75rem;"><strong>Allowed Amount:</strong> Maximum payment payer will make for covered service</li>
+            <li style="margin-bottom:0.75rem;"><strong>Timely Filing:</strong> Deadline for submitting claims to payer (typically 90-365 days)</li>
+            <li style="margin-bottom:0.75rem;"><strong>Prior Authorization:</strong> Payer approval required before performing certain services</li>
+          </ul>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Questions About Medical Billing Terms?</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Our billing experts can explain any terminology and help you understand your practice revenue cycle.</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Contact Our Team</a>
+          </div>
+        </section>
+      `
+    },
+    'faq': {
+      title: 'Medical Billing FAQs | Common Questions Answered | Medtransic',
+      metaDescription: 'Frequently asked questions about medical billing services, pricing, implementation, compliance, and revenue cycle management. Get expert answers.',
+      h1: 'Frequently Asked Questions About Medical Billing Services',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Find answers to common questions about medical billing services, implementation, pricing, compliance, and working with Medtransic. Can't find your answer? Contact us for personalized assistance.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Getting Started</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">How quickly can you implement billing services?</h3>
+              <p style="color:#4b5563;">Implementation typically takes 30-45 days including system integration, data migration, staff training, and workflow setup. We provide dedicated implementation specialists to ensure smooth transition with minimal practice disruption.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">What information do you need to get started?</h3>
+              <p style="color:#4b5563;">EHR/practice management system details, provider credentialing information, payer enrollment status, current fee schedules, recent performance reports (A/R aging, denial reports), and practice demographics.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Will you work with my existing EHR system?</h3>
+              <p style="color:#4b5563;">Yes, we integrate with all major EHR and practice management systems including Epic, Cerner, Athenahealth, AdvancedMD, Kareo, NextGen, eClinicalWorks, and 50+ others. Our team has extensive experience with system integrations.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Pricing & Cost</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.75rem;">How much do your services cost?</h3>
+              <p style="color:#374151;">Pricing is based on practice size, specialty, claim volume, and services required. Most practices pay 4-7% of collections for comprehensive RCM services. We provide transparent proposals showing total costs and expected ROI.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.75rem;">Are there setup fees or long-term contracts?</h3>
+              <p style="color:#374151;">Minimal setup fees cover implementation costs. We offer flexible contract terms typically 12-24 months. Month-to-month options available for established practices. No penalties for early termination in most cases.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1e40af;margin-bottom:0.75rem;">How much can I save versus in-house billing?</h3>
+              <p style="color:#374151;">Typical savings of 30-40% compared to in-house operations. Eliminate staff salaries and benefits ($40K-$60K per FTE), software licenses ($500-$2K monthly), training costs, and overhead while collecting more revenue.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Services & Performance</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.75rem;">What services are included?</h3>
+              <p style="color:#374151;">Comprehensive RCM including eligibility verification, coding, claim submission, payment posting, denial management, AR follow-up, patient billing, credentialing, reporting, and dedicated account management.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.75rem;">What are your typical collection rates?</h3>
+              <p style="color:#374151;">We achieve 97-99% collection rates on net collectible revenue, significantly exceeding industry average of 85-90%. Clean claim rates consistently exceed 98% with denial rates below 5%.</p>
+            </div>
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#047857;margin-bottom:0.75rem;">How do you handle denials?</h3>
+              <p style="color:#374151;">Proactive denial prevention through claim scrubbing and pre-submission review. When denials occur, we appeal within 24-48 hours using documentation and medical necessity arguments. Overturn rate of 70-75%.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Compliance & Security</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#991b1b;margin-bottom:0.75rem;">Are you HIPAA compliant?</h3>
+              <p style="color:#374151;">Yes, full HIPAA compliance with encrypted data transmission, secure access controls, regular security audits, staff training, and business associate agreements. We undergo annual HIPAA compliance audits.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#991b1b;margin-bottom:0.75rem;">How do you ensure coding compliance?</h3>
+              <p style="color:#374151;">Certified coders with ongoing education, automated compliance checks, regular internal audits, adherence to CPT/ICD-10 guidelines, medical necessity verification, and OIG compliance program elements.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#991b1b;margin-bottom:0.75rem;">What happens if there's an audit?</h3>
+              <p style="color:#374151;">We support you through audits providing documentation, responding to requests, and representing your interests. Our compliant practices typically result in minimal findings or refunds.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Reporting & Communication</h2>
+          <div style="padding:2rem;background:#fefce8;border-radius:0.5rem;">
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#854d0e;margin-bottom:0.5rem;">What reports will I receive?</h3>
+              <p style="color:#374151;">Comprehensive monthly reports including collection rates, clean claim rates, denial analysis, A/R aging, payer performance, provider productivity, and recommendations. Real-time dashboards available 24/7.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#854d0e;margin-bottom:0.5rem;">Who will be my primary contact?</h3>
+              <p style="color:#374151;">Dedicated account manager serves as single point of contact understanding your practice needs. Supported by billing specialists, coding experts, and customer service team.</p>
+            </div>
+            <div>
+              <h3 style="font-weight:600;color:#854d0e;margin-bottom:0.5rem;">How quickly do you respond to questions?</h3>
+              <p style="color:#374151;">Standard response within 4 business hours for routine questions, immediate response for urgent issues. Email, phone, and portal communication options available.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Still Have Questions?</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Our medical billing experts are ready to answer your specific questions.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Contact Us Today</a>
+          </div>
+        </section>
+      `
+    },
+    'ceo': {
+      title: 'Meet Our CEO - Nasar Haq | Medtransic Leadership',
+      metaDescription: 'Meet Nasar Haq, CEO of Medtransic. Learn about his vision for transforming medical billing and revenue cycle management in healthcare.',
+      h1: 'Leadership: Nasar Haq, CEO',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Under the leadership of CEO Nasar Haq, Medtransic has grown to become a trusted partner for healthcare practices nationwide, delivering industry-leading collection rates and client satisfaction through innovation, expertise, and unwavering commitment to results.</p>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#047857;">Our CEO's Vision</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Nasar Haq founded Medtransic with a clear mission: to help healthcare providers maximize revenue while reducing administrative burden so they can focus on patient care. His vision combines technology innovation with human expertise to deliver superior results.</p>
+          <p style="color:#374151;">"Healthcare providers should focus on healing patients, not fighting with insurance companies. Our role is to handle the revenue cycle complexity efficiently and transparently, ensuring practices get paid what they've earned while maintaining complete compliance." - Nasar Haq</p>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Experience & Expertise</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Revenue Cycle Management Pioneer</h3>
+              <p style="color:#374151;">Over 15 years leading medical billing operations, implementing RCM best practices, and developing innovative solutions that improve practice financial performance.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Technology Innovator</h3>
+              <p style="color:#374151;">Champion of billing automation, AI-powered denial prediction, advanced analytics, and seamless EHR integration to maximize efficiency and accuracy.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Client-Focused Leadership</h3>
+              <p style="color:#374151;">Building lasting partnerships through transparency, accountability, and measurable results. Client retention rate exceeding 95% reflects commitment to service excellence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Company Growth Under His Leadership</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.75rem;">Expanded services to cover 40+ medical specialties nationwide</li>
+              <li style="margin-bottom:0.75rem;">Achieved industry-leading 97-99% collection rates across client base</li>
+              <li style="margin-bottom:0.75rem;">Processed billions of dollars in healthcare revenue</li>
+              <li style="margin-bottom:0.75rem;">Built team of certified coding and billing professionals</li>
+              <li style="margin-bottom:0.75rem;">Developed proprietary technology for claim scrubbing and analytics</li>
+              <li style="margin-bottom:0.75rem;">Established partnerships with major EHR vendors and clearinghouses</li>
+              <li style="margin-bottom:0.75rem;">Maintained 95%+ client retention through exceptional service</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Core Values & Philosophy</h2>
+          <div style="display:grid;gap:1rem;">
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Transparency:</strong> <span style="color:#4b5563;">Provide complete visibility into practice performance with real-time dashboards and detailed reporting. No hidden fees or surprises.</span>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Accountability:</strong> <span style="color:#4b5563;">Hold ourselves responsible for results through performance-based pricing and measurable outcomes. We succeed when you succeed.</span>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Innovation:</strong> <span style="color:#4b5563;">Continuously invest in technology and process improvement to deliver better results more efficiently.</span>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Integrity:</strong> <span style="color:#4b5563;">Maintain highest ethical standards in all billing practices, ensuring compliant coding and proper documentation.</span>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Experience the Medtransic Difference</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Discover how our leadership and expertise can transform your practice revenue.</p>
+          <p style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Consultation</a>
+          </div>
+        </section>
+      `
+    },
+    'careers': {
+      title: 'Careers at Medtransic | Join Our Medical Billing Team',
+      metaDescription: 'Explore career opportunities at Medtransic. Join a growing medical billing company with competitive compensation, professional development, and career growth.',
+      h1: 'Join the Medtransic Team',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic is always seeking talented professionals to join our team. We offer rewarding careers in medical billing, coding, revenue cycle management, and healthcare administration with competitive compensation, comprehensive benefits, and opportunities for professional growth.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Why Work at Medtransic?</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Professional Development</h3>
+              <p style="color:#374151;">Continuous education including certification preparation, specialty training, regulatory updates, and leadership development programs. We invest in your growth.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Competitive Compensation</h3>
+              <p style="color:#374151;">Market-competitive salaries, performance bonuses, and comprehensive benefits including health insurance, 401(k) matching, paid time off, and professional certification support.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-left:4px solid #dc2626;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Career Growth Opportunities</h3>
+              <p style="color:#374151;">Clear career paths from entry-level to senior leadership positions. Promote from within culture rewards talent and dedication with advancement opportunities.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid #eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Work-Life Balance</h3>
+              <p style="color:#374151;">Flexible scheduling options, remote work opportunities, generous PTO, and supportive environment that values your personal life and wellbeing.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Current Opportunities</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Medical Billing Specialists</h3>
+              <p style="color:#4b5563;margin-bottom:0.5rem;">Process claims, post payments, manage denials, and follow up on accounts receivable. Experience with medical billing software and knowledge of payer requirements preferred.</p>
+              <p style="color:#6b7280;font-size:0.875rem;"><strong>Requirements:</strong> 2+ years billing experience, high school diploma or equivalent</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Certified Medical Coders</h3>
+              <p style="color:#4b5563;margin-bottom:0.5rem;">Assign accurate ICD-10, CPT, and HCPCS codes for medical services. Review documentation for medical necessity and compliance. Specialty coding experience valued.</p>
+              <p style="color:#6b7280;font-size:0.875rem;"><strong>Requirements:</strong> CPC or CCS certification, 1+ years coding experience</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">AR Follow-Up Representatives</h3>
+              <p style="color:#4b5563;margin-bottom:0.5rem;">Contact payers to resolve outstanding claims, appeal denials, negotiate payments, and ensure maximum collections. Strong communication and problem-solving skills essential.</p>
+              <p style="color:#6b7280;font-size:0.875rem;"><strong>Requirements:</strong> 1+ years AR experience, excellent communication skills</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Credentialing Specialists</h3>
+              <p style="color:#4b5563;margin-bottom:0.5rem;">Manage provider enrollment, CAQH profiles, payer applications, and credentialing maintenance. Detail-oriented with strong organizational skills.</p>
+              <p style="color:#6b7280;font-size:0.875rem;"><strong>Requirements:</strong> 1+ years credentialing experience, knowledge of payer requirements</p>
+            </div>
+            <div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Account Managers</h3>
+              <p style="color:#4b5563;margin-bottom:0.5rem;">Serve as primary client contact, oversee billing operations, analyze performance metrics, and provide strategic recommendations. RCM expertise and client management experience required.</p>
+              <p style="color:#6b7280;font-size:0.875rem;"><strong>Requirements:</strong> 3+ years RCM experience, strong analytical and communication skills</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Benefits & Perks</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem;">
+            <div>
+              <strong style="color:#1f2937;">Health Benefits</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#374151;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Medical, dental, and vision insurance</li>
+                <li>Health savings account options</li>
+                <li>Life and disability insurance</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">Financial Benefits</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#374151;font-size:0.875rem;margin-top:0.5rem;">
+                <li>401(k) with company match</li>
+                <li>Performance bonuses</li>
+                <li>Competitive salaries</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">Time Off</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#374151;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Paid vacation and sick leave</li>
+                <li>Paid holidays</li>
+                <li>Flexible scheduling</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">Professional Development</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#374151;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Certification support and reimbursement</li>
+                <li>Continuing education opportunities</li>
+                <li>Leadership training programs</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">How to Apply</h2>
+          <p style="color:#374151;margin-bottom:1rem;">Interested in joining our team? We'd love to hear from you.</p>
+          <div style="padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Email your resume and cover letter to:</strong> careers@medtransic.com</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Include:</strong> Position of interest, relevant experience, certifications held, and salary expectations</p>
+            <p style="color:#374151;">We review all applications and contact qualified candidates for interviews. Equal opportunity employer committed to diversity and inclusion.</p>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Ready to Launch Your Career?</h2>
+          <p style="font-size:1.125rem;margin-bottom:2rem;">Join a growing company where your skills and dedication are valued and rewarded.</p>
+          <p style="font-size:1.25rem;margin-bottom:0.5rem;"><strong>Email:</strong> careers@medtransic.com</p>
+          <p style="font-size:1.25rem;"><strong>Phone:</strong> (866) 261-5711</p>
+        </section>
+      `
+    },
+    'locations': {
+      title: 'Service Locations | Nationwide Medical Billing Coverage | Medtransic',
+      metaDescription: 'Medtransic provides medical billing services nationwide. Remote RCM services for practices in all 50 states with local market expertise.',
+      h1: 'Nationwide Medical Billing Services',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic serves healthcare practices nationwide with comprehensive medical billing and revenue cycle management services. Our remote service model delivers expert support to practices in all 50 states while maintaining deep understanding of local payer requirements and regulations.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">National Coverage with Local Expertise</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">All 50 States Covered</h3>
+              <p style="color:#374151;">Our team serves practices throughout the United States including Alaska, Hawaii, and U.S. territories. Remote service delivery enables us to support practices anywhere with internet connectivity.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">State-Specific Expertise</h3>
+              <p style="color:#374151;">Understanding of state-specific Medicaid programs, workers' compensation requirements, auto insurance rules, and regional payer policies. Each state has unique billing requirements we navigate expertly.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Multi-Location Practice Support</h3>
+              <p style="color:#374151;">Seamless support for practices with multiple locations across different states. Centralized billing with location-specific handling for credentialing, payer enrollment, and compliance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Primary Service Regions</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Northeast</h3>
+              <p style="color:#4b5563;">New York, Pennsylvania, New Jersey, Massachusetts, Connecticut, and surrounding states. Extensive experience with regional payers including Empire, Independence Blue Cross, and state Medicaid programs.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Southeast</h3>
+              <p style="color:#4b5563;">Florida, Georgia, North Carolina, South Carolina, Virginia, and throughout the Southeast. Knowledge of Florida Blue, Anthem, WellCare, and regional Medicare Advantage plans.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Midwest</h3>
+              <p style="color:#4b5563;">Illinois, Ohio, Michigan, Indiana, Wisconsin, and Midwest states. Familiarity with Blue Cross Blue Shield regional plans, Humana, and state-specific programs.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Southwest</h3>
+              <p style="color:#4b5563;">Texas, Arizona, New Mexico, Nevada, and Southwest region. Experience with Southwest-specific payers, border health programs, and regional requirements.</p>
+            </div>
+            <div>
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">West Coast</h3>
+              <p style="color:#4b5563;">California, Washington, Oregon, and Western states. Knowledge of Kaiser, Anthem California, Regence, and state-specific regulations including California's unique requirements.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Payer Network Coverage</h2>
+          <p style="margin-bottom:1.5rem;color:#374151;">We work with all major national and regional payers:</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;">
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">National Payers</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#4b5563;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Medicare (all jurisdictions)</li>
+                <li>UnitedHealthcare</li>
+                <li>Anthem/Blue Cross Blue Shield</li>
+                <li>Aetna</li>
+                <li>Cigna</li>
+                <li>Humana</li>
+              </ul>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">State Medicaid</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#4b5563;font-size:0.875rem;margin-top:0.5rem;">
+                <li>All state Medicaid programs</li>
+                <li>Managed Medicaid plans</li>
+                <li>Medi-Cal (California)</li>
+                <li>Medicaid MCOs</li>
+              </ul>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Regional Plans</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#4b5563;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Kaiser Permanente</li>
+                <li>BCBS regional plans</li>
+                <li>Regional HMOs/PPOs</li>
+                <li>Medicare Advantage plans</li>
+              </ul>
+            </div>
+            <div style="padding:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <strong style="color:#1f2937;">Specialty Payers</strong>
+              <ul style="list-style:disc;margin-left:1.5rem;color:#4b5563;font-size:0.875rem;margin-top:0.5rem;">
+                <li>Workers' Compensation</li>
+                <li>Auto insurance medical</li>
+                <li>TriCare/VA</li>
+                <li>Commercial plans</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Remote Service Advantages</h2>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.75rem;">Access to specialized expertise regardless of practice location</li>
+            <li style="margin-bottom:0.75rem;">Lower costs than hiring local billing staff</li>
+            <li style="margin-bottom:0.75rem;">24/7 claim processing and monitoring</li>
+            <li style="margin-bottom:0.75rem;">No office space or equipment requirements</li>
+            <li style="margin-bottom:0.75rem;">Seamless EHR integration over secure connections</li>
+            <li style="margin-bottom:0.75rem;">Dedicated account management with regular communication</li>
+            <li style="margin-bottom:0.75rem;">Real-time reporting and dashboard access</li>
+          </ul>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Serving Practices Nationwide</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">No matter where your practice is located, we provide expert billing support with local market knowledge.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Get Started Today</a>
+          </div>
+        </section>
+      `
+    },
+    'comparisons': {
+      title: 'Medical Billing Comparisons | In-House vs Outsourcing | Medtransic',
+      metaDescription: 'Compare medical billing options: in-house vs outsourcing, different billing companies, pricing models, and service features. Make informed decisions.',
+      h1: 'Medical Billing Service Comparisons',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Understanding your medical billing options helps you make informed decisions for your practice. Compare in-house billing versus outsourcing, different service models, pricing structures, and key features to find the best solution for your needs.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">In-House vs Outsourced Billing</h2>
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;background:white;border-radius:0.5rem;overflow:hidden;">
+              <thead style="background:#1e40af;color:white;">
+                <tr>
+                  <th style="padding:1rem;text-align:left;">Factor</th>
+                  <th style="padding:1rem;text-align:left;">In-House Billing</th>
+                  <th style="padding:1rem;text-align:left;">Outsourced (Medtransic)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Setup Cost</td>
+                  <td style="padding:1rem;">$15K-$30K (software, training, hiring)</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">Minimal ($500-$2K)</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Monthly Cost</td>
+                  <td style="padding:1rem;">$6K-$12K per staff member</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">4-7% of collections</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Collection Rate</td>
+                  <td style="padding:1rem;">85-92% typical</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">97-99%</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Clean Claim Rate</td>
+                  <td style="padding:1rem;">90-95%</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">98%+</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Days in A/R</td>
+                  <td style="padding:1rem;">40-55 days</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">25-32 days</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Staff Turnover Risk</td>
+                  <td style="padding:1rem;">High (industry avg 25-30%)</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">None (our responsibility)</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Compliance Risk</td>
+                  <td style="padding:1rem;">Moderate to high</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">Low (built-in expertise)</td>
+                </tr>
+                <tr style="border-top:1px solid #e5e7eb;">
+                  <td style="padding:1rem;font-weight:600;">Scalability</td>
+                  <td style="padding:1rem;">Difficult (hiring, training)</td>
+                  <td style="padding:1rem;color:#047857;font-weight:600;">Easy (instant capacity)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Pricing Model Comparison</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Percentage of Collections (Recommended)</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;"><strong>How it works:</strong> Billing company charges 4-8% of actual collections</p>
+              <p style="color:#374151;"><strong>Advantages:</strong> Aligned incentives, no risk if collections are low, scales with practice revenue, transparent cost structure</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Per Claim Fee</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;"><strong>How it works:</strong> Fixed fee per claim submitted (typically $3-$8)</p>
+              <p style="color:#374151;"><strong>Disadvantages:</strong> No incentive to maximize collections, costs add up quickly for high-volume practices, hidden fees common</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">Flat Monthly Fee</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;"><strong>How it works:</strong> Fixed monthly charge regardless of volume or collections</p>
+              <p style="color:#374151;"><strong>Disadvantages:</strong> No performance incentive, may not scale appropriately, often requires minimum volume commitments</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">Hourly Billing</h3>
+              <p style="color:#374151;margin-bottom:0.5rem;"><strong>How it works:</strong> Charged for time spent on billing activities</p>
+              <p style="color:#374151;"><strong>Disadvantages:</strong> Unpredictable costs, no efficiency incentive, difficult to track and verify, typically most expensive</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">What to Look for in a Billing Company</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Proven Performance Metrics</h3>
+              <p style="color:#4b5563;">Look for companies demonstrating 97%+ collection rates, 98%+ clean claim rates, sub-35 day A/R, and below 5% denial rates. Ask for client references and case studies.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Specialty Experience</h3>
+              <p style="color:#4b5563;">Ensure the company has extensive experience with your medical specialty including understanding of specialty-specific codes, documentation requirements, and common payer issues.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Technology Capabilities</h3>
+              <p style="color:#4b5563;">Advanced claim scrubbing (300+ edits), real-time eligibility verification, automated denial management, EHR integration, and comprehensive analytics dashboards.</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Transparency & Reporting</h3>
+              <p style="color:#4b5563;">Real-time dashboard access, detailed monthly reports, clear communication, responsive support, and transparent pricing with no hidden fees.</p>
+            </div>
+            <div>
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Compliance & Certification</h3>
+              <p style="color:#4b5563;">HIPAA compliance, certified coders (CPC, CCS), regular audits, business associate agreements, and documented compliance programs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Red Flags to Watch For</h2>
+          <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+            <li style="margin-bottom:0.75rem;">Promises that sound too good to be true (99.9% collection rates, zero denials)</li>
+            <li style="margin-bottom:0.75rem;">Lack of specialty experience or client references</li>
+            <li style="margin-bottom:0.75rem;">Hidden fees or vague pricing structures</li>
+            <li style="margin-bottom:0.75rem;">Long-term contracts with penalties (3+ years)</li>
+            <li style="margin-bottom:0.75rem;">No access to real-time reporting or data</li>
+            <li style="margin-bottom:0.75rem;">Offshore-only operations without U.S. oversight</li>
+            <li style="margin-bottom:0.75rem;">No certified coders or compliance programs</li>
+            <li style="margin-bottom:0.75rem;">Poor responsiveness during sales process</li>
+          </ul>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#047857 0%,#059669 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Compare Your Options with Expert Guidance</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Get personalized comparison showing costs, benefits, and ROI for your specific practice situation.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">Request Free Analysis</a>
+          </div>
+        </section>
+      `
+    },
+    'website-design': {
+      title: 'Medical Practice Website Design | Healthcare Web Development | Medtransic',
+      metaDescription: 'Professional website design for medical practices. HIPAA-compliant, mobile-responsive, SEO-optimized healthcare websites with patient portals and online scheduling.',
+      h1: 'Professional Website Design for Medical Practices',
+      content: `
+        <p style="font-size:1.125rem;margin-bottom:2rem;line-height:1.8;">Medtransic offers professional website design and development services specifically for healthcare practices. Our HIPAA-compliant, mobile-responsive websites help you attract new patients, improve online presence, and provide convenient digital services.</p>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Healthcare Website Features</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#047857;">Modern, Professional Design</h3>
+              <p style="color:#374151;">Clean, contemporary designs that establish credibility and trust. Custom branding reflecting your practice identity with professional photography and graphics.</p>
+            </div>
+            <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;">Mobile-Responsive</h3>
+              <p style="color:#374151;">Fully responsive design works perfectly on smartphones, tablets, and desktops. Over 60% of healthcare searches occur on mobile devices.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fef2f2;border-left:4px solid #dc2626;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#991b1b;">HIPAA Compliance</h3>
+              <p style="color:#374151;">Secure hosting, encrypted forms, proper privacy policies, and compliance with HIPAA requirements for patient communications and data protection.</p>
+            </div>
+            <div style="padding:1.5rem;background:#fefce8;border-left:4px solid #eab308;border-radius:0.5rem;">
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#854d0e;">SEO Optimization</h3>
+              <p style="color:#374151;">Search engine optimization to help patients find your practice. Local SEO targeting your geographic area with Google My Business integration.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Essential Website Elements</h2>
+          <div style="padding:2rem;background:#f9fafb;border-radius:0.5rem;">
+            <ul style="list-style:disc;margin-left:2rem;color:#374151;">
+              <li style="margin-bottom:0.75rem;"><strong>Provider Bios & Credentials:</strong> Professional profiles highlighting education, experience, specialties, and patient approach</li>
+              <li style="margin-bottom:0.75rem;"><strong>Services & Treatments:</strong> Detailed descriptions of medical services, procedures, and treatments offered</li>
+              <li style="margin-bottom:0.75rem;"><strong>Online Appointment Scheduling:</strong> Patient-friendly booking system integrated with practice management system</li>
+              <li style="margin-bottom:0.75rem;"><strong>Contact & Location Information:</strong> Maps, directions, hours, phone numbers, and contact forms</li>
+              <li style="margin-bottom:0.75rem;"><strong>Insurance & Payment Info:</strong> Accepted insurance plans, payment options, and financial policies</li>
+              <li style="margin-bottom:0.75rem;"><strong>Patient Education:</strong> Health information, FAQs, pre-visit instructions, and post-care guidelines</li>
+              <li style="margin-bottom:0.75rem;"><strong>Patient Portal Access:</strong> Secure login to EHR patient portal for records, test results, and messaging</li>
+              <li style="margin-bottom:0.75rem;"><strong>Reviews & Testimonials:</strong> Patient feedback and ratings integrated from Google, Healthgrades, and other sources</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Advanced Features Available</h2>
+          <div style="display:grid;gap:1.5rem;">
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Telemedicine Integration</h3>
+              <p style="color:#4b5563;">Secure video consultation capabilities for virtual visits. Integration with telemedicine platforms and appointment scheduling.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Online Bill Pay</h3>
+              <p style="color:#4b5563;">Secure payment processing allowing patients to pay bills online. Integration with practice management system for automatic posting.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">New Patient Forms</h3>
+              <p style="color:#4b5563;">Digital intake forms patients complete before first visit. Reduces waiting room time and improves check-in efficiency.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Blog & Content Marketing</h3>
+              <p style="color:#4b5563;">Regular health content attracts new patients and improves search rankings. Professional medical content writing available.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Analytics & Tracking</h3>
+              <p style="color:#4b5563;">Google Analytics integration showing visitor behavior, traffic sources, and conversion tracking for appointment bookings.</p>
+            </div>
+            <div style="padding:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;">
+              <h3 style="font-weight:600;color:#1f2937;margin-bottom:0.75rem;">Multi-Language Support</h3>
+              <p style="color:#4b5563;">Website content in multiple languages serving diverse patient populations. Spanish, Chinese, and other language options available.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-radius:0.5rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#1e40af;">Website Development Process</h2>
+          <div style="display:grid;gap:1rem;margin-top:1.5rem;">
+            <div>
+              <strong style="color:#1f2937;">1. Discovery & Planning</strong>
+              <p style="color:#374151;font-size:0.875rem;margin-top:0.25rem;">Understand practice needs, target patients, competitive landscape, and desired features. Define site structure and functionality.</p>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">2. Design & Branding</strong>
+              <p style="color:#374151;font-size:0.875rem;margin-top:0.25rem;">Create custom design mockups reflecting practice brand. Select colors, fonts, imagery, and overall aesthetic. Revise until approved.</p>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">3. Development & Content</strong>
+              <p style="color:#374151;font-size:0.875rem;margin-top:0.25rem;">Build website with chosen features. Write professional content. Set up hosting and security. Integrate necessary systems.</p>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">4. Testing & Launch</strong>
+              <p style="color:#374151;font-size:0.875rem;margin-top:0.25rem;">Comprehensive testing on all devices and browsers. Load testing, security review, SEO optimization. Launch and monitor initial performance.</p>
+            </div>
+            <div>
+              <strong style="color:#1f2937;">5. Ongoing Support</strong>
+              <p style="color:#374151;font-size:0.875rem;margin-top:0.25rem;">Regular updates, security patches, content changes, and feature additions. Monthly performance reports and optimization recommendations.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-bottom:3rem;">
+          <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Pricing & Timeline</h2>
+          <div style="padding:2rem;background:#f0fdf4;border-radius:0.5rem;">
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Custom Website Development:</strong> $3,500 - $8,500 depending on features and complexity</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Monthly Hosting & Maintenance:</strong> $99 - $299 including hosting, security, updates, and support</p>
+            <p style="color:#374151;margin-bottom:1rem;"><strong>Timeline:</strong> Typically 6-10 weeks from kickoff to launch</p>
+            <p style="color:#374151;"><strong>Optional Services:</strong> Content writing, photography, video production, ongoing SEO, and digital marketing</p>
+          </div>
+        </section>
+
+        <section style="padding:2.5rem;background:linear-gradient(135deg,#1e40af 0%,#2563eb 100%);border-radius:0.5rem;text-align:center;color:white;">
+          <h2 style="font-size:2rem;font-weight:bold;margin-bottom:1.5rem;">Ready for a Professional Healthcare Website?</h2>
+          <p style="font-size:1.125rem;margin-bottom:1.5rem;">Schedule a consultation to discuss your website needs and receive a custom proposal.</p>
+          <p style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;">Call (866) 261-5711</p>
+          <div>
+            <a href="/contact" style="display:inline-block;padding:1rem 2.5rem;background:white;color:#2563eb;font-weight:600;border-radius:0.5rem;text-decoration:none;">Request Proposal</a>
+          </div>
+        </section>
+      `
     }
     // Continue with remaining static pages...
   };
