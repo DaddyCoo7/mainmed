@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run prerender",
-    "build:no-prerender": "vite build",
-    "prerender": "tsx scripts/prerender-simple.ts",
+    "build": "vite build && npm run generate:static",
+    "build:no-static": "vite build",
+    "generate:static": "tsx scripts/static-generator.ts",
+    "build:old": "vite build && npm run prerender:old",
+    "prerender:old": "tsx scripts/prerender-simple.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },
