@@ -801,11 +801,82 @@ function generateServicePageHTML(serviceSlug: string, baseHTML: string): string 
   return html;
 }
 
-function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): string {
+async function generateFAQPageHTML(baseHTML: string): Promise<string> {
+  console.log('   📥 Fetching general FAQs from database...');
+
+  const { data: faqs, error } = await supabase
+    .from('specialty_faqs')
+    .select('question, answer')
+    .eq('specialty_slug', 'general')
+    .order('priority', { ascending: true })
+    .limit(50);
+
+  if (error) {
+    console.error('   ⚠️  Error fetching FAQs:', error);
+    return generateStaticPageHTML(
+      {
+        path: 'faq',
+        title: 'Medical Billing FAQs | Common RCM Questions Answered',
+        description: 'Get answers to common questions about medical billing, revenue cycle management, coding, and healthcare reimbursement.'
+      },
+      baseHTML,
+      [
+        { name: 'Home', url: 'https://medtransic.com/' },
+        { name: 'Medical Billing FAQs', url: 'https://medtransic.com/faq' }
+      ]
+    );
+  }
+
+  console.log(`   ✅ Found ${faqs?.length || 0} FAQs for the FAQ page`);
+
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: 'Home', url: 'https://medtransic.com/' },
+    { name: 'Medical Billing FAQs', url: 'https://medtransic.com/faq' }
+  ];
+
+  let html = generateStaticPageHTML(
+    {
+      path: 'faq',
+      title: 'Medical Billing FAQs | Common RCM Questions Answered',
+      description: 'Get answers to common questions about medical billing, revenue cycle management, coding, and healthcare reimbursement.'
+    },
+    baseHTML,
+    breadcrumbs
+  );
+
+  if (faqs && faqs.length > 0) {
+    const stripHtml = (text: string) => {
+      return text.replace(/<[^>]*>/g, '').replace(/\n/g, ' ').trim();
+    };
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": stripHtml(faq.answer)
+        }
+      }))
+    };
+
+    html = html.replace(
+      '</head>',
+      `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n  </head>`
+    );
+
+    console.log('   ✅ FAQ schema added to FAQ page');
+  }
+
+  return html;
+}
+
+async function generateSpecialtyPageWithFAQs(specialtySlug: string, baseHTML: string): Promise<string> {
   const specialtyData = SPECIALTY_ROUTES[specialtySlug as keyof typeof SPECIALTY_ROUTES];
 
   if (!specialtyData) {
-    // Fallback for specialties not in the mapping
     const specialtyName = specialtySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const title = `${specialtyName} Medical Billing Services | RCM Solutions | Medtransic`;
     const description = `Specialized medical billing services for ${specialtyName.toLowerCase()} practices. Expert revenue cycle management tailored to your specialty.`;
@@ -819,7 +890,6 @@ function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): str
     return generateStaticPageHTML({ path: `specialties/${specialtySlug}`, title, description }, baseHTML, breadcrumbs);
   }
 
-  // Create breadcrumbs
   const specialtyName = specialtyData.title.split('|')[0].trim();
   const breadcrumbs: BreadcrumbItem[] = [
     { name: 'Home', url: 'https://medtransic.com/' },
@@ -827,14 +897,12 @@ function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): str
     { name: specialtyName, url: `https://medtransic.com/specialties/${specialtySlug}` }
   ];
 
-  // Generate HTML with specialty-specific structured data and breadcrumbs
   let html = generateStaticPageHTML({
     path: `specialties/${specialtySlug}`,
     title: specialtyData.title,
     description: specialtyData.description
   }, baseHTML, breadcrumbs);
 
-  // Add MedicalSpecialty schema
   const specialtySchema = {
     "@context": "https://schema.org",
     "@type": "MedicalSpecialty",
@@ -852,6 +920,41 @@ function generateSpecialtyPageHTML(specialtySlug: string, baseHTML: string): str
     '</head>',
     `  <script type="application/ld+json">${JSON.stringify(specialtySchema)}</script>\n  </head>`
   );
+
+  const { data: faqs, error } = await supabase
+    .from('specialty_faqs')
+    .select('question, answer')
+    .eq('specialty_slug', specialtySlug)
+    .order('priority', { ascending: true })
+    .limit(20);
+
+  if (!error && faqs && faqs.length > 0) {
+    const stripHtml = (text: string) => {
+      return text.replace(/<[^>]*>/g, '').replace(/\n/g, ' ').trim();
+    };
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": stripHtml(faq.answer)
+        }
+      })),
+      "about": {
+        "@type": "MedicalSpecialty",
+        "name": specialtyName
+      }
+    };
+
+    html = html.replace(
+      '</head>',
+      `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n  </head>`
+    );
+  }
 
   return html;
 }
@@ -1006,14 +1109,19 @@ async function prerenderPages() {
     try {
       console.log(`🔄 Generating HTML for: ${route.path}...`);
 
-      // Create breadcrumbs for static pages
-      const pageName = route.title.split('|')[0].trim();
-      const breadcrumbs: BreadcrumbItem[] = [
-        { name: 'Home', url: 'https://medtransic.com/' },
-        { name: pageName, url: `https://medtransic.com/${route.path}` }
-      ];
+      let pageHTML: string;
 
-      const pageHTML = generateStaticPageHTML(route, baseHTML, breadcrumbs);
+      if (route.path === 'faq') {
+        pageHTML = await generateFAQPageHTML(baseHTML);
+      } else {
+        const pageName = route.title.split('|')[0].trim();
+        const breadcrumbs: BreadcrumbItem[] = [
+          { name: 'Home', url: 'https://medtransic.com/' },
+          { name: pageName, url: `https://medtransic.com/${route.path}` }
+        ];
+
+        pageHTML = generateStaticPageHTML(route, baseHTML, breadcrumbs);
+      }
 
       const pagePath = join(distPath, route.path);
       mkdirSync(pagePath, { recursive: true });
@@ -1079,7 +1187,7 @@ async function prerenderPages() {
   for (const specialtySlug of Object.keys(SPECIALTY_ROUTES)) {
     try {
       console.log(`🔄 Generating HTML for: specialties/${specialtySlug}...`);
-      const pageHTML = generateSpecialtyPageHTML(specialtySlug, baseHTML);
+      const pageHTML = await generateSpecialtyPageWithFAQs(specialtySlug, baseHTML);
 
       const pagePath = join(distPath, 'specialties', specialtySlug);
       mkdirSync(pagePath, { recursive: true });
