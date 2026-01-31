@@ -1,0 +1,7 @@
+# Netlify Redirects Configuration for React SPA with Prerendering
+# This file enables proper SPA routing while serving prerendered HTML when available
+
+# Serve the SPA for all unmatched routes (client-side routing)
+# The 200 status means "rewrite" not "redirect", so the URL stays the same
+# If a prerendered HTML file exists at the path, it will be served instead
+/*    /index.html   200
