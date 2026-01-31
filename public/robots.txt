@@ -2,46 +2,12 @@
 # Allow all crawlers to index the site
 
 User-agent: *
+# Allow all content (most permissive rule first)
 Allow: /
+
+# Block only specific admin/API paths
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemap location
 Sitemap: https://medtransic.com/sitemap.xml
-
-# Crawl-delay for polite crawling (optional)
-Crawl-delay: 1
-
-# Specific rules for major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow crawling of admin or private areas if any
-Disallow: /admin/
-Disallow: /api/
-Disallow: /*.json$
-
-# Ignore common query parameters to prevent duplicate content
-Disallow: /*?replytocom=*
-Disallow: /*?utm_*
-Disallow: /*?ref=*
-Disallow: /*?source=*
-Disallow: /*?fbclid=*
-Disallow: /*?gclid=*
-Disallow: /*?_ga=*
-Disallow: /*?sort=*
-Disallow: /*?filter=*
-
-# Allow crawling of assets
-Allow: /assets/
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
