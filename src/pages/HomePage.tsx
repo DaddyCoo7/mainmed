@@ -13,7 +13,6 @@ import ProcessFlow from '../components/ProcessFlow';
 import MipsCompliance from '../components/MipsCompliance';
 import MedicalBillingEducation from '../components/MedicalBillingEducation';
 import ChoosingBillingPartner from '../components/ChoosingBillingPartner';
-import IndustryInsights from '../components/IndustryInsights';
 
 const HomePage: React.FC = () => {
   return (
@@ -34,7 +33,6 @@ const HomePage: React.FC = () => {
       <Services />
       <SpecialtyServices />
       <MedicalBillingEducation />
-      <IndustryInsights />
       <ChoosingBillingPartner />
       <VirtualReceptionist />
       <EHRLogosSection />
