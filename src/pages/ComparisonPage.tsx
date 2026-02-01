@@ -259,16 +259,16 @@ export default function ComparisonPage() {
                       onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                       className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <div className="flex items-start gap-4 flex-1">
+                      <span className="flex items-start gap-4 flex-1">
                         <HelpCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span className="font-semibold text-gray-900 text-lg">
                           {faq.question}
                         </span>
-                      </div>
-                      <motion.div
+                      </span>
+                      <motion.span
                         animate={{ rotate: openFAQ === index ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className="flex-shrink-0 ml-4"
+                        className="flex-shrink-0 ml-4 inline-block"
                       >
                         <svg
                           className="w-6 h-6 text-gray-500"
@@ -283,7 +283,7 @@ export default function ComparisonPage() {
                             d="M19 9l-7 7-7-7"
                           />
                         </svg>
-                      </motion.div>
+                      </motion.span>
                     </button>
                     <motion.div
                       initial={false}

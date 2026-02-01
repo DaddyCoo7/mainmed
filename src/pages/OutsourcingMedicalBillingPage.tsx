@@ -475,13 +475,11 @@ export default function OutsourcingMedicalBillingPage() {
               {faqs.map((faq, index) => (
                 <AnimatedSection key={index} delay={index * 0.05}>
                   <details className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
-                    <summary className="px-8 py-6 cursor-pointer hover:bg-blue-50 transition-colors">
-                      <div className="flex items-start gap-4">
-                        <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1 group-open:bg-blue-600">
-                          <ArrowRight className="w-4 h-4 text-blue-600 group-open:text-white transform group-open:rotate-90 transition-transform" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900 flex-1">{faq.question}</h3>
-                      </div>
+                    <summary className="px-8 py-6 cursor-pointer hover:bg-blue-50 transition-colors flex items-start gap-4">
+                      <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1 group-open:bg-blue-600">
+                        <ArrowRight className="w-4 h-4 text-blue-600 group-open:text-white transform group-open:rotate-90 transition-transform" />
+                      </span>
+                      <h3 className="text-lg font-semibold text-gray-900 flex-1">{faq.question}</h3>
                     </summary>
                     <div className="px-8 pb-6 pl-16">
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>

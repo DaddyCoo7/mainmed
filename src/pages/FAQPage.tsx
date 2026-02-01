@@ -311,24 +311,24 @@ const FAQPage: React.FC = () => {
                       onClick={() => toggleFAQ(faq.id)}
                       className="w-full px-6 py-5 text-left flex items-start justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                     >
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
+                      <span className="flex-1 flex flex-col">
+                        <span className="flex items-center gap-3 mb-2">
                           <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-${config.color}-100 dark:bg-${config.color}-900/30 text-${config.color}-700 dark:text-${config.color}-400`}>
                             <Icon className="w-3.5 h-3.5" />
                             {config.label}
                           </span>
-                        </div>
+                        </span>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-snug">
                           {faq.question}
                         </h3>
-                      </div>
-                      <div className="flex-shrink-0">
+                      </span>
+                      <span className="flex-shrink-0">
                         {expandedId === faq.id ? (
                           <ChevronUp className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                         ) : (
                           <ChevronDown className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                         )}
-                      </div>
+                      </span>
                     </button>
 
                     {expandedId === faq.id && (
