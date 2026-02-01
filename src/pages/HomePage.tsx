@@ -11,15 +11,18 @@ import VirtualReceptionist from '../components/VirtualReceptionist';
 import EHRLogosSection from '../components/EHRLogosSection';
 import ProcessFlow from '../components/ProcessFlow';
 import MipsCompliance from '../components/MipsCompliance';
+import MedicalBillingEducation from '../components/MedicalBillingEducation';
+import ChoosingBillingPartner from '../components/ChoosingBillingPartner';
+import IndustryInsights from '../components/IndustryInsights';
 
 const HomePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Medical Billing Services 2025 | 99% Clean Claims | RCM"
-        description="Boost revenue by 30% with certified medical billing experts. HIPAA-compliant RCM solutions, 99% clean claims, faster payments. Free consultation for healthcare practices nationwide. Call 888-777-0860!"
+        title="Medical Billing Services 2025 | Expert RCM | 99% Clean Claims"
+        description="Comprehensive guide to medical billing and revenue cycle management. Expert insights on choosing billing partners, industry trends, compliance, coding accuracy, and denial management. Certified professionals helping practices increase revenue by 30%. Free consultation available."
         canonical="https://medtransic.com/"
-        keywords="medical billing services 2025, revenue cycle management, RCM, medical coding, healthcare billing, practice management, denial management, provider credentialing, HIPAA compliance, certified medical billers"
+        keywords="medical billing services, revenue cycle management, RCM, medical coding accuracy, healthcare billing guide, denial management strategies, accounts receivable management, HIPAA compliance, certified medical coders, billing company selection, practice management, claims processing"
         ogType="website"
       />
       <OrganizationSchema />
@@ -30,6 +33,9 @@ const HomePage: React.FC = () => {
       <AdvantagesSection />
       <Services />
       <SpecialtyServices />
+      <MedicalBillingEducation />
+      <IndustryInsights />
+      <ChoosingBillingPartner />
       <VirtualReceptionist />
       <EHRLogosSection />
       <ProcessFlow />
