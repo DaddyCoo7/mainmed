@@ -21,8 +21,11 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import ROICalculator from '../components/ROICalculator';
 import BreakEvenAnalysis from '../components/BreakEvenAnalysis';
+import FAQSection from '../components/FAQSection';
+import { useFAQs } from '../hooks/useFAQs';
 
 const PricingPage: React.FC = () => {
+  const { faqs, loading: faqsLoading } = useFAQs('general');
   const billingFeatures = [
     'Advance Benefits Verification',
     'Medical Coding Services',
@@ -447,6 +450,12 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {!faqsLoading && faqs.length > 0 && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <FAQSection faqs={faqs.slice(0, 12)} specialtyName="Medical Billing Pricing" />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -5,9 +5,12 @@ import { Award, Users, TrendingUp, CheckCircle, ArrowRight, Shield, Clock, Heart
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import FAQSection from '../components/FAQSection';
 import OrganizationSchema from '../components/OrganizationSchema';
+import { useFAQs } from '../hooks/useFAQs';
 
 const AboutPage: React.FC = () => {
+  const { faqs, loading: faqsLoading } = useFAQs('general');
   const values = [
     {
       icon: Award,
@@ -527,7 +530,7 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Join hundreds of healthcare providers who trust Medtransic to optimize 
+              Join hundreds of healthcare providers who trust Medtransic to optimize
               their revenue cycle and improve their practice's financial health.
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -551,6 +554,12 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </AnimatedSection>
+
+        {!faqsLoading && faqs.length > 0 && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <FAQSection faqs={faqs.slice(0, 10)} specialtyName="Medical Billing" />
+          </div>
+        )}
       </div>
     </div>
   );

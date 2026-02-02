@@ -28,10 +28,13 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
+import FAQSection from '../components/FAQSection';
 import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
+import { useFAQs } from '../hooks/useFAQs';
 
 const CardiologyPage: React.FC = () => {
+  const { faqs, loading: faqsLoading } = useFAQs('cardiology');
   const painPoints = [
     {
       icon: AlertTriangle,
@@ -433,6 +436,10 @@ const CardiologyPage: React.FC = () => {
         <AnimatedSection animation="slideUp" className="mb-24">
           <RelatedServices services={getRelatedLinks('cardiology')} />
         </AnimatedSection>
+
+        {!faqsLoading && faqs.length > 0 && (
+          <FAQSection faqs={faqs} specialtyName="Cardiology" />
+        )}
 
         <AnimatedSection animation="slideUp" className="text-center">
           <div className="bg-white rounded-2xl p-12 shadow-xl border border-gray-100">

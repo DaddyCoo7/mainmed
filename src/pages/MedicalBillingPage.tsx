@@ -28,9 +28,12 @@ import InteractiveCard from '../components/InteractiveCard';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import AggregateRatingSchema from '../components/AggregateRatingSchema';
 import RelatedServices from '../components/RelatedServices';
+import FAQSection from '../components/FAQSection';
 import { getRelatedLinks } from '../config/internalLinks';
+import { useFAQs } from '../hooks/useFAQs';
 
 const MedicalBillingPage: React.FC = () => {
+  const { faqs, loading: faqsLoading } = useFAQs('general');
   const painPoints = [
     {
       icon: FileText,
@@ -579,6 +582,10 @@ const MedicalBillingPage: React.FC = () => {
         <AnimatedSection animation="slideUp" className="mb-24">
           <RelatedServices services={getRelatedLinks('medical-billing')} />
         </AnimatedSection>
+
+        {!faqsLoading && faqs.length > 0 && (
+          <FAQSection faqs={faqs} specialtyName="Medical Billing" />
+        )}
 
         <AnimatedSection animation="slideUp" className="text-center">
           <div className="bg-white rounded-2xl p-12 shadow-xl border border-gray-100">
