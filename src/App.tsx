@@ -119,6 +119,14 @@ const LocationsPage = lazy(() => import('./pages/LocationsPage'));
 const AIPHASPage = lazy(() => import('./pages/AIPHASPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
+const CPTCodesCheatSheetPage = lazy(() => import('./pages/resources/CPTCodesCheatSheetPage'));
+const ICD10CodesReferencePage = lazy(() => import('./pages/resources/ICD10CodesReferencePage'));
+const DentalCodesCheatSheetPage = lazy(() => import('./pages/resources/DentalCodesCheatSheetPage'));
+const MedicalBillingModifiersGuidePage = lazy(() => import('./pages/resources/MedicalBillingModifiersGuidePage'));
+const EMRIntegrationPage = lazy(() => import('./pages/integrations/EMRIntegrationPage'));
+const EMRIntegrationsListPage = lazy(() => import('./pages/integrations/EMRIntegrationsListPage'));
+const StateBillingLawsPage = lazy(() => import('./pages/resources/StateBillingLawsPage'));
+
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -237,6 +245,13 @@ function App() {
             <Route path="/specialties/clinical-research" element={<ClinicalResearchPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/resources/billing-glossary" element={<BillingGlossaryPage />} />
+            <Route path="/resources/cpt-codes-cheat-sheet" element={<CPTCodesCheatSheetPage />} />
+            <Route path="/resources/icd-10-codes-reference" element={<ICD10CodesReferencePage />} />
+            <Route path="/resources/dental-codes-cheat-sheet" element={<DentalCodesCheatSheetPage />} />
+            <Route path="/resources/medical-billing-modifiers-guide" element={<MedicalBillingModifiersGuidePage />} />
+            <Route path="/resources/emr-integrations" element={<EMRIntegrationsListPage />} />
+            <Route path="/resources/state-billing-laws" element={<StateBillingLawsPage />} />
+            <Route path="/integrations/:slug" element={<EMRIntegrationPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/ceo" element={<CEOPage />} />
             <Route path="/admin/indexnow" element={<IndexNowAdminPage />} />
