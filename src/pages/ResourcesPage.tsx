@@ -13,7 +13,11 @@ import {
   TrendingUp,
   Calendar,
   Phone,
-  Scale
+  Scale,
+  Code,
+  Stethoscope,
+  Zap,
+  Building2
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
@@ -42,12 +46,66 @@ const ResourcesPage: React.FC = () => {
       features: ['80+ RCM terms defined', 'Easy alphabetical navigation', 'Real-world examples', 'Searchable database']
     },
     {
+      icon: Code,
+      title: 'CPT Codes Cheat Sheet',
+      href: '/resources/cpt-codes-cheat-sheet',
+      description: 'Free 2025 CPT codes reference with descriptions, RVU values, and specialty-specific procedure codes. Includes 99213, 99214, and all commonly used E&M codes.',
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      features: ['21+ CPT codes', 'E&M codes', 'Surgical codes', 'RVU values']
+    },
+    {
+      icon: Stethoscope,
+      title: 'ICD-10 Codes Reference',
+      href: '/resources/icd-10-codes-reference',
+      description: 'Quick reference guide for ICD-10 diagnosis codes including Z01.818 (pre-op clearance), surgical clearance codes, and commonly used diagnosis codes.',
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      features: ['Pre-op codes', 'Z01.818 included', 'Clinical notes', 'Searchable']
+    },
+    {
+      icon: FileText,
+      title: 'Dental Codes Cheat Sheet',
+      href: '/resources/dental-codes-cheat-sheet',
+      description: 'Complete CDT codes reference with ADA dental procedure codes. Includes D0140, D9310, and all diagnostic, preventive, and restorative codes.',
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      features: ['10+ CDT codes', 'ADA categories', 'D0140 & D9310', 'Usage notes']
+    },
+    {
+      icon: Code,
+      title: 'Medical Billing Modifiers',
+      href: '/resources/medical-billing-modifiers-guide',
+      description: 'Complete guide to medical billing modifiers including GA, GW, GV, 59, and 25 modifiers. Learn when to use each modifier with real examples.',
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      features: ['5 key modifiers', 'Usage guidelines', 'Real examples', 'Specialty info']
+    },
+    {
+      icon: Zap,
+      title: 'EMR/EHR Integrations',
+      href: '/resources/emr-integrations',
+      description: 'Medical billing integration guides for all major EMR systems including eClinicalWorks, Office Ally, Kareo, Athena, Epic, NextGen, and more.',
+      color: 'text-cyan-600',
+      bgColor: 'bg-cyan-50',
+      features: ['12+ EMR systems', 'API integration', 'HL7 support', 'Setup guides']
+    },
+    {
+      icon: Building2,
+      title: 'State Billing Laws',
+      href: '/resources/state-billing-laws',
+      description: 'State-by-state guide to medical billing regulations, statute of limitations, timely filing requirements, and legal compliance.',
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+      features: ['All 50 states', 'Legal guidelines', 'Timely filing', 'Compliance']
+    },
+    {
       icon: HelpCircle,
       title: 'Frequently Asked Questions',
       href: '/faq',
       description: 'Get answers to 60+ common questions about medical billing, CPT codes, modifiers, denials, and RCM services.',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
+      color: 'text-teal-600',
+      bgColor: 'bg-teal-50',
       features: ['CPT coding questions', 'Modifier usage', 'Denial management', 'Insurance claims']
     },
     {
