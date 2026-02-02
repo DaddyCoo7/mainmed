@@ -153,7 +153,7 @@ const PricingPage: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                3.00% of Monthly Collections
+                4.00% of Monthly Collections
               </motion.div>
             </div>
             
