@@ -115,6 +115,12 @@ const ALL_SITE_URLS = [
   `${SITE_URL}/specialties/genetic-testing`,
   `${SITE_URL}/specialties/clinical-research`,
   `${SITE_URL}/specialties/durable-medical-equipment`,
+  `${SITE_URL}/resources/cpt-codes-cheat-sheet`,
+  `${SITE_URL}/resources/icd10-codes-reference`,
+  `${SITE_URL}/resources/dental-codes-cheat-sheet`,
+  `${SITE_URL}/resources/medical-billing-modifiers-guide`,
+  `${SITE_URL}/resources/state-billing-laws`,
+  `${SITE_URL}/integrations`,
 ];
 
 async function submitToIndexNow(urls: string[]): Promise<any> {

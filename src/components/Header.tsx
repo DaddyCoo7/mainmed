@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import RegionSwitcher from './RegionSwitcher';
-import { Menu, X, Phone, Calendar, ArrowRight, Shield, Award, Calculator, FileText, Headphones, Search, TrendingUp, Truck, Scissors, Users, MessageCircle, Brain, Heart, Activity, Stethoscope, Star, Rocket, Globe, Palette, Share2, MapPin, Database, ChevronDown, ChevronRight, Target, BookOpen, HelpCircle, Video, CheckSquare, Building2, CircleUser as UserCircle, FileCheck, Moon, Sun, Zap } from 'lucide-react';
+import { Menu, X, Phone, Calendar, ArrowRight, Shield, Award, Calculator, FileText, Headphones, Search, TrendingUp, Truck, Scissors, Users, MessageCircle, Brain, Heart, Activity, Stethoscope, Star, Rocket, Globe, Palette, Share2, MapPin, Database, ChevronDown, ChevronRight, Target, BookOpen, HelpCircle, Video, CheckSquare, Building2, CircleUser as UserCircle, FileCheck, Moon, Sun, Zap, Code2, Pill, Scale, Laptop } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const Header: React.FC = () => {
@@ -174,11 +174,40 @@ const Header: React.FC = () => {
       href: '/resources',
       children: [
         {
-          name: 'Medtransic Brochure',
-          href: '/documents/medtransicprofile.pdf',
+          name: 'CPT Codes Cheat Sheet',
+          href: '/resources/cpt-codes-cheat-sheet',
+          icon: Code2,
+          description: 'Quick reference guide for the most commonly used CPT codes in medical billing.'
+        },
+        {
+          name: 'ICD-10 Reference',
+          href: '/resources/icd10-codes-reference',
+          icon: Search,
+          description: 'Comprehensive ICD-10 diagnosis codes reference for accurate medical coding.'
+        },
+        {
+          name: 'Dental Codes Guide',
+          href: '/resources/dental-codes-cheat-sheet',
+          icon: Pill,
+          description: 'Complete guide to CDT dental codes for dental billing and claims.'
+        },
+        {
+          name: 'Modifiers Guide',
+          href: '/resources/medical-billing-modifiers-guide',
           icon: FileText,
-          description: 'Download our comprehensive company profile and service overview.',
-          external: true
+          description: 'Essential medical billing modifiers explained with practical examples.'
+        },
+        {
+          name: 'EMR Integrations',
+          href: '/integrations',
+          icon: Laptop,
+          description: 'Discover our seamless integrations with 50+ EMR and EHR systems.'
+        },
+        {
+          name: 'State Billing Laws',
+          href: '/resources/state-billing-laws',
+          icon: Scale,
+          description: 'State-specific medical billing regulations and compliance requirements.'
         },
         {
           name: 'Billing Glossary',
@@ -191,24 +220,6 @@ const Header: React.FC = () => {
           href: '/faq',
           icon: HelpCircle,
           description: 'Answers to common questions about medical billing and RCM services.'
-        },
-        {
-          name: 'Case Studies',
-          href: '/resources',
-          icon: CheckSquare,
-          description: 'Real-world success stories from healthcare practices we serve.'
-        },
-        {
-          name: 'Industry Guides',
-          href: '/resources',
-          icon: FileText,
-          description: 'Expert guides on healthcare billing compliance and best practices.'
-        },
-        {
-          name: 'HIPAA Compliance',
-          href: '/hipaa-compliance',
-          icon: Shield,
-          description: 'Learn about our comprehensive HIPAA compliance and data security measures.'
         }
       ]
     },
