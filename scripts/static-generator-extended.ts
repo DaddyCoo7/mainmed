@@ -587,6 +587,61 @@ async function generateAllPages() {
     }
   }
 
+  // Generate Comparison Pages
+  console.log('\n═══════════════════════════════════════════════');
+  console.log('🆚 GENERATING COMPARISON PAGES');
+  console.log('═══════════════════════════════════════════════\n');
+
+  try {
+    const { data: comparisons, error: compError } = await supabase
+      .from('comparison_pages')
+      .select('*')
+      .order('title');
+
+    if (compError) throw compError;
+
+    if (comparisons && comparisons.length > 0) {
+      console.log(`✅ Found ${comparisons.length} comparison pages in database\n`);
+
+      for (const comparison of comparisons) {
+        try {
+          const content = generateComparisonPageContent(comparison);
+
+          const pageHTML = generateStaticHTML(baseHTML, {
+            title: comparison.title,
+            metaDescription: comparison.meta_description,
+            canonicalUrl: `https://medtransic.com/comparisons/${comparison.slug}`,
+            h1: comparison.h1,
+            content,
+            schema: {
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              'headline': comparison.h1,
+              'description': comparison.meta_description,
+              'url': `https://medtransic.com/comparisons/${comparison.slug}`,
+              'author': {
+                '@type': 'Organization',
+                'name': 'Medtransic'
+              }
+            }
+          });
+
+          const pagePath = join(distPath, 'comparisons', comparison.slug);
+          mkdirSync(pagePath, { recursive: true });
+          writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+
+          console.log(`✅ ${totalSuccess + 1}. ${comparison.option_a_name} vs ${comparison.option_b_name}`);
+          totalSuccess++;
+        } catch (error) {
+          console.error(`❌ Error generating comparison: ${comparison.slug}`, error);
+          totalError++;
+        }
+      }
+    }
+  } catch (error) {
+    console.error('❌ Error fetching comparison pages:', error);
+  }
+
   // Summary
   console.log('\n═══════════════════════════════════════════════');
   console.log('📊 GENERATION SUMMARY');
@@ -659,6 +714,79 @@ function generateCityPageContent(city: any, stateName: string): string {
     <p style="color:#2563eb;font-weight:600;">Call (866) 261-5711</p>
   </section></div>`;
 
+  return content;
+}
+
+function generateComparisonPageContent(comparison: any): string {
+  let content = `<div style="line-height:1.8;">`;
+
+  // Intro section
+  content += `<p style="font-size:1.125rem;margin-bottom:2rem;color:#374151;">${comparison.intro}</p>`;
+
+  // Comparison table
+  content += `<section style="margin-bottom:3rem;">
+    <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#111827;">Head-to-Head Comparison</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+        <thead>
+          <tr style="background:#f3f4f6;">
+            <th style="padding:1rem;text-align:left;font-weight:600;border-bottom:2px solid #e5e7eb;">Factor</th>
+            <th style="padding:1rem;text-align:left;font-weight:600;border-bottom:2px solid #e5e7eb;">${comparison.option_a_name}</th>
+            <th style="padding:1rem;text-align:left;font-weight:600;border-bottom:2px solid #e5e7eb;">${comparison.option_b_name}</th>
+          </tr>
+        </thead>
+        <tbody>`;
+
+  if (comparison.comparison_factors && comparison.comparison_factors.length > 0) {
+    comparison.comparison_factors.forEach((factor: any, index: number) => {
+      const bgColor = index % 2 === 0 ? '#ffffff' : '#f9fafb';
+      content += `<tr style="background:${bgColor};">
+        <td style="padding:1rem;border-bottom:1px solid #e5e7eb;font-weight:500;">${factor.factor}</td>
+        <td style="padding:1rem;border-bottom:1px solid #e5e7eb;color:#374151;">${factor.optionA}${factor.winner === 'A' ? ' ✓' : ''}</td>
+        <td style="padding:1rem;border-bottom:1px solid #e5e7eb;color:#374151;">${factor.optionB}${factor.winner === 'B' ? ' ✓' : ''}</td>
+      </tr>`;
+    });
+  }
+
+  content += `</tbody>
+      </table>
+    </div>
+  </section>`;
+
+  // Winner summary
+  if (comparison.winner_summary) {
+    content += `<section style="margin-bottom:3rem;padding:2rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
+      <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;color:#111827;">The Verdict</h2>
+      <p style="color:#374151;line-height:1.8;">${comparison.winner_summary}</p>
+    </section>`;
+  }
+
+  // FAQs
+  if (comparison.faqs && comparison.faqs.length > 0) {
+    content += `<section style="margin-bottom:3rem;">
+      <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;color:#111827;">Frequently Asked Questions</h2>
+      <div style="display:grid;gap:1.5rem;">`;
+
+    comparison.faqs.forEach((faq: any) => {
+      content += `<div style="padding:1.5rem;background:#f9fafb;border-radius:0.5rem;">
+        <h3 style="font-size:1.125rem;font-weight:600;margin-bottom:0.75rem;color:#111827;">${faq.question}</h3>
+        <p style="color:#6b7280;line-height:1.6;">${faq.answer}</p>
+      </div>`;
+    });
+
+    content += `</div></section>`;
+  }
+
+  // CTA
+  if (comparison.cta_text) {
+    content += `<section style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,#2563eb,#3b82f6);border-radius:0.75rem;text-align:center;color:white;">
+      <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1rem;">${comparison.cta_text}</h2>
+      <p style="font-size:1.125rem;margin-bottom:1.5rem;opacity:0.9;">Get expert advice on choosing the right solution for your practice.</p>
+      <p style="font-weight:600;font-size:1.25rem;">Call (866) 261-5711</p>
+    </section>`;
+  }
+
+  content += `</div>`;
   return content;
 }
 
