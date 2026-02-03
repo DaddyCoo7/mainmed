@@ -199,9 +199,15 @@ const Header: React.FC = () => {
         },
         {
           name: 'EMR Integrations',
-          href: '/integrations',
+          href: '/resources/emr-integrations',
           icon: Laptop,
           description: 'Discover our seamless integrations with 50+ EMR and EHR systems.'
+        },
+        {
+          name: 'Billing Comparisons',
+          href: '/resources/comparisons',
+          icon: Scale,
+          description: 'Compare billing models, EMR systems, and revenue cycle solutions.'
         },
         {
           name: 'State Billing Laws',
@@ -280,6 +286,12 @@ const Header: React.FC = () => {
           href: '/medical-billing-services/florida/miami',
           icon: MapPin,
           description: 'Expert billing services for Miami healthcare providers and specialists.'
+        },
+        {
+          name: 'View All 50 States',
+          href: '/locations',
+          icon: Globe,
+          description: 'Medical billing services available in all 50 states nationwide.'
         }
       ]
     },
