@@ -553,7 +553,7 @@ export function generateStaticPageContent(def: PageDefinition): any {
           <h2 style="font-size:1.875rem;font-weight:bold;margin-bottom:1.5rem;">Core Revenue Cycle Services</h2>
           <div style="display:grid;gap:1.5rem;">
             <div style="padding:1.5rem;background:#eff6ff;border-left:4px solid #2563eb;border-radius:0.5rem;">
-              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;"><a href="/services/rcm" style="color:#1e40af;text-decoration:none;">Revenue Cycle Management (RCM)</a></h3>
+              <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.75rem;color:#1e40af;"><a href="/services/medical-billing" style="color:#1e40af;text-decoration:none;">Revenue Cycle Management (RCM)</a></h3>
               <p style="color:#374151;">Complete end-to-end RCM services managing your entire revenue cycle from patient intake through final payment. Achieve 97-99% collection rates with systematic processes and expert management.</p>
             </div>
             <div style="padding:1.5rem;background:#f0fdf4;border-left:4px solid #10b981;border-radius:0.5rem;">

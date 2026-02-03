@@ -36,7 +36,6 @@ const ALL_SITE_URLS = [
   `${SITE_URL}/privacy`,
   `${SITE_URL}/terms`,
   `${SITE_URL}/services/medical-billing`,
-  `${SITE_URL}/services/rcm`,
   `${SITE_URL}/services/medical-coding`,
   `${SITE_URL}/services/credentialing`,
   `${SITE_URL}/services/denial-management`,

@@ -72,12 +72,6 @@ const NotFoundPage: React.FC = () => {
                 Medical Billing
               </Link>
               <Link
-                to="/services/rcm"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
-              >
-                RCM Services
-              </Link>
-              <Link
                 to="/services/denial-management"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
               >

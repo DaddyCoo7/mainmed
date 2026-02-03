@@ -66,7 +66,7 @@ export const internalLinksMap: Record<string, RelatedLink[]> = {
     {
       title: 'Revenue Cycle Management',
       description: 'Comprehensive RCM solutions that maximize revenue and reduce costs.',
-      url: '/services/rcm'
+      url: '/services/medical-billing'
     },
     {
       title: 'Medical Billing Services',
@@ -210,7 +210,7 @@ export const internalLinksMap: Record<string, RelatedLink[]> = {
     {
       title: 'RCM Services',
       description: 'Optimize your entire revenue cycle with data-driven insights.',
-      url: '/services/rcm'
+      url: '/services/medical-billing'
     },
     {
       title: 'Practice Management Consulting',
@@ -362,9 +362,9 @@ export const internalLinksMap: Record<string, RelatedLink[]> = {
       url: '/services/staff-training-sop'
     },
     {
-      title: 'RCM Services',
+      title: 'Medical Billing Services',
       description: 'Optimize your revenue cycle with expert guidance.',
-      url: '/services/rcm'
+      url: '/services/medical-billing'
     }
   ],
 

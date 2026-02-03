@@ -75,7 +75,6 @@ const EmergencyMedicinePage = lazy(() => import('./pages/EmergencyMedicinePage')
 const OccupationalHealthClinicsPage = lazy(() => import('./pages/OccupationalHealthClinicsPage'));
 const OralMaxillofacialSurgeryPage = lazy(() => import('./pages/OralMaxillofacialSurgeryPage'));
 const ClinicalResearchPage = lazy(() => import('./pages/ClinicalResearchPage'));
-const RCMPage = lazy(() => import('./pages/RCMPage'));
 const MedicalBillingPage = lazy(() => import('./pages/MedicalBillingPage'));
 const ARManagementPage = lazy(() => import('./pages/ARManagementPage'));
 const MedicalCodingPage = lazy(() => import('./pages/MedicalCodingPage'));
@@ -111,7 +110,6 @@ const CityBillingPage = lazy(() => import('./pages/CityBillingPage'));
 const ComparisonPage = lazy(() => import('./pages/ComparisonPage'));
 const ComparisonsListPage = lazy(() => import('./pages/ComparisonsListPage'));
 const WebsiteDesignPage = lazy(() => import('./pages/WebsiteDesignPage'));
-const OutsourcingMedicalBillingPage = lazy(() => import('./pages/OutsourcingMedicalBillingPage'));
 const PayerEnrollmentPage = lazy(() => import('./pages/PayerEnrollmentPage'));
 const PriorAuthorizationPage = lazy(() => import('./pages/PriorAuthorizationPage'));
 const VirtualAssistantsPage = lazy(() => import('./pages/VirtualAssistantsPage'));
@@ -153,7 +151,7 @@ function App() {
             <Route path="/ph/careers" element={<CareersPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/rcm" element={<RCMPage />} />
+            <Route path="/services/rcm" element={<Navigate to="/services/medical-billing" replace />} />
             <Route path="/services/medical-billing" element={<MedicalBillingPage />} />
             <Route path="/services/ar-management" element={<ARManagementPage />} />
             <Route path="/services/medical-coding" element={<MedicalCodingPage />} />
@@ -172,14 +170,14 @@ function App() {
             <Route path="/services/practice-management-consulting" element={<PracticeManagementConsultingPage />} />
             <Route path="/services/analytics-reporting" element={<AnalyticsReportingPage />} />
             <Route path="/services/call-center-scheduling" element={<CallCenterSchedulingPage />} />
-            <Route path="/services/end-to-end-rcm" element={<Navigate to="/services/outsourcing-medical-billing" replace />} />
+            <Route path="/services/end-to-end-rcm" element={<Navigate to="/services/medical-billing" replace />} />
             <Route path="/services/payment-reconciliation" element={<PaymentReconciliationPage />} />
             <Route path="/services/payer-contract-negotiation" element={<PayerContractNegotiationPage />} />
             <Route path="/services/compliance-hipaa-audits" element={<ComplianceHIPAAAuditsPage />} />
             <Route path="/services/mips-macra-reporting" element={<MIPSMACRAReportingPage />} />
             <Route path="/services/ehr-emr-integration" element={<EHREMRIntegrationPage />} />
             <Route path="/services/staff-training-sop" element={<StaffTrainingSOPPage />} />
-            <Route path="/services/outsourcing-medical-billing" element={<OutsourcingMedicalBillingPage />} />
+            <Route path="/services/outsourcing-medical-billing" element={<Navigate to="/services/medical-billing" replace />} />
             <Route path="/services/payer-enrollment" element={<PayerEnrollmentPage />} />
             <Route path="/services/prior-authorization" element={<PriorAuthorizationPage />} />
             <Route path="/services/virtual-assistants" element={<VirtualAssistantsPage />} />

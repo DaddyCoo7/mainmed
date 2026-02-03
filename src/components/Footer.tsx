@@ -212,7 +212,7 @@ const Footer: React.FC = () => {
                       <Link
                         to={
                           service === 'Transparent Pricing' ? '/pricing' :
-                          service === 'Outsourcing Medical Billing' ? '/services/outsourcing-medical-billing' :
+                          service === 'Outsourcing Medical Billing' ? '/services/medical-billing' :
                           '/services'
                         }
                         className="text-gray-300 dark:text-gray-400 hover:text-emerald-400 dark:hover:text-emerald-300 transition-colors flex items-center group"

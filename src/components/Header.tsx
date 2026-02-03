@@ -42,16 +42,10 @@ const Header: React.FC = () => {
       href: '/services',
       children: [
         {
-          name: 'Outsourcing Medical Billing',
-          href: '/services/outsourcing-medical-billing',
-          icon: Globe,
-          description: 'Reduce costs by 30-50% and increase revenue by 15-25% with expert outsourced billing services.'
-        },
-        {
           name: 'Medical Billing & RCM',
-          href: '/services/rcm',
+          href: '/services/medical-billing',
           icon: Calculator,
-          description: 'Comprehensive revenue cycle management from patient registration to final payment collection.'
+          description: 'Comprehensive billing and revenue cycle management from patient registration to final payment collection.'
         },
         {
           name: 'Medical Coding',

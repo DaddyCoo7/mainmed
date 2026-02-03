@@ -13,30 +13,6 @@ const ServicesPage: React.FC = () => {
 
   const servicesData = [
     {
-      icon: Handshake,
-      title: 'Outsourcing Medical Billing',
-      description: 'Partner with experts to reduce costs by 30-50% and increase revenue by 15-25% through comprehensive outsourced billing.',
-      features: [
-        'Reduce operating costs 30-50%',
-        'Increase revenue by 15-25%',
-        '98% collection rate guarantee'
-      ],
-      linkTo: '/services/outsourcing-medical-billing',
-      variant: 'gradient' as const
-    },
-    {
-      icon: TrendingUp,
-      title: 'Revenue Cycle Management (RCM)',
-      description: 'Complete RCM solutions from patient registration to payment collection, ensuring seamless financial processes.',
-      features: [
-        '99% clean claim rate',
-        'Accelerated reimbursements',
-        'Real-time financial dashboards'
-      ],
-      linkTo: '/services/rcm',
-      variant: 'blue' as const
-    },
-    {
       icon: Calculator,
       title: 'Medical Billing Services',
       description: 'Accurate and compliant billing for all specialties, ensuring claims are correctly coded, submitted, and reimbursed promptly.',
@@ -298,7 +274,7 @@ const ServicesPage: React.FC = () => {
         'Cost-effective solutions',
         'Transparent, scalable model'
       ],
-      linkTo: '/services/outsourcing-medical-billing',
+      linkTo: '/services/medical-billing',
       variant: 'gradient' as const
     },
     {
