@@ -753,6 +753,13 @@
   </url>
 
   <url>
+    <loc>https://medtransic.com/sitemap</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://medtransic.com/careers</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
