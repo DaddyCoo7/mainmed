@@ -113,7 +113,7 @@ export default function StateBillingPage() {
       <SEOHead
         title={pageData.meta_title}
         description={pageData.meta_description}
-        canonicalUrl={`https://medtransic.com/medical-billing-services/${pageData.slug}`}
+        canonical={`https://medtransic.com/medical-billing-services/${pageData.slug}`}
       />
       <LocationSchema
         locationName={pageData.state_name}

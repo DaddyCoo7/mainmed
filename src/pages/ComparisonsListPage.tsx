@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Scale, TrendingUp } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -43,7 +45,7 @@ export default function ComparisonsListPage() {
       <SEOHead
         title="Medical Billing Comparisons | Expert Analysis"
         description="Compare medical billing services, software, and strategies side-by-side. In-depth analysis of in-house vs outsourced billing, EHR vs PM systems, and more to help you choose the right solution."
-        canonicalUrl="https://medtransic.com/comparisons"
+        canonical="https://medtransic.com/comparisons"
       />
       <Header />
 
