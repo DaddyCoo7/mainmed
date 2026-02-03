@@ -37,10 +37,10 @@ const Hero: React.FC = () => {
       stat2Label: 'Revenue Increase',
       stat2Color: 'text-blue-400',
       cta1Text: 'Get RCM Analysis',
-      cta1Link: '/contact',
+      cta1Link: '/services/medical-billing',
       cta1Icon: Calculator,
-      cta2Text: 'View Services',
-      cta2Link: '/services'
+      cta2Text: 'Contact Us',
+      cta2Link: '/contact'
     },
     {
       url: '/medium-vecteezy_portrait-of-smiling-doctor-in-uniform-standing-in-medicine_47262856_medium.jpg',
@@ -59,10 +59,10 @@ const Hero: React.FC = () => {
       stat2Label: 'Commercial Insurance',
       stat2Color: 'text-blue-400',
       cta1Text: 'Start Credentialing',
-      cta1Link: '/contact',
+      cta1Link: '/services/credentialing',
       cta1Icon: Shield,
-      cta2Text: 'Learn More',
-      cta2Link: '/services'
+      cta2Text: 'Contact Us',
+      cta2Link: '/contact'
     },
     {
       url: '/medtransicva.jpg',
@@ -81,10 +81,10 @@ const Hero: React.FC = () => {
       stat2Label: 'Support Available',
       stat2Color: 'text-blue-400',
       cta1Text: 'Hire Virtual Staff',
-      cta1Link: '/contact',
+      cta1Link: '/services/virtual-assistants',
       cta1Icon: Headphones,
-      cta2Text: 'See Pricing',
-      cta2Link: '/pricing',
+      cta2Text: 'Contact Us',
+      cta2Link: '/contact',
       flipImage: true
     },
     {
@@ -104,10 +104,10 @@ const Hero: React.FC = () => {
       stat2Label: 'Denial Reduction',
       stat2Color: 'text-blue-400',
       cta1Text: 'Improve Coding',
-      cta1Link: '/contact',
+      cta1Link: '/services/medical-coding',
       cta1Icon: FileText,
-      cta2Text: 'View Specialties',
-      cta2Link: '/specialties'
+      cta2Text: 'Contact Us',
+      cta2Link: '/contact'
     },
     {
       url: '/medium-vecteezy_an-empty-waiting-room-with-chairs-and-a-clock_70594850_medium.jpg',
@@ -130,6 +130,28 @@ const Hero: React.FC = () => {
       cta1Icon: Target,
       cta2Text: 'Call Now',
       cta2Link: 'tel:+1-888-777-0860'
+    },
+    {
+      url: '/dentist.jpg',
+      alt: 'Modern dental practice with advanced equipment',
+      trustBadgeText: 'Dental Practice Billing Experts',
+      headlinePrimary: 'Expert Dental',
+      headlineSecondary: 'Practice',
+      headlineTertiary: 'Billing',
+      valueProposition: 'Specialized billing services for dental practices including CDT coding, insurance verification, and claim management for all procedures.',
+      stat1Value: 96,
+      stat1Suffix: '%',
+      stat1Label: 'Clean Claim Rate',
+      stat1Color: 'text-green-400',
+      stat2Value: 30,
+      stat2Suffix: '%',
+      stat2Label: 'Revenue Boost',
+      stat2Color: 'text-blue-400',
+      cta1Text: 'Get Dental Billing',
+      cta1Link: '/specialties/dental',
+      cta1Icon: FileText,
+      cta2Text: 'Contact Us',
+      cta2Link: '/contact'
     }
   ];
 

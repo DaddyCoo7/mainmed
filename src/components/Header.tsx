@@ -94,6 +94,12 @@ const Header: React.FC = () => {
           href: '/practice-launch',
           icon: Target,
           description: 'Complete practice setup services including credentialing, website development, EHR setup, and marketing to get you operational fast.'
+        },
+        {
+          name: 'Digital Presence Services',
+          href: '/services/digital-presence',
+          icon: Globe,
+          description: 'Website development, social media management, performance marketing, and Google My Business optimization.'
         }
       ]
     },
@@ -114,10 +120,10 @@ const Header: React.FC = () => {
       href: '/specialties',
       children: [
         {
-          name: 'Urgent Care',
-          href: '/specialties',
-          icon: Truck,
-          description: 'Specialized billing solutions for urgent care facilities with high-volume expertise.'
+          name: 'Dental Practice Billing',
+          href: '/specialties/dental',
+          icon: Stethoscope,
+          description: 'Specialized billing services for dental practices with CDT coding and insurance expertise.'
         },
         {
           name: 'Plastic Surgery',

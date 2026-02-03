@@ -115,6 +115,7 @@ const PriorAuthorizationPage = lazy(() => import('./pages/PriorAuthorizationPage
 const VirtualAssistantsPage = lazy(() => import('./pages/VirtualAssistantsPage'));
 const LocationsPage = lazy(() => import('./pages/LocationsPage'));
 const AIPHASPage = lazy(() => import('./pages/AIPHASPage'));
+const DigitalPresenceServicesPage = lazy(() => import('./pages/DigitalPresenceServicesPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const CPTCodesCheatSheetPage = lazy(() => import('./pages/resources/CPTCodesCheatSheetPage'));
@@ -181,6 +182,7 @@ function App() {
             <Route path="/services/payer-enrollment" element={<PayerEnrollmentPage />} />
             <Route path="/services/prior-authorization" element={<PriorAuthorizationPage />} />
             <Route path="/services/virtual-assistants" element={<VirtualAssistantsPage />} />
+            <Route path="/services/digital-presence" element={<DigitalPresenceServicesPage />} />
             <Route path="/aiphas" element={<AIPHASPage />} />
             <Route path="/specialties" element={<SpecialtiesPage />} />
             <Route path="/pricing" element={<PricingPage />} />
