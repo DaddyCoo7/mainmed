@@ -111,51 +111,54 @@ const DigitalPresenceServicesPage: React.FC = () => {
     0: [ // Website Development
       {
         name: 'Starter',
-        price: 2499,
+        price: 299,
         setup: 0,
         description: 'Perfect for new practices',
+        isOneTime: true,
         features: [
-          '5-page responsive website',
+          '10-page responsive website',
           'Mobile-optimized design',
           'Contact form integration',
           'Basic SEO setup',
           'SSL certificate included',
-          '3 months free hosting',
+          '1 year free hosting',
           '2 rounds of revisions'
         ],
         recommended: false
       },
       {
         name: 'Professional',
-        price: 4999,
+        price: 599,
         setup: 0,
         description: 'Most popular choice',
+        isOneTime: true,
         features: [
-          '10-page responsive website',
+          '15-page responsive website',
           'Custom design & branding',
           'Advanced SEO optimization',
           'Blog functionality',
           'Patient portal integration',
           '1 year free hosting',
-          'Unlimited revisions',
+          '3 rounds of revisions',
           'Google Analytics setup'
         ],
         recommended: true
       },
       {
         name: 'Enterprise',
-        price: 9999,
+        price: 799,
         setup: 0,
         description: 'For growing practices',
+        isOneTime: true,
         features: [
-          'Unlimited pages',
+          '25-page responsive website',
           'Premium custom design',
           'E-commerce capability',
           'Advanced integrations (EHR, CRM)',
           'Multi-location support',
           '2 years free hosting',
           'Priority support',
-          'Monthly performance reports',
+          'Unlimited revisions',
           'Conversion optimization'
         ],
         recommended: false
@@ -164,12 +167,14 @@ const DigitalPresenceServicesPage: React.FC = () => {
     1: [ // Social Media Management
       {
         name: 'Basic',
-        price: 499,
+        price: 299,
         setup: 0,
         description: 'Essential social presence',
         features: [
-          '2 social platforms',
-          '12 posts per month',
+          '1 social network',
+          '15 posts per month',
+          '3 video reels per month',
+          'Same content across network',
           'Content creation',
           'Basic analytics',
           'Community monitoring',
@@ -178,39 +183,31 @@ const DigitalPresenceServicesPage: React.FC = () => {
         recommended: false
       },
       {
-        name: 'Growth',
-        price: 999,
+        name: 'Professional',
+        price: 499,
         setup: 0,
         description: 'Expand your reach',
         features: [
-          '4 social platforms',
-          '20 posts per month',
+          '3 social networks',
+          '24 posts per month',
+          '7 video reels per month',
+          'Same content across all networks',
           'Custom graphics & videos',
           'Advanced analytics',
           'Active engagement',
-          'Competitor analysis',
           'Weekly reporting',
-          'Paid social ad management ($500 ad spend)'
+          'Hashtag strategy'
         ],
         recommended: true
       },
       {
         name: 'Premium',
-        price: 1999,
+        price: 0,
         setup: 0,
-        description: 'Maximum engagement',
-        features: [
-          'All major platforms',
-          '40 posts per month',
-          'Professional content creation',
-          'Video production',
-          'Influencer collaboration',
-          'Crisis management',
-          'Real-time monitoring',
-          'Daily engagement',
-          'Paid social ad management ($1500 ad spend)'
-        ],
-        recommended: false
+        description: '',
+        features: [],
+        recommended: false,
+        hidden: true
       }
     ],
     2: [ // Performance Marketing
@@ -418,8 +415,12 @@ const DigitalPresenceServicesPage: React.FC = () => {
                 <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
                   Choose Your Plan
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {currentPricing.map((tier, index) => (
+                <div className={`grid grid-cols-1 gap-8 ${
+                  currentPricing.filter((t: any) => !t.hidden).length === 2
+                    ? 'md:grid-cols-2 max-w-4xl mx-auto'
+                    : 'md:grid-cols-3'
+                }`}>
+                  {currentPricing.filter((tier: any) => !tier.hidden).map((tier: any, index: number) => (
                     <motion.div
                       key={index}
                       className={`relative rounded-2xl p-8 ${
@@ -462,7 +463,7 @@ const DigitalPresenceServicesPage: React.FC = () => {
                           <span className={`ml-2 ${
                             tier.recommended ? 'text-white/80' : 'text-gray-600 dark:text-gray-400'
                           }`}>
-                            /month
+                            {tier.isOneTime ? 'one-time' : '/month'}
                           </span>
                         </div>
                         {tier.setup > 0 && (

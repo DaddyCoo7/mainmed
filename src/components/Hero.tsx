@@ -151,7 +151,8 @@ const Hero: React.FC = () => {
       cta1Link: '/specialties/dental',
       cta1Icon: FileText,
       cta2Text: 'Contact Us',
-      cta2Link: '/contact'
+      cta2Link: '/contact',
+      flipImage: true
     }
   ];
 

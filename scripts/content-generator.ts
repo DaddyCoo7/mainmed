@@ -96,7 +96,7 @@ export const specialtyDefinitions: PageDefinition[] = [
   { title: 'Clinical Research', slug: 'clinical-research', type: 'specialty', keywords: ['research', 'clinical trials', 'studies'], cptCodes: ['99202-99215', 'Q0035'] }
 ];
 
-// All 23 Static Pages
+// All 24 Static Pages
 export const staticPageDefinitions: PageDefinition[] = [
   { title: 'Home', slug: '', type: 'static', keywords: ['medical billing', 'RCM', 'healthcare revenue'] },
   { title: 'About Us', slug: 'about', type: 'static', keywords: ['company', 'team', 'experience'] },
@@ -117,6 +117,7 @@ export const staticPageDefinitions: PageDefinition[] = [
   { title: 'Locations', slug: 'locations', type: 'static', keywords: ['locations', 'coverage', 'areas'] },
   { title: 'Comparisons', slug: 'comparisons', type: 'static', keywords: ['comparisons', 'versus', 'alternatives'] },
   { title: 'Website Design', slug: 'website-design', type: 'static', keywords: ['web design', 'website', 'digital'] },
+  { title: 'Digital Presence Services', slug: 'services/digital-presence', type: 'static', keywords: ['digital marketing', 'website development', 'social media', 'Google My Business'] },
   { title: 'IndexNow Admin', slug: 'indexnow-admin', type: 'static', keywords: ['indexing', 'SEO', 'search'] },
   { title: 'Pakistan Operations', slug: 'pk', type: 'static', keywords: ['Pakistan', 'offshore', 'operations'] },
   { title: 'Philippines Operations', slug: 'ph', type: 'static', keywords: ['Philippines', 'offshore', 'operations'] },

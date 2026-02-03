@@ -290,9 +290,9 @@ async function generateAllPages() {
     }
   }
 
-  // 5. Generate STATIC pages (23 pages) - About, Contact, etc.
+  // 5. Generate STATIC pages (24 pages) - About, Contact, etc.
   console.log('\n═══════════════════════════════════════════════');
-  console.log('📄 GENERATING STATIC PAGES (Target: 23)');
+  console.log('📄 GENERATING STATIC PAGES (Target: 24)');
   console.log('═══════════════════════════════════════════════\n');
 
   for (const staticDef of allDefinitions.staticPages) {
