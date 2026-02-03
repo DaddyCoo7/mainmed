@@ -33,30 +33,31 @@ function generateStaticHTML(baseHTML: string, pageData: {
   let html = baseHTML;
 
   // Update title
-  html = html.replace(/<title>.*?<\/title>/, `<title>${pageData.title}</title>`);
+  html = html.replace(/<title>.*?<\/title>/i, `<title>${pageData.title}</title>`);
 
-  // Update/add meta description
-  if (html.includes('<meta name="description"')) {
-    html = html.replace(
-      /<meta name="description" content="[^"]*"\s*\/?>/,
-      `<meta name="description" content="${pageData.metaDescription}" />`
-    );
-  } else {
-    html = html.replace(
-      '</head>',
-      `  <meta name="description" content="${pageData.metaDescription}">\n  </head>`
-    );
-  }
+  // Update meta description
+  html = html.replace(
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/gi,
+    `<meta name="description" content="${pageData.metaDescription}" />`
+  );
 
-  // Add canonical URL
-  if (!html.includes('rel="canonical"')) {
-    html = html.replace(
-      '</head>',
-      `  <link rel="canonical" href="${pageData.canonicalUrl}">\n  </head>`
-    );
-  }
+  // Update canonical URL
+  html = html.replace(
+    /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/gi,
+    `<link rel="canonical" href="${pageData.canonicalUrl}" />`
+  );
 
-  // Add robots meta
+  // Remove old Open Graph and Twitter tags
+  html = html.replace(/<meta\s+property="og:[^"]*"\s+content="[^"]*"\s*\/?>/gi, '');
+  html = html.replace(/<meta\s+name="twitter:[^"]*"\s+content="[^"]*"\s*\/?>/gi, '');
+  html = html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/gi, '');
+  html = html.replace(/<meta\s+property="og:site_name"\s+content="[^"]*"\s*\/?>/gi, '');
+  html = html.replace(/<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/?>/gi, '');
+
+  // Remove extra whitespace left by removed tags
+  html = html.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+  // Ensure robots meta exists
   if (!html.includes('<meta name="robots"')) {
     html = html.replace(
       '</head>',
@@ -64,7 +65,7 @@ function generateStaticHTML(baseHTML: string, pageData: {
     );
   }
 
-  // Add Open Graph tags
+  // Add new Open Graph tags
   const ogTags = `
   <meta property="og:title" content="${pageData.title}">
   <meta property="og:description" content="${pageData.metaDescription}">
@@ -76,7 +77,10 @@ function generateStaticHTML(baseHTML: string, pageData: {
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
-  // Add schema markup
+  // Remove old schema markup to avoid duplicates
+  html = html.replace(/<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/gi, '');
+
+  // Add new schema markup
   if (pageData.schema) {
     html = html.replace(
       '</head>',
