@@ -23,8 +23,11 @@ import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const ResourcesPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const resources = [
     {
       icon: FileText,

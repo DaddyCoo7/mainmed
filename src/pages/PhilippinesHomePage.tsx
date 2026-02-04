@@ -2,8 +2,11 @@ import React from 'react';
 import { getRegionByCode } from '../config/regions';
 import SEOHead from '../components/SEOHead';
 import RegionalHomePage from './RegionalHomePage';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PhilippinesHomePage: React.FC = () => {
+  usePrerenderReady(true);
+
   const region = getRegionByCode('ph');
   return (
     <>

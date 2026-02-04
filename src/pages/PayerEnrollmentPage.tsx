@@ -22,8 +22,11 @@ import {
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import ServiceSchema from '../components/ServiceSchema';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PayerEnrollmentPage: React.FC = () => {
+
+  usePrerenderReady(true);
 
   const benefits = [
     {

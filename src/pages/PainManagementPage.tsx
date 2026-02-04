@@ -33,8 +33,11 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PainManagementPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const painPoints = [
     {
       icon: AlertTriangle,

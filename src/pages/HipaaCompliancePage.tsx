@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import ServiceSchema from '../components/ServiceSchema';
 import { Shield, Lock, FileCheck, Users, AlertTriangle, CheckCircle, Award, Eye } from 'lucide-react';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const HipaaCompliancePage: React.FC = () => {
+  usePrerenderReady(true);
+
   const complianceFeatures = [
     {
       icon: Shield,

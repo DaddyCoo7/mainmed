@@ -4,6 +4,7 @@ import SEOHead from '../components/SEOHead';
 import RelatedServices from '../components/RelatedServices';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 import {
   Shield,
   Lock,
@@ -20,6 +21,8 @@ import {
 } from 'lucide-react';
 
 const DataSecurityPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const securityFeatures = [
     {
       icon: Lock,

@@ -25,8 +25,11 @@ import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const MedicalCodingPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const painPoints = [
     {
       icon: FileText,

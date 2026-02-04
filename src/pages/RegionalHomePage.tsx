@@ -10,6 +10,7 @@ import SpecialtyServices from '../components/SpecialtyServices';
 import VirtualReceptionist from '../components/VirtualReceptionist';
 import ProcessFlow from '../components/ProcessFlow';
 import MipsCompliance from '../components/MipsCompliance';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface RegionalHomePageProps {
   region: RegionConfig;

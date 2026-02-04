@@ -13,8 +13,11 @@ import ProcessFlow from '../components/ProcessFlow';
 import MipsCompliance from '../components/MipsCompliance';
 import MedicalBillingEducation from '../components/MedicalBillingEducation';
 import ChoosingBillingPartner from '../components/ChoosingBillingPartner';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const HomePage: React.FC = () => {
+  usePrerenderReady(true);
+
   return (
     <>
       <SEOHead

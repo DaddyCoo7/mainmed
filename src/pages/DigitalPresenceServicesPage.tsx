@@ -30,8 +30,11 @@ import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const DigitalPresenceServicesPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const [activeService, setActiveService] = useState(0);
   const [selectedTier, setSelectedTier] = useState<{ [key: number]: number }>({
     0: 1,

@@ -24,8 +24,11 @@ import HeroSection from '../components/HeroSection';
 import RelatedServices from '../components/RelatedServices';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const VirtualAssistantsPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const services = [
     {
       icon: Calendar,

@@ -24,8 +24,11 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import HeroSection from '../components/HeroSection';
 import SpecialtySchema from '../components/SpecialtySchema';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PhysicianBillingPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const painPoints = [
     {
       icon: Clock,

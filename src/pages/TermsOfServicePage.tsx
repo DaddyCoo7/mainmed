@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 import {
   FileText,
   Shield,
@@ -15,7 +16,10 @@ import {
 } from 'lucide-react';
 
 const TermsOfServicePage: React.FC = () => {
+  usePrerenderReady(true);
+
   return (
+
     <div className="min-h-screen bg-medtransic-gradient relative overflow-hidden pt-20">
       <SEOHead
         title="Terms of Service | Medical Billing Service Agreement | Medtransic"

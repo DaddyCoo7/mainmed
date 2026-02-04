@@ -6,8 +6,11 @@ import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const SpecialtiesPage: React.FC = () => {
+  usePrerenderReady(true);
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const specialties = [
