@@ -8,13 +8,13 @@ const AsSeenOnBanner: React.FC = () => {
           <img
             src="/usanewssmall.png"
             alt="As Seen On USA News - Medtransic Featured Medical Billing Provider"
-            className="h-20 md:h-28 w-auto object-contain"
+            className="h-26 md:h-36 w-auto object-contain"
             loading="lazy"
           />
           <img
             src="/digitaljournal.png"
             alt="As Seen On Digital Journal - Medtransic Featured Medical Billing Provider"
-            className="h-20 md:h-28 w-auto object-contain"
+            className="h-26 md:h-36 w-auto object-contain"
             loading="lazy"
           />
         </div>
