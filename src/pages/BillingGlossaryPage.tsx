@@ -14,6 +14,7 @@ import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import { supabase } from '../lib/supabase';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface GlossaryTerm {
   id: string;
@@ -58,6 +59,8 @@ const BillingGlossaryPage: React.FC = () => {
 
     fetchGlossaryTerms();
   }, []);
+
+  usePrerenderReady(!loading && glossaryTerms.length > 0);
 
   const filteredTerms = glossaryTerms
     .filter(term => {

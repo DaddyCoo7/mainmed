@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Search, ArrowRight, Zap } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
+import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface EMRIntegration {
   id: string;
@@ -29,6 +30,8 @@ export default function EMRIntegrationsListPage() {
   useEffect(() => {
     filterIntegrations();
   }, [searchTerm, integrations]);
+
+  usePrerenderReady(!loading && integrations.length > 0);
 
   const fetchIntegrations = async () => {
     try {

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Download, Filter, Star, BookOpen } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
+import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface CPTCode {
   id: string;
@@ -32,6 +33,8 @@ export default function CPTCodesCheatSheetPage() {
   useEffect(() => {
     filterCodes();
   }, [searchTerm, selectedCategory, selectedSpecialty, commonOnly, codes]);
+
+  usePrerenderReady(!loading && codes.length > 0);
 
   const fetchCPTCodes = async () => {
     try {

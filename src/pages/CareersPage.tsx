@@ -20,6 +20,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
 import { getRegionByCode, RegionConfig } from '../config/regions';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface JobPosting {
   id: string;
@@ -65,6 +66,8 @@ const CareersPage: React.FC = () => {
   useEffect(() => {
     fetchJobs();
   }, [pathname, regionCode]);
+
+  usePrerenderReady(!loading);
 
   const fetchJobs = async () => {
     try {
