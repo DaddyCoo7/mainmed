@@ -1,6 +1,12 @@
 [build]
 publish = "dist"
-command = "npx vite build"
+command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-prerender-spa"
+
+[plugins.inputs]
+entrypoint = "index.html"
 
 [[redirects]]
 from = "/*"
