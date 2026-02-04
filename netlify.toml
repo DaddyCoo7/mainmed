@@ -2,6 +2,26 @@
 publish = "dist"
 command = "npx vite build"
 
+# SEO Critical Files - Must be served directly before SPA fallback
+[[redirects]]
+from = "/sitemap.xml"
+to = "/sitemap.xml"
+status = 200
+force = true
+
+[[redirects]]
+from = "/robots.txt"
+to = "/robots.txt"
+status = 200
+force = true
+
+# Static assets should be served directly
+[[redirects]]
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+
+# Service redirects (301 permanent)
 [[redirects]]
 from = "/services/rcm"
 to = "/services/medical-billing"
@@ -12,6 +32,7 @@ from = "/services/outsourcing-medical-billing"
 to = "/services/medical-billing"
 status = 301
 
+# SPA fallback - MUST BE LAST
 [[redirects]]
 from = "/*"
 to = "/index.html"

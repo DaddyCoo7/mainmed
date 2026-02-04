@@ -1,5 +1,8 @@
 # Netlify Redirects Configuration for React SPA with Prerendering
-# This file enables proper SPA routing while serving prerendered HTML when available
+# Note: netlify.toml takes precedence, but keeping this for documentation
+
+# SEO Critical - Serve sitemap and robots directly (configured in netlify.toml)
+# These must be served as static files, not SPA routes
 
 # 301 Permanent Redirects - Consolidating duplicate service pages
 /services/rcm                           /services/medical-billing    301
@@ -7,5 +10,5 @@
 
 # Serve the SPA for all unmatched routes (client-side routing)
 # The 200 status means "rewrite" not "redirect", so the URL stays the same
-# If a prerendered HTML file exists at the path, it will be served instead
+# Netlify Prerender Extension will serve prerendered HTML to crawlers
 /*    /index.html   200

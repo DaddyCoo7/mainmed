@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
     <>
       <SEOHead
         title="Medical Billing Services 2025 | Expert RCM | 99% Clean Claims"
-        description="Comprehensive guide to medical billing and revenue cycle management. Expert insights on choosing billing partners, industry trends, compliance, coding accuracy, and denial management. Certified professionals helping practices increase revenue by 30%. Free consultation available."
+        description="Expert medical billing and RCM services. 99% clean claims, 25% revenue increase, 60% faster payments. HIPAA-compliant. Free consultation available today."
         canonical="https://medtransic.com/"
         keywords="medical billing services, revenue cycle management, RCM, medical coding accuracy, healthcare billing guide, denial management strategies, accounts receivable management, HIPAA compliance, certified medical coders, billing company selection, practice management, claims processing"
         ogType="website"
