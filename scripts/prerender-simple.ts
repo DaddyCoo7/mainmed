@@ -734,8 +734,8 @@ function generateStaticPageHTML(
   // Extract H1 from title (remove " | Medtransic" suffix if present)
   const h1Text = route.title.replace(/ \| Medtransic$/, '');
 
-  // Add static H1 and content for SEO crawlers (screen reader only technique)
-  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${h1Text}</h1><p>${route.description}</p></div></div>`;
+  // Add static H1 and content for SEO crawlers (visible for SSR)
+  const staticContent = `<div id="root"><div><noscript><h1>${h1Text}</h1><p>${route.description}</p></noscript></div></div>`;
 
   html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
