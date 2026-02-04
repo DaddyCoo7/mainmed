@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calculator, FileText, Shield, Headphones, Search, TrendingUp, ArrowRight, DollarSign, CreditCard, MessageCircle, Guitar as Hospital, FlaskConical, Armchair as Wheelchair, Stethoscope, Monitor, Archive, Bot, Briefcase, BarChart2, PhoneCall, Globe, ClipboardCheck, Handshake, FileWarning, Calendar, Database, GraduationCap, X, FileCheck, Clock } from 'lucide-react';
