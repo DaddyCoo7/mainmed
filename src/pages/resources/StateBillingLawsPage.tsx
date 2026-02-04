@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Scale, Clock, Shield } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
+import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface StateBillingLaw {
   id: string;
@@ -31,6 +32,8 @@ export default function StateBillingLawsPage() {
   useEffect(() => {
     filterStates();
   }, [searchTerm, states]);
+
+  usePrerenderReady(!loading && states.length > 0);
 
   const fetchStateLaws = async () => {
     try {

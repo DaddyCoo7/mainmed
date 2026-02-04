@@ -6,6 +6,7 @@ import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import LocationSchema from '../components/LocationSchema';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface CityPageData {
   state_slug: string;
@@ -99,6 +100,8 @@ export default function CityBillingPage() {
       fetchCityData();
     }
   }, [state, city]);
+
+  usePrerenderReady(!loading && !!pageData && !!stateData);
 
   if (loading) {
     return (

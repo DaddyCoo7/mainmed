@@ -23,9 +23,13 @@ import ROICalculator from '../components/ROICalculator';
 import BreakEvenAnalysis from '../components/BreakEvenAnalysis';
 import FAQSection from '../components/FAQSection';
 import { useFAQs } from '../hooks/useFAQs';
+import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PricingPage: React.FC = () => {
   const { faqs, loading: faqsLoading } = useFAQs('general');
+
+  usePrerenderReady(!faqsLoading);
+
   const billingFeatures = [
     'Advance Benefits Verification',
     'Medical Coding Services',

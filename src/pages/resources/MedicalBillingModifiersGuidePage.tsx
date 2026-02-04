@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Info } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
+import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface BillingModifier {
   id: string;
@@ -26,6 +27,8 @@ export default function MedicalBillingModifiersGuidePage() {
   useEffect(() => {
     filterModifiers();
   }, [searchTerm, modifiers]);
+
+  usePrerenderReady(!loading && modifiers.length > 0);
 
   const fetchModifiers = async () => {
     try {
