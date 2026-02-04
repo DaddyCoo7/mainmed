@@ -2,6 +2,16 @@
 publish = "dist"
 command = "npx vite build"
 
+[build.processing]
+skip_processing = false
+
+[build.processing.html]
+pretty_urls = true
+
+# Enable prerendering for search engine bots
+[prerendering]
+enable = true
+
 # SEO Critical Files - Must be served directly before SPA fallback
 [[redirects]]
 from = "/sitemap.xml"
