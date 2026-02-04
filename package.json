@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsx scripts/prerender-simple.ts",
+    "build:no-prerender": "vite build",
+    "prerender": "tsx scripts/prerender-simple.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -979,6 +979,50 @@ async function prerenderPages() {
   let totalSuccess = 0;
   let totalError = 0;
 
+  // Generate homepage HTML first
+  console.log('📊 Pre-rendering homepage...');
+  try {
+    console.log('🔄 Generating HTML for homepage...');
+
+    const homeTitle = 'Medical Billing Services 2025 | 99% Clean Claims | RCM | Medtransic';
+    const homeDescription = 'Boost revenue by 30% with certified medical billing experts. HIPAA-compliant RCM solutions, 99% clean claims, faster payments. Free consultation for healthcare practices nationwide. Call 888-777-0860!';
+
+    let homeHTML = baseHTML;
+
+    // Update title (already correct, but ensure it)
+    homeHTML = homeHTML.replace(/<title>.*?<\/title>/, `<title>${homeTitle}</title>`);
+
+    // Update meta description
+    if (homeHTML.includes('<meta name="description"')) {
+      homeHTML = homeHTML.replace(
+        /<meta name="description" content="[^"]*"\s*\/?>/,
+        `<meta name="description" content="${homeDescription}" />`
+      );
+    }
+
+    // Add canonical URL
+    if (!homeHTML.includes('rel="canonical"')) {
+      homeHTML = homeHTML.replace(
+        '</head>',
+        '  <link rel="canonical" href="https://medtransic.com/">\n  </head>'
+      );
+    }
+
+    // Add screen-reader accessible content for Googlebot
+    const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>Medical Billing Services 2025</h1><p>${homeDescription}</p><h2>Complete Revenue Cycle Management Solutions</h2><p>End-to-end RCM services that maximize collections and reduce administrative burden. From patient registration to final payment, we handle it all.</p><h2>Expert Medical Billing & Coding Services</h2><p>Professional medical billing services with 99% clean claims rate. Expert coding, claims management, and denial resolution. Increase revenue and reduce administrative burden.</p><h2>Medical Specialties We Serve</h2><p>Expert medical billing services for 50+ specialties including cardiology, orthopedics, mental health, physical therapy, dental, ophthalmology, and more.</p></div></div>`;
+
+    homeHTML = homeHTML.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
+
+    // Write homepage
+    writeFileSync(baseHTMLPath, homeHTML, 'utf-8');
+
+    console.log('   ✅ Homepage pre-rendered successfully\n');
+    totalSuccess++;
+  } catch (error) {
+    console.error('   ❌ Error generating homepage:', error);
+    totalError++;
+  }
+
   // Fetch all state pages from Supabase
   console.log('📊 Fetching state pages from database...');
   const { data: states, error } = await supabase
