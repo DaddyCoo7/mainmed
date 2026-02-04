@@ -18,13 +18,16 @@ export async function renderPageSSR(options: SSROptions): Promise<string> {
   // Read the base HTML
   const baseHTML = readFileSync(join(distPath, 'index.html'), 'utf-8');
 
-  // Create a jsdom instance
+  // Create a jsdom instance with proper resource loading
   const dom = new JSDOM(baseHTML, {
-    url: `https://medtransic.com${url}`,
+    url: `file://${distPath}/`,
     runScripts: 'dangerously',
     resources: 'usable',
     pretendToBeVisual: true,
     beforeParse(window) {
+      // Set up the base path for resources
+      (window as any).__RESOURCE_BASE__ = `file://${distPath}`;
+
       // Mock window.matchMedia for components that use it
       window.matchMedia = window.matchMedia || function() {
         return {
@@ -45,6 +48,22 @@ export async function renderPageSSR(options: SSROptions): Promise<string> {
         disconnect() {}
       };
 
+      // Mock ResizeObserver for framer-motion
+      (window as any).ResizeObserver = class ResizeObserver {
+        constructor() {}
+        observe() {}
+        unobserve() {}
+        disconnect() {}
+      };
+
+      // Mock requestAnimationFrame for animations
+      (window as any).requestAnimationFrame = (callback: any) => {
+        return setTimeout(callback, 0);
+      };
+      (window as any).cancelAnimationFrame = (id: any) => {
+        clearTimeout(id);
+      };
+
       // Set prerender flag
       (window as any).__PRERENDERING__ = true;
     }
@@ -55,13 +74,30 @@ export async function renderPageSSR(options: SSROptions): Promise<string> {
 
   // Wait for the React app to render
   await new Promise<void>((resolve) => {
+    let lastLength = 0;
+    let stableCount = 0;
+
     const checkInterval = setInterval(() => {
       const root = document.getElementById('root');
-      if (root && root.innerHTML && root.innerHTML.length > 100) {
-        clearInterval(checkInterval);
-        resolve();
+      if (root && root.innerHTML) {
+        const currentLength = root.innerHTML.length;
+
+        // Check if content is substantial and stable
+        if (currentLength > 500) {
+          if (currentLength === lastLength) {
+            stableCount++;
+            // If content hasn't changed for 3 checks, consider it stable
+            if (stableCount >= 3) {
+              clearInterval(checkInterval);
+              resolve();
+            }
+          } else {
+            stableCount = 0;
+            lastLength = currentLength;
+          }
+        }
       }
-    }, 100);
+    }, 200);
 
     // Timeout fallback
     setTimeout(() => {

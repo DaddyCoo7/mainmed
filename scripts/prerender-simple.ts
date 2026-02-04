@@ -3,6 +3,7 @@ import { writeFileSync, mkdirSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import { renderPageSSR } from './ssr-renderer.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -304,7 +305,7 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
 const STATIC_ROUTES = [
   // Main pages
   { path: 'about', title: 'About Us - Medical Billing Experts | Medtransic', description: 'Learn about Medtransic, a leading medical billing company with expertise in RCM, revenue cycle management, and healthcare billing solutions.' },
-  { path: 'services', title: 'Medical Billing Services | RCM Solutions | Medtransic', description: 'Comprehensive medical billing and RCM services including coding, AR management, denial management, and revenue cycle optimization.' },
+  // Note: 'services' is generated separately with full content (28 services) - see above
   { path: 'specialties', title: 'Medical Specialties We Serve | Billing Experts | Medtransic', description: 'Expert medical billing services for 50+ specialties including cardiology, orthopedics, mental health, physical therapy, and more.' },
   { path: 'pricing', title: 'Medical Billing Pricing | Transparent RCM Costs | Medtransic', description: 'Transparent medical billing pricing with no hidden fees. Custom RCM solutions tailored to your practice size and specialty.' },
   { path: 'contact', title: 'Contact Us - Get Your Free RCM Analysis | Medtransic', description: 'Contact Medtransic for a free revenue cycle analysis. Expert medical billing consultants ready to optimize your practice revenue.' },
@@ -1021,6 +1022,70 @@ async function prerenderPages() {
     totalSuccess++;
   } catch (error) {
     console.error('   ❌ Error generating homepage:', error);
+    totalError++;
+  }
+
+  // Pre-render services page with full service list
+  console.log('📊 Pre-rendering services page with full content...');
+  try {
+    console.log('🔄 Generating comprehensive services page HTML...');
+
+    const servicesData = [
+      { title: 'Medical Billing Services', description: 'Accurate and compliant billing for all specialties, ensuring claims are correctly coded, submitted, and reimbursed promptly.', features: ['Reduce billing errors', 'Increase cash flow', 'Improve first-pass acceptance'] },
+      { title: 'Accounts Receivable (A/R) Management', description: 'We recover unpaid claims, analyze denial reasons, and ensure every dollar owed is collected efficiently.', features: ['Decrease outstanding AR days', 'Boost recovery rate by up to 60%', 'Improve payer communication'] },
+      { title: 'Medical Coding Services', description: 'CPC-certified coders ensure accurate ICD-10, CPT, and HCPCS coding for all encounters.', features: ['Avoid compliance penalties', 'Eliminate underbilling', 'Capture full revenue potential'] },
+      { title: 'Denial Management', description: 'Identify, correct, and prevent denials through analytics-driven tracking and appeal processes.', features: ['Cut denial rate to under 5%', 'Faster appeal turnaround', 'Trend-based prevention strategies'] },
+      { title: 'Prior Authorization Management', description: 'Comprehensive authorization management including proactive prior auth and retroactive authorization recovery.', features: ['98% authorization approval rate', '70% retro auth success rate', 'Emergency service recovery', 'Expert payer communication'] },
+      { title: 'Eligibility & Benefits Verification', description: 'Confirm insurance coverage, co-pays, deductibles, and patient responsibilities before service.', features: ['Prevent claim denials upfront', 'Ensure billing accuracy', 'Enhance patient experience'] },
+      { title: 'Charge Entry & Payment Posting', description: 'Accurate charge entry and timely posting of EOBs/ERAs ensure your revenue reports are always up to date.', features: ['Accurate financial data', 'Detect underpayments instantly', 'Improve reconciliation accuracy'] },
+      { title: 'Provider Credentialing & Enrollment', description: 'Handle all payer enrollment, CAQH setup, and revalidation to keep your providers in-network and compliant.', features: ['Faster payer approval', 'No payment delays', 'Maintain active participation with payers'] },
+      { title: 'Payer Enrollment Services', description: 'Fast-track enrollment with Medicare, Medicaid, and commercial insurance payers in 60-90 days.', features: ['98% approval rate', 'Reduce enrollment time by 50%', 'Expert enrollment specialists'] },
+      { title: 'Patient Billing & Support', description: 'We manage patient statements, follow-ups, and calls — ensuring clear communication and timely collections.', features: ['Boost patient payments', 'Reduce call volume', 'Enhance satisfaction and retention'] },
+      { title: 'Hospital & Facility Billing', description: 'Inpatient, outpatient, and ASC billing with complete DRG validation, charge capture, and audit compliance.', features: ['Handle high-volume claims', 'Avoid revenue leakage', 'Improve facility cash flow'] },
+      { title: 'Laboratory Billing Services', description: 'Billing for clinical, molecular, and pathology labs with payer-specific compliance and panel bundling expertise.', features: ['Quick claim turnaround', 'Higher reimbursement accuracy', 'Audit-ready reporting'] },
+      { title: 'Durable Medical Equipment (DME) Billing', description: 'Complete DME billing with documentation, prior authorizations, and resubmissions.', features: ['Eliminate "same/similar" denials', 'Faster claim resolution', 'Better compliance management'] },
+      { title: 'Physician Billing Services', description: 'Customized billing for solo and multi-specialty practices with transparent reporting and dedicated account management.', features: ['Increase revenue per encounter', 'Simplify workflow', 'Ensure payer compliance'] },
+      { title: 'Telehealth Billing Services', description: 'Specialized billing for virtual visits and remote patient monitoring across all states.', features: ['Correct use of telehealth CPT codes', 'Reduce payer-specific denials', 'Improve virtual care profitability'] },
+      { title: 'Old A/R Clean-Up Projects', description: 'We review, rework, and recover old or neglected AR accounts for maximum revenue recovery.', features: ['Retrieve lost income', 'Fix billing process gaps', 'Clean up your financial backlog'] },
+      { title: 'RCM Process Automation (RPA Integration)', description: 'We integrate robotic process automation to streamline claim validation, posting, and tracking.', features: ['40% faster claim cycle', 'Reduce manual work', 'Improve accuracy and productivity'] },
+      { title: 'Practice Management Consulting', description: 'Analyze your existing workflows to identify inefficiencies and revenue leakage.', features: ['Boost collections by up to 30%', 'Optimize staff performance', 'Align RCM with business goals'] },
+      { title: 'Analytics & Financial Reporting', description: 'We provide insightful dashboards covering collection ratios, AR aging, denial trends, and payer performance.', features: ['Real-time decision-making', 'Identify hidden issues', 'Improve practice profitability'] },
+      { title: 'Call Center & Patient Scheduling', description: 'We manage inbound/outbound calls, appointment scheduling, and patient reminders.', features: ['Reduce no-shows', 'Increase patient retention', 'Improve front-desk efficiency'] },
+      { title: 'Virtual Medical Assistants', description: 'Professional remote assistants for appointment scheduling, call management, insurance verification, and patient communication.', features: ['Save 60-70% on staffing costs', 'Extended coverage hours', 'HIPAA-trained professionals'] },
+      { title: 'End-to-End RCM Outsourcing', description: 'Outsource your full billing department to our experts for a stress-free experience.', features: ['Dedicated account manager', 'Cost-effective solutions', 'Transparent, scalable model'] },
+      { title: 'Payment Reconciliation & Audit Support', description: 'We cross-verify all payments with EOBs and reports to ensure every claim is paid correctly.', features: ['Detect payer underpayments', 'Maintain financial accuracy', 'Ensure compliance with payer contracts'] },
+      { title: 'Payer Contract Negotiation', description: 'Our experts review your payer contracts to negotiate better reimbursement rates and terms.', features: ['Higher allowed amounts', 'More favorable payment terms', 'Maximize practice profitability'] },
+      { title: 'EHR/EMR Integration & Support', description: 'Seamless integration with all major EHR systems including Epic, Cerner, Athena, eClinicalWorks, and more.', features: ['Automated data flow', 'Reduce manual entry errors', 'Improve workflow efficiency'] },
+      { title: 'Compliance & HIPAA Audits', description: 'Ensure your practice meets all regulatory requirements with comprehensive compliance audits.', features: ['HIPAA compliance verification', 'Risk assessment and mitigation', 'Staff training and education'] },
+      { title: 'MIPS & MACRA Reporting', description: 'Navigate value-based care requirements with expert MIPS and MACRA reporting support.', features: ['Maximize quality bonuses', 'Avoid penalties', 'Improve quality metrics'] },
+      { title: 'Staff Training & SOP Development', description: 'Comprehensive training programs and standard operating procedures for your billing team.', features: ['Reduce errors', 'Improve efficiency', 'Ensure consistency'] }
+    ];
+
+    const servicesHTML = servicesData.map(service => `
+      <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">${service.title}</h3>
+        <p class="text-gray-700 mb-4">${service.description}</p>
+        <ul class="space-y-2">
+          ${service.features.map(feature => `<li class="flex items-start text-sm text-gray-600"><span class="mr-2">✓</span>${feature}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
+
+    const servicesStaticContent = `<div id="root"><div class="min-h-screen bg-gray-50"><main class="pt-24 pb-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-6">Medical Billing Services | Revenue Cycle Management</h1><p class="text-xl text-gray-700 mb-8">Comprehensive medical billing and RCM services to maximize your revenue and reduce administrative burden. Our expert team handles everything from coding to collections.</p><h2 class="text-3xl font-bold text-gray-900 mb-6">Our Complete Range of Services</h2><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">${servicesHTML}</div><div class="bg-blue-50 rounded-lg p-8 mb-12"><h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Medical Billing Services?</h2><ul class="space-y-3 text-gray-700"><li class="flex items-start"><span class="mr-2">✓</span><span><strong>99% Clean Claims Rate:</strong> Industry-leading accuracy ensures faster payments</span></li><li class="flex items-start"><span class="mr-2">✓</span><span><strong>30% Revenue Increase:</strong> Average revenue boost for our clients</span></li><li class="flex items-start"><span class="mr-2">✓</span><span><strong>HIPAA Compliant:</strong> Full compliance with all healthcare regulations</span></li><li class="flex items-start"><span class="mr-2">✓</span><span><strong>Dedicated Support:</strong> Personal account manager for your practice</span></li></ul></div></div></main></div></div>`;
+
+    let servicesPageHTML = baseHTML;
+    servicesPageHTML = servicesPageHTML.replace(/<title>.*?<\/title>/, '<title>Medical Billing Services | Revenue Cycle Management | Medtransic</title>');
+    servicesPageHTML = servicesPageHTML.replace(/<meta name="description" content="[^"]*"\s*\/>/, '<meta name="description" content="Comprehensive medical billing and RCM services including coding, AR management, denial management, and revenue cycle optimization. 99% clean claims rate, 30% revenue increase." />');
+    servicesPageHTML = servicesPageHTML.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, servicesStaticContent);
+
+    const servicesPath = join(distPath, 'services');
+    mkdirSync(servicesPath, { recursive: true });
+    writeFileSync(join(servicesPath, 'index.html'), servicesPageHTML, 'utf-8');
+
+    console.log('   ✅ Services page with 28 services pre-rendered successfully\n');
+    totalSuccess++;
+  } catch (error) {
+    console.error('   ❌ Error generating services page:', error);
     totalError++;
   }
 
