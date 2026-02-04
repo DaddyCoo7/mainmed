@@ -2,11 +2,15 @@
 publish = "dist"
 command = "npx vite build"
 
-[[plugins]]
-package = "@netlify/plugin-prerender-spa"
+[[redirects]]
+from = "/services/rcm"
+to = "/services/medical-billing"
+status = 301
 
-[plugins.inputs]
-entrypoint = "index.html"
+[[redirects]]
+from = "/services/outsourcing-medical-billing"
+to = "/services/medical-billing"
+status = 301
 
 [[redirects]]
 from = "/*"
