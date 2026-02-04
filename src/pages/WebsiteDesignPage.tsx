@@ -11,7 +11,7 @@ export default function WebsiteDesignPage() {
       <SEOHead
         title="Website Design | User-Centered Approach"
         description="Learn about Medtransic's intentional approach to website design - structured, simple, and focused on clear communication for busy healthcare professionals."
-        canonical="https://medtransic.com/about-website-design"
+        canonicalUrl="https://medtransic.com/about-website-design"
       />
       <ServiceSchema
         name="Website Design"

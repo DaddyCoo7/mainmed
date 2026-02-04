@@ -103,7 +103,6 @@ const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
 const BillingGlossaryPage = lazy(() => import('./pages/BillingGlossaryPage'));
 const CEOPage = lazy(() => import('./pages/CEOPage'));
 const FAQPage = lazy(() => import('./pages/FAQPage'));
-const SitemapPage = lazy(() => import('./pages/SitemapPage'));
 const IndexNowAdminPage = lazy(() => import('./pages/IndexNowAdminPage'));
 const ChicagoBillingPage = lazy(() => import('./pages/ChicagoBillingPage'));
 const StateBillingPage = lazy(() => import('./pages/StateBillingPage'));
@@ -251,11 +250,9 @@ function App() {
             <Route path="/resources/dental-codes-cheat-sheet" element={<DentalCodesCheatSheetPage />} />
             <Route path="/resources/medical-billing-modifiers-guide" element={<MedicalBillingModifiersGuidePage />} />
             <Route path="/resources/emr-integrations" element={<EMRIntegrationsListPage />} />
-            <Route path="/resources/comparisons" element={<ComparisonsListPage />} />
             <Route path="/resources/state-billing-laws" element={<StateBillingLawsPage />} />
             <Route path="/integrations/:slug" element={<EMRIntegrationPage />} />
             <Route path="/faq" element={<FAQPage />} />
-            <Route path="/sitemap" element={<SitemapPage />} />
             <Route path="/ceo" element={<CEOPage />} />
             <Route path="/admin/indexnow" element={<IndexNowAdminPage />} />
             <Route path="/locations" element={<LocationsPage />} />

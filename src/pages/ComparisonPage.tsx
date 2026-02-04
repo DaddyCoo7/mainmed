@@ -3,8 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle2, XCircle, Minus, ArrowRight, HelpCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -129,7 +127,7 @@ export default function ComparisonPage() {
       <SEOHead
         title={pageData.title}
         description={pageData.meta_description}
-        canonical={`https://medtransic.com/comparisons/${pageData.slug}`}
+        canonicalUrl={`https://medtransic.com/comparisons/${pageData.slug}`}
       />
       <Header />
 

@@ -1,12 +1,15 @@
 [build]
 publish = "dist"
-command = "npm run build"
+command = "npx vite build"
 
 [[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
 force = false
+
+[redirects.conditions]
+Kind = [ "document" ]
 
 [[headers]]
 for = "/*"

@@ -1,10 +1,11 @@
-# Netlify Redirects Configuration
-# Static HTML pages are served first, SPA fallback for non-existent routes
+# Netlify Redirects Configuration for React SPA with Prerendering
+# This file enables proper SPA routing while serving prerendered HTML when available
 
 # 301 Permanent Redirects - Consolidating duplicate service pages
 /services/rcm                           /services/medical-billing    301
 /services/outsourcing-medical-billing  /services/medical-billing    301
 
-# SPA fallback - only for routes without static HTML files
-# With force=false, existing files take precedence
+# Serve the SPA for all unmatched routes (client-side routing)
+# The 200 status means "rewrite" not "redirect", so the URL stays the same
+# If a prerendered HTML file exists at the path, it will be served instead
 /*    /index.html   200
