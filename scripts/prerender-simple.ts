@@ -157,8 +157,8 @@ function generateStateHTML(stateData: StatePageData, baseHTML: string): string {
     `  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>\n  </head>`
   );
 
-  // Add static H1 and content for SEO crawlers (screen reader only technique)
-  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${stateData.hero_title}</h1><p>${stateData.hero_description}</p></div></div>`;
+  // Add static H1 and content for SEO crawlers (VISIBLE content)
+  const staticContent = `<div id="root"><div class="min-h-screen bg-white"><main class="pt-24 pb-12"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-6">${stateData.hero_title}</h1><p class="text-lg text-gray-700 leading-relaxed mb-8">${stateData.hero_description}</p><h2 class="text-2xl font-bold text-gray-900 mb-4">Cities We Serve in ${stateData.state_name}</h2><ul class="list-disc list-inside text-gray-700 space-y-2">${stateData.major_cities.map(city => `<li>${city}</li>`).join('')}</ul></div></main></div></div>`;
 
   html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
@@ -284,8 +284,8 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
     `  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>\n  </head>`
   );
 
-  // Add static H1 and content for SEO crawlers (screen reader only technique)
-  const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>${cityData.hero_title}</h1><p>${cityData.hero_description}</p></div></div>`;
+  // Add static H1 and content for SEO crawlers (VISIBLE content)
+  const staticContent = `<div id="root"><div class="min-h-screen bg-white"><main class="pt-24 pb-12"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-6">${cityData.hero_title}</h1><p class="text-lg text-gray-700 leading-relaxed mb-8">${cityData.hero_description}</p><div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8"><h2 class="text-xl font-bold text-gray-900 mb-3">About ${cityData.city_name}</h2><p class="text-gray-700 mb-2"><strong>Metro Area:</strong> ${cityData.metro_area}</p><p class="text-gray-700"><strong>Population:</strong> ${cityData.population}</p></div>${cityData.nearby_cities.length > 0 ? `<h2 class="text-2xl font-bold text-gray-900 mb-4">Nearby Cities We Serve</h2><ul class="list-disc list-inside text-gray-700 space-y-2">${cityData.nearby_cities.map(city => `<li>${city}</li>`).join('')}</ul>` : ''}</div></main></div></div>`;
 
   html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
@@ -734,8 +734,9 @@ function generateStaticPageHTML(
   // Extract H1 from title (remove " | Medtransic" suffix if present)
   const h1Text = route.title.replace(/ \| Medtransic$/, '');
 
-  // Add static H1 and content for SEO crawlers (visible for SSR)
-  const staticContent = `<div id="root"><div><noscript><h1>${h1Text}</h1><p>${route.description}</p></noscript></div></div>`;
+  // Add static H1 and content for SEO crawlers (VISIBLE content that React will hydrate over)
+  // Using server-rendered content that's visible to all crawlers
+  const staticContent = `<div id="root"><div class="min-h-screen bg-white"><main class="pt-24 pb-12"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-6">${h1Text}</h1><p class="text-lg text-gray-700 leading-relaxed">${route.description}</p></div></main></div></div>`;
 
   html = html.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
@@ -1008,8 +1009,8 @@ async function prerenderPages() {
       );
     }
 
-    // Add screen-reader accessible content for Googlebot
-    const staticContent = `<div id="root"><div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0"><h1>Medical Billing Services 2025</h1><p>${homeDescription}</p><h2>Complete Revenue Cycle Management Solutions</h2><p>End-to-end RCM services that maximize collections and reduce administrative burden. From patient registration to final payment, we handle it all.</p><h2>Expert Medical Billing & Coding Services</h2><p>Professional medical billing services with 99% clean claims rate. Expert coding, claims management, and denial resolution. Increase revenue and reduce administrative burden.</p><h2>Medical Specialties We Serve</h2><p>Expert medical billing services for 50+ specialties including cardiology, orthopedics, mental health, physical therapy, dental, ophthalmology, and more.</p></div></div>`;
+    // Add VISIBLE prerendered content for crawlers
+    const staticContent = `<div id="root"><div class="min-h-screen bg-white"><main class="pt-24 pb-12"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-6">Medical Billing Services 2025</h1><p class="text-lg text-gray-700 leading-relaxed mb-8">${homeDescription}</p><h2 class="text-3xl font-bold text-gray-900 mb-4">Complete Revenue Cycle Management Solutions</h2><p class="text-gray-700 mb-6">End-to-end RCM services that maximize collections and reduce administrative burden. From patient registration to final payment, we handle it all.</p><h2 class="text-3xl font-bold text-gray-900 mb-4">Expert Medical Billing & Coding Services</h2><p class="text-gray-700 mb-6">Professional medical billing services with 99% clean claims rate. Expert coding, claims management, and denial resolution. Increase revenue and reduce administrative burden.</p><h2 class="text-3xl font-bold text-gray-900 mb-4">Medical Specialties We Serve</h2><p class="text-gray-700">Expert medical billing services for 50+ specialties including cardiology, orthopedics, mental health, physical therapy, dental, ophthalmology, and more.</p></div></main></div></div>`;
 
     homeHTML = homeHTML.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, staticContent);
 
