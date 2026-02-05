@@ -135,7 +135,7 @@ function App() {
       if (typeof window !== 'undefined') {
         (window as any).prerenderReady = true;
       }
-    }, 2000); // Wait 2 seconds for helmet to update and content to render
+    }, 4000); // Wait 2 seconds for helmet to update and content to render
 
     return () => clearTimeout(timer);
   }, []); // Empty dependency array = runs once on mount
