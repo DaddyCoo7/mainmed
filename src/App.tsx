@@ -131,14 +131,14 @@ function App() {
 
   // Signal to Netlify Prerender that the page is ready
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (typeof window !== 'undefined') {
-        (window as any).prerenderReady = true;
-      }
-    }, 4000); // Wait 2 seconds for helmet to update and content to render
+  const timer = setTimeout(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).prerenderReady = true;
+    }
+  }, 6000); // Just wait 6 seconds, period
 
-    return () => clearTimeout(timer);
-  }, []); // Empty dependency array = runs once on mount
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <ThemeProvider>
