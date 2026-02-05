@@ -23,3 +23,11 @@ if (rootElement.hasChildNodes()) {
 } else {
   createRoot(rootElement).render(app);
 }
+
+// Signal to Netlify Prerender that the page is ready
+// Wait for React and react-helmet-async to finish rendering
+setTimeout(() => {
+  if (typeof window !== 'undefined') {
+    (window as any).prerenderReady = true;
+  }
+}, 2000); // 2 second delay to ensure helmet has updated meta tags
