@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
@@ -128,6 +128,17 @@ const StateBillingLawsPage = lazy(() => import('./pages/resources/StateBillingLa
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+
+  // Signal to Netlify Prerender that the page is ready
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        (window as any).prerenderReady = true;
+      }
+    }, 2000); // Wait 2 seconds for helmet to update and content to render
+
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array = runs once on mount
 
   return (
     <ThemeProvider>
