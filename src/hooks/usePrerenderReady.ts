@@ -25,7 +25,7 @@ export const usePrerenderReady = (isReady: boolean) => {
       // 3. Update the actual DOM elements
       const timeoutId = setTimeout(() => {
         window.prerenderReady = true;
-      }, 100);
+      }, 500);
 
       return () => clearTimeout(timeoutId);
     }
