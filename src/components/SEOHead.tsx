@@ -21,7 +21,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://medtransic.com/medtransic-logomark1.svg',
+  ogImage = 'https://medtransic.com/medtransiclogolightbk.png',
   keywords,
   noindex = false,
   structuredData

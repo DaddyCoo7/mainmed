@@ -3,7 +3,6 @@ import { writeFileSync, mkdirSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import { renderPageSSR } from './ssr-renderer.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -94,9 +93,12 @@ function generateStateHTML(stateData: StatePageData, baseHTML: string): string {
   <meta property="og:description" content="${stateData.meta_description}">
   <meta property="og:url" content="${canonicalURL}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Medtransic">
+  <meta property="og:image" content="https://medtransic.com/medtransiclogolightbk.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${stateData.meta_title}">
-  <meta name="twitter:description" content="${stateData.meta_description}">`;
+  <meta name="twitter:description" content="${stateData.meta_description}">
+  <meta name="twitter:image" content="https://medtransic.com/medtransiclogolightbk.png">`;
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
@@ -211,9 +213,12 @@ function generateCityHTML(cityData: CityPageData, stateData: StatePageData, base
   <meta property="og:description" content="${cityData.meta_description}">
   <meta property="og:url" content="${canonicalURL}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Medtransic">
+  <meta property="og:image" content="https://medtransic.com/medtransiclogolightbk.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${cityData.meta_title}">
-  <meta name="twitter:description" content="${cityData.meta_description}">`;
+  <meta name="twitter:description" content="${cityData.meta_description}">
+  <meta name="twitter:image" content="https://medtransic.com/medtransiclogolightbk.png">`;
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
@@ -326,6 +331,15 @@ const STATIC_ROUTES = [
   { path: 'chicago-medical-billing', title: 'Chicago Medical Billing Services | Illinois RCM | Medtransic', description: 'Professional medical billing services in Chicago, Illinois. Expert revenue cycle management for Chicago healthcare providers.' },
   { path: 'pk', title: 'Medical Billing Services Pakistan | Medtransic', description: 'Medtransic Pakistan office providing world-class medical billing services and healthcare revenue cycle management.' },
   { path: 'ph', title: 'Medical Billing Services Philippines | Medtransic', description: 'Medtransic Philippines office offering expert medical billing and revenue cycle management services.' },
+  { path: 'pk/careers', title: 'Careers in Pakistan | Medical Billing Jobs | Medtransic', description: 'Join Medtransic Pakistan team. Career opportunities in medical billing, coding, and revenue cycle management.' },
+  { path: 'ph/careers', title: 'Careers in Philippines | Medical Billing Jobs | Medtransic', description: 'Join Medtransic Philippines team. Career opportunities in medical billing, coding, and revenue cycle management.' },
+  { path: 'locations/chicago', title: 'Chicago Medical Billing Services | Illinois RCM | Medtransic', description: 'Professional medical billing services in Chicago, Illinois. Expert revenue cycle management for Chicago healthcare providers.' },
+  { path: 'resources/cpt-codes-cheat-sheet', title: 'CPT Codes Cheat Sheet 2025 | Quick Reference Guide | Medtransic', description: 'Complete CPT codes cheat sheet with commonly used procedure codes for medical billing. Quick reference guide for healthcare providers and billing professionals.' },
+  { path: 'resources/icd-10-codes-reference', title: 'ICD-10 Codes Reference Guide 2025 | Medtransic', description: 'Comprehensive ICD-10 codes reference guide for medical billing and coding. Browse diagnosis codes by category with expert guidance.' },
+  { path: 'resources/dental-codes-cheat-sheet', title: 'Dental Codes Cheat Sheet 2025 | CDT Code Reference | Medtransic', description: 'Complete dental CDT codes cheat sheet for dental billing. Quick reference guide for dental procedures, diagnostic codes, and billing tips.' },
+  { path: 'resources/medical-billing-modifiers-guide', title: 'Medical Billing Modifiers Guide 2025 | Complete Reference | Medtransic', description: 'Complete guide to medical billing modifiers. Learn when and how to use CPT modifiers correctly to avoid claim denials and optimize reimbursement.' },
+  { path: 'resources/emr-integrations', title: 'EMR/EHR Integrations | Compatible Systems | Medtransic', description: 'Medtransic integrates with all major EMR/EHR systems. See our full list of compatible electronic health record platforms.' },
+  { path: 'resources/state-billing-laws', title: 'State Medical Billing Laws & Regulations | Medtransic', description: 'Guide to state-specific medical billing laws, regulations, and compliance requirements across all 50 states.' },
 ];
 
 // Service page routes with specific metadata
@@ -445,6 +459,10 @@ const SERVICE_ROUTES = {
   'outsourcing-medical-billing': {
     title: 'Outsourcing Medical Billing Services | Full-Service RCM',
     description: 'Reduce costs by 30-50% and increase revenue by 15-25% with expert outsourced billing services. Complete revenue cycle management, dedicated account managers, and transparent reporting.'
+  },
+  'digital-presence': {
+    title: 'Digital Presence Services | Medical Practice Marketing | Medtransic',
+    description: 'Boost your medical practice online presence with professional website design, SEO, social media management, and digital marketing services tailored for healthcare providers.'
   }
 };
 
@@ -699,9 +717,12 @@ function generateStaticPageHTML(
   <meta property="og:description" content="${route.description}">
   <meta property="og:url" content="${canonicalURL}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Medtransic">
+  <meta property="og:image" content="https://medtransic.com/medtransiclogolightbk.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${route.title}">
-  <meta name="twitter:description" content="${route.description}">`;
+  <meta name="twitter:description" content="${route.description}">
+  <meta name="twitter:image" content="https://medtransic.com/medtransiclogolightbk.png">`;
 
   html = html.replace('</head>', `${ogTags}\n  </head>`);
 
@@ -1000,6 +1021,11 @@ async function prerenderPages() {
         /<meta name="description" content="[^"]*"\s*\/?>/,
         `<meta name="description" content="${homeDescription}" />`
       );
+    } else {
+      homeHTML = homeHTML.replace(
+        '</head>',
+        `  <meta name="description" content="${homeDescription}">\n  </head>`
+      );
     }
 
     // Add canonical URL
@@ -1007,6 +1033,29 @@ async function prerenderPages() {
       homeHTML = homeHTML.replace(
         '</head>',
         '  <link rel="canonical" href="https://medtransic.com/">\n  </head>'
+      );
+    }
+
+    // Add Open Graph tags
+    const homeOgTags = `
+  <meta property="og:title" content="${homeTitle}">
+  <meta property="og:description" content="${homeDescription}">
+  <meta property="og:url" content="https://medtransic.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Medtransic">
+  <meta property="og:image" content="https://medtransic.com/medtransiclogolightbk.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${homeTitle}">
+  <meta name="twitter:description" content="${homeDescription}">
+  <meta name="twitter:image" content="https://medtransic.com/medtransiclogolightbk.png">`;
+
+    homeHTML = homeHTML.replace('</head>', `${homeOgTags}\n  </head>`);
+
+    // Add meta robots tag
+    if (!homeHTML.includes('<meta name="robots"')) {
+      homeHTML = homeHTML.replace(
+        '</head>',
+        '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n  </head>'
       );
     }
 
@@ -1321,6 +1370,120 @@ async function prerenderPages() {
 
   totalSuccess += specialtySuccess;
   totalError += specialtyError;
+
+  // Generate comparison pages from database
+  console.log('\n📊 Pre-rendering comparison pages...');
+  let comparisonSuccess = 0;
+  let comparisonError = 0;
+
+  try {
+    const { data: comparisons, error: compError } = await supabase
+      .from('comparison_pages')
+      .select('slug, title, meta_description');
+
+    if (compError) {
+      console.error('   ❌ Error fetching comparisons:', compError);
+    } else if (comparisons && comparisons.length > 0) {
+      for (const comp of comparisons) {
+        try {
+          console.log(`🔄 Generating HTML for: comparisons/${comp.slug}...`);
+
+          const breadcrumbs: BreadcrumbItem[] = [
+            { name: 'Home', url: 'https://medtransic.com/' },
+            { name: 'Comparisons', url: 'https://medtransic.com/comparisons' },
+            { name: comp.title.split(':')[0].trim(), url: `https://medtransic.com/comparisons/${comp.slug}` }
+          ];
+
+          const pageHTML = generateStaticPageHTML({
+            path: `comparisons/${comp.slug}`,
+            title: comp.title,
+            description: comp.meta_description
+          }, baseHTML, breadcrumbs);
+
+          const pagePath = join(distPath, 'comparisons', comp.slug);
+          mkdirSync(pagePath, { recursive: true });
+          writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+
+          console.log(`   ✅ Saved to: /comparisons/${comp.slug}/index.html`);
+          comparisonSuccess++;
+        } catch (error) {
+          console.error(`   ❌ Error generating comparisons/${comp.slug}:`, error);
+          comparisonError++;
+        }
+      }
+    }
+  } catch (error) {
+    console.error('   ❌ Error fetching comparison pages:', error);
+  }
+
+  console.log(`\n📊 Comparison Pages Summary:`);
+  console.log(`   ✅ Successfully generated: ${comparisonSuccess} comparison pages`);
+  if (comparisonError > 0) {
+    console.log(`   ❌ Failed: ${comparisonError} comparison pages`);
+  }
+
+  totalSuccess += comparisonSuccess;
+  totalError += comparisonError;
+
+  // Generate EMR integration pages from database
+  console.log('\n📊 Pre-rendering EMR integration pages...');
+  let integrationSuccess = 0;
+  let integrationError = 0;
+
+  try {
+    const { data: integrations, error: intError } = await supabase
+      .from('emr_integrations')
+      .select('slug, name, description')
+      .order('popularity_rank');
+
+    if (intError) {
+      console.error('   ❌ Error fetching integrations:', intError);
+    } else if (integrations && integrations.length > 0) {
+      for (const emr of integrations) {
+        try {
+          console.log(`🔄 Generating HTML for: integrations/${emr.slug}...`);
+
+          const breadcrumbs: BreadcrumbItem[] = [
+            { name: 'Home', url: 'https://medtransic.com/' },
+            { name: 'EMR Integrations', url: 'https://medtransic.com/resources/emr-integrations' },
+            { name: emr.name, url: `https://medtransic.com/integrations/${emr.slug}` }
+          ];
+
+          const title = `${emr.name} Billing Integration | Medical Billing Services | Medtransic`;
+          const description = emr.description.length > 170
+            ? emr.description.substring(0, 167) + '...'
+            : emr.description;
+
+          const pageHTML = generateStaticPageHTML({
+            path: `integrations/${emr.slug}`,
+            title,
+            description
+          }, baseHTML, breadcrumbs);
+
+          const pagePath = join(distPath, 'integrations', emr.slug);
+          mkdirSync(pagePath, { recursive: true });
+          writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+
+          console.log(`   ✅ Saved to: /integrations/${emr.slug}/index.html`);
+          integrationSuccess++;
+        } catch (error) {
+          console.error(`   ❌ Error generating integrations/${emr.slug}:`, error);
+          integrationError++;
+        }
+      }
+    }
+  } catch (error) {
+    console.error('   ❌ Error fetching EMR integrations:', error);
+  }
+
+  console.log(`\n📊 EMR Integration Pages Summary:`);
+  console.log(`   ✅ Successfully generated: ${integrationSuccess} integration pages`);
+  if (integrationError > 0) {
+    console.log(`   ❌ Failed: ${integrationError} integration pages`);
+  }
+
+  totalSuccess += integrationSuccess;
+  totalError += integrationError;
 
   console.log('\n📊 Total Pre-rendering Summary:');
   console.log(`   ✅ Total pages generated: ${totalSuccess} pages`);
