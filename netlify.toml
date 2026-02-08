@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "vite build"
+command = "npx vite build"
 
 [build.processing]
 skip_processing = false
