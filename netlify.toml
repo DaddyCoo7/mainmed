@@ -6,7 +6,7 @@ command = "npx vite build"
 skip_processing = false
 
 [build.processing.html]
-pretty_urls = true
+pretty_urls = false
 
 [[redirects]]
 from = "/sitemap.xml"
