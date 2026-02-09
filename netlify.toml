@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npx vite build"
+command = "npx vite build && npx tsx scripts/prerender-simple.ts"
 
 [build.processing]
 skip_processing = false
@@ -29,11 +29,13 @@ status = 200
 from = "/services/rcm"
 to = "/services/medical-billing"
 status = 301
+force = true
 
 [[redirects]]
 from = "/services/outsourcing-medical-billing"
 to = "/services/medical-billing"
 status = 301
+force = true
 
 [[redirects]]
 from = "/*"
