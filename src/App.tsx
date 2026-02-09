@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
@@ -134,16 +134,6 @@ const StateBillingLawsPage = lazy(() => import('./pages/resources/StateBillingLa
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
-
-  useEffect(() => {
-    window.prerenderReady = false;
-
-    const timer = setTimeout(() => {
-      window.prerenderReady = true;
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <ThemeProvider>
