@@ -1127,9 +1127,7 @@ async function prerenderPages() {
     servicesPageHTML = servicesPageHTML.replace(/<meta name="description" content="[^"]*"\s*\/>/, '<meta name="description" content="Comprehensive medical billing and RCM services including coding, AR management, denial management, and revenue cycle optimization. 99% clean claims rate, 30% revenue increase." />');
     servicesPageHTML = servicesPageHTML.replace(/<div id="root">[\s\S]*?<\/div>(\s*<\/div>)?/, servicesStaticContent);
 
-    const servicesPath = join(distPath, 'services');
-    mkdirSync(servicesPath, { recursive: true });
-    writeFileSync(join(servicesPath, 'index.html'), servicesPageHTML, 'utf-8');
+    writeFileSync(join(distPath, 'services.html'), servicesPageHTML, 'utf-8');
 
     console.log('   ✅ Services page with 28 services pre-rendered successfully\n');
     totalSuccess++;
@@ -1168,15 +1166,13 @@ async function prerenderPages() {
       // Generate the HTML with state-specific content
       const stateHTML = generateStateHTML(state, baseHTML);
 
-      // Create directory structure
-      const pagePath = join(distPath, 'medical-billing-services', state.slug);
-      mkdirSync(pagePath, { recursive: true });
+      const parentDir = join(distPath, 'medical-billing-services');
+      mkdirSync(parentDir, { recursive: true });
 
-      // Write HTML file
-      const htmlPath = join(pagePath, 'index.html');
+      const htmlPath = join(parentDir, `${state.slug}.html`);
       writeFileSync(htmlPath, stateHTML, 'utf-8');
 
-      console.log(`   ✅ Saved to: /medical-billing-services/${state.slug}/index.html`);
+      console.log(`   ✅ Saved to: /medical-billing-services/${state.slug}.html`);
       successCount++;
     } catch (error) {
       console.error(`   ❌ Error generating ${state.state_name}:`, error);
@@ -1227,15 +1223,13 @@ async function prerenderPages() {
         // Generate the HTML with city-specific content
         const cityHTML = generateCityHTML(city, stateData, baseHTML);
 
-        // Create directory structure
-        const pagePath = join(distPath, 'medical-billing-services', city.state_slug, city.city_slug);
-        mkdirSync(pagePath, { recursive: true });
+        const parentDir = join(distPath, 'medical-billing-services', city.state_slug);
+        mkdirSync(parentDir, { recursive: true });
 
-        // Write HTML file
-        const htmlPath = join(pagePath, 'index.html');
+        const htmlPath = join(parentDir, `${city.city_slug}.html`);
         writeFileSync(htmlPath, cityHTML, 'utf-8');
 
-        console.log(`   ✅ Saved to: /medical-billing-services/${city.state_slug}/${city.city_slug}/index.html`);
+        console.log(`   ✅ Saved to: /medical-billing-services/${city.state_slug}/${city.city_slug}.html`);
         citySuccessCount++;
       } catch (error) {
         console.error(`   ❌ Error generating ${city.city_name}:`, error);
@@ -1282,13 +1276,11 @@ async function prerenderPages() {
         pageHTML = generateStaticPageHTML(route, baseHTML, breadcrumbs);
       }
 
-      const pagePath = join(distPath, route.path);
-      mkdirSync(pagePath, { recursive: true });
-
-      const htmlPath = join(pagePath, 'index.html');
+      const htmlPath = join(distPath, `${route.path}.html`);
+      mkdirSync(dirname(htmlPath), { recursive: true });
       writeFileSync(htmlPath, pageHTML, 'utf-8');
 
-      console.log(`   ✅ Saved to: /${route.path}/index.html`);
+      console.log(`   ✅ Saved to: /${route.path}.html`);
       staticSuccess++;
     } catch (error) {
       console.error(`   ❌ Error generating ${route.path}:`, error);
@@ -1315,13 +1307,13 @@ async function prerenderPages() {
       console.log(`🔄 Generating HTML for: services/${serviceSlug}...`);
       const pageHTML = generateServicePageHTML(serviceSlug, baseHTML);
 
-      const pagePath = join(distPath, 'services', serviceSlug);
-      mkdirSync(pagePath, { recursive: true });
+      const parentDir = join(distPath, 'services');
+      mkdirSync(parentDir, { recursive: true });
 
-      const htmlPath = join(pagePath, 'index.html');
+      const htmlPath = join(parentDir, `${serviceSlug}.html`);
       writeFileSync(htmlPath, pageHTML, 'utf-8');
 
-      console.log(`   ✅ Saved to: /services/${serviceSlug}/index.html`);
+      console.log(`   ✅ Saved to: /services/${serviceSlug}.html`);
       serviceSuccess++;
     } catch (error) {
       console.error(`   ❌ Error generating services/${serviceSlug}:`, error);
@@ -1348,13 +1340,13 @@ async function prerenderPages() {
       console.log(`🔄 Generating HTML for: specialties/${specialtySlug}...`);
       const pageHTML = await generateSpecialtyPageWithFAQs(specialtySlug, baseHTML);
 
-      const pagePath = join(distPath, 'specialties', specialtySlug);
-      mkdirSync(pagePath, { recursive: true });
+      const parentDir = join(distPath, 'specialties');
+      mkdirSync(parentDir, { recursive: true });
 
-      const htmlPath = join(pagePath, 'index.html');
+      const htmlPath = join(parentDir, `${specialtySlug}.html`);
       writeFileSync(htmlPath, pageHTML, 'utf-8');
 
-      console.log(`   ✅ Saved to: /specialties/${specialtySlug}/index.html`);
+      console.log(`   ✅ Saved to: /specialties/${specialtySlug}.html`);
       specialtySuccess++;
     } catch (error) {
       console.error(`   ❌ Error generating specialties/${specialtySlug}:`, error);
@@ -1400,11 +1392,11 @@ async function prerenderPages() {
             description: comp.meta_description
           }, baseHTML, breadcrumbs);
 
-          const pagePath = join(distPath, 'comparisons', comp.slug);
-          mkdirSync(pagePath, { recursive: true });
-          writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+          const parentDir = join(distPath, 'comparisons');
+          mkdirSync(parentDir, { recursive: true });
+          writeFileSync(join(parentDir, `${comp.slug}.html`), pageHTML, 'utf-8');
 
-          console.log(`   ✅ Saved to: /comparisons/${comp.slug}/index.html`);
+          console.log(`   ✅ Saved to: /comparisons/${comp.slug}.html`);
           comparisonSuccess++;
         } catch (error) {
           console.error(`   ❌ Error generating comparisons/${comp.slug}:`, error);
@@ -1460,11 +1452,11 @@ async function prerenderPages() {
             description
           }, baseHTML, breadcrumbs);
 
-          const pagePath = join(distPath, 'integrations', emr.slug);
-          mkdirSync(pagePath, { recursive: true });
-          writeFileSync(join(pagePath, 'index.html'), pageHTML, 'utf-8');
+          const parentDir = join(distPath, 'integrations');
+          mkdirSync(parentDir, { recursive: true });
+          writeFileSync(join(parentDir, `${emr.slug}.html`), pageHTML, 'utf-8');
 
-          console.log(`   ✅ Saved to: /integrations/${emr.slug}/index.html`);
+          console.log(`   ✅ Saved to: /integrations/${emr.slug}.html`);
           integrationSuccess++;
         } catch (error) {
           console.error(`   ❌ Error generating integrations/${emr.slug}:`, error);

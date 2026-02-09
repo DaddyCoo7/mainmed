@@ -187,7 +187,7 @@ export function prerenderPlugin(): Plugin {
 
       for (const route of routes) {
         try {
-          const outputPath = join(distPath, route.path === '/' ? 'index.html' : `${route.path}/index.html`);
+          const outputPath = join(distPath, route.path === '/' ? 'index.html' : `${route.path}.html`);
           const outputDir = dirname(outputPath);
 
           if (!existsSync(outputDir)) {
