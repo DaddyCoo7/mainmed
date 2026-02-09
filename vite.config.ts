@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { prerenderPlugin } from './vite-plugin-prerender';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), prerenderPlugin()],
+  plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
