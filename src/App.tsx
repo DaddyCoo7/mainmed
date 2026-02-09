@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
@@ -15,6 +15,13 @@ declare global {
     prerenderReady?: boolean;
   }
 }
+
+const PrerenderReady: React.FC = () => {
+  useEffect(() => {
+    window.prerenderReady = true;
+  }, []);
+  return null;
+};
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PakistanHomePage = lazy(() => import('./pages/PakistanHomePage'));
@@ -280,6 +287,7 @@ function App() {
 
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
+          <PrerenderReady />
           </Suspense>
         </ScrollToTop>
         </main>
