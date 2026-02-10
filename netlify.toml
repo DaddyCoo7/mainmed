@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npx vite build && npx tsx scripts/prerender-simple.ts"
+command = "npx vite build"
 
 [build.processing]
 skip_processing = false
