@@ -31,12 +31,9 @@ import RelatedServices from '../components/RelatedServices';
 import FAQSection from '../components/FAQSection';
 import { getRelatedLinks } from '../config/internalLinks';
 import { useFAQs } from '../hooks/useFAQs';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const MedicalBillingPage: React.FC = () => {
   const { faqs, loading: faqsLoading } = useFAQs('general');
-
-  usePrerenderReady(!faqsLoading);
 
   const painPoints = [
     {

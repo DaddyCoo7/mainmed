@@ -4,10 +4,8 @@ import { Phone, Mail, MapPin, Calendar, Send, CheckCircle, Loader2, AlertCircle 
 import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const ContactPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const [formData, setFormData] = useState({
     name: '',

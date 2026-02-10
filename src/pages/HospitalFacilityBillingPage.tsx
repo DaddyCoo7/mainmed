@@ -26,10 +26,8 @@ import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
 import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const HospitalFacilityBillingPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

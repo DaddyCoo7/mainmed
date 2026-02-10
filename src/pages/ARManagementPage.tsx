@@ -26,10 +26,8 @@ import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import ARAgingVisualization from '../components/ARAgingVisualization';
 import ServiceSchema from '../components/ServiceSchema';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const ARManagementPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

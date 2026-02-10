@@ -8,12 +8,9 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import FAQSection from '../components/FAQSection';
 import OrganizationSchema from '../components/OrganizationSchema';
 import { useFAQs } from '../hooks/useFAQs';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const AboutPage: React.FC = () => {
   const { faqs, loading: faqsLoading } = useFAQs('general');
-
-  usePrerenderReady(!faqsLoading);
   const values = [
     {
       icon: Award,

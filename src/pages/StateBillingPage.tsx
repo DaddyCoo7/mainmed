@@ -6,7 +6,6 @@ import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import LocationSchema from '../components/LocationSchema';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface StatePageData {
   state_name: string;
@@ -79,8 +78,6 @@ export default function StateBillingPage() {
       fetchStateData();
     }
   }, [state]);
-
-  usePrerenderReady(!loading && !!pageData);
 
   if (loading) {
     return (

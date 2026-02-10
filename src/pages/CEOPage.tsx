@@ -2,11 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, CheckCircle, Users, Award } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const CEOPage: React.FC = () => {
-  usePrerenderReady(true);
-
   const achievements = [
     {
       icon: CheckCircle,

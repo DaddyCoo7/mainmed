@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Download, Star } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
-import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface DentalCode {
   id: string;
@@ -30,8 +29,6 @@ export default function DentalCodesCheatSheetPage() {
   useEffect(() => {
     filterCodes();
   }, [searchTerm, selectedCategory, commonOnly, codes]);
-
-  usePrerenderReady(!loading && codes.length > 0);
 
   const fetchDentalCodes = async () => {
     try {

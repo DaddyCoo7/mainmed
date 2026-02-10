@@ -23,7 +23,6 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import FAQStructuredData from '../components/FAQStructuredData';
 import { supabase } from '../lib/supabase';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface FAQ {
   id: string;
@@ -132,8 +131,6 @@ const FAQPage: React.FC = () => {
 
     fetchFAQs();
   }, []);
-
-  usePrerenderReady(!loading && faqs.length > 0);
 
   const categories = Array.from(new Set(faqs.map(faq => faq.category))).sort();
 

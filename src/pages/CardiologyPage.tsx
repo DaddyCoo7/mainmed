@@ -32,12 +32,9 @@ import FAQSection from '../components/FAQSection';
 import SpecialtySchema from '../components/SpecialtySchema';
 import { getRelatedLinks } from '../config/internalLinks';
 import { useFAQs } from '../hooks/useFAQs';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const CardiologyPage: React.FC = () => {
   const { faqs, loading: faqsLoading } = useFAQs('cardiology');
-
-  usePrerenderReady(!faqsLoading);
 
   const painPoints = [
     {

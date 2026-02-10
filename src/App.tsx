@@ -10,12 +10,6 @@ import OrganizationSchema from './components/OrganizationSchema';
 import GeoRedirect from './components/GeoRedirect';
 import { redirectRules } from './config/redirects';
 
-declare global {
-  interface Window {
-    prerenderReady?: boolean;
-  }
-}
-
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PakistanHomePage = lazy(() => import('./pages/PakistanHomePage'));
 const PhilippinesHomePage = lazy(() => import('./pages/PhilippinesHomePage'));

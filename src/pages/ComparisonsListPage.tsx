@@ -5,7 +5,6 @@ import { ArrowRight, Scale, TrendingUp } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface ComparisonItem {
   slug: string;
@@ -38,8 +37,6 @@ export default function ComparisonsListPage() {
 
     fetchComparisons();
   }, []);
-
-  usePrerenderReady(!loading && comparisons.length > 0);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">

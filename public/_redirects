@@ -10,5 +10,4 @@
 
 # Serve the SPA for all unmatched routes (client-side routing)
 # The 200 status means "rewrite" not "redirect", so the URL stays the same
-# Netlify Prerender Extension will serve prerendered HTML to crawlers
 /*    /index.html   200

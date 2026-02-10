@@ -13,7 +13,6 @@ import ProcessFlow from '../components/ProcessFlow';
 import MipsCompliance from '../components/MipsCompliance';
 import MedicalBillingEducation from '../components/MedicalBillingEducation';
 import ChoosingBillingPartner from '../components/ChoosingBillingPartner';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const HomePage: React.FC = () => {
   const [isContentReady, setIsContentReady] = useState(false);
@@ -27,8 +26,6 @@ const HomePage: React.FC = () => {
 
     return () => clearTimeout(timeoutId);
   }, []);
-
-  usePrerenderReady(isContentReady);
 
   return (
     <>

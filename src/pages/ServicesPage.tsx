@@ -7,12 +7,9 @@ import OrganizationSchema from '../components/OrganizationSchema';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import ROICalculator from '../components/ROICalculator';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const ServicesPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-
-  usePrerenderReady(true);
 
   const servicesData = [
     {

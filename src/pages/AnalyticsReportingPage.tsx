@@ -26,10 +26,8 @@ import InteractiveCard from '../components/InteractiveCard';
 import RelatedServices from '../components/RelatedServices';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const AnalyticsReportingPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

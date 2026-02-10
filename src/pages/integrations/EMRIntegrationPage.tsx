@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, AlertCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
-import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface EMRIntegration {
   id: string;
@@ -55,8 +54,6 @@ export default function EMRIntegrationPage() {
       setLoading(false);
     }
   };
-
-  usePrerenderReady(!loading && !!integration);
 
   if (loading) {
     return (

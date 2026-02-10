@@ -22,10 +22,8 @@ import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import AggregateRatingSchema from '../components/AggregateRatingSchema';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const ChicagoBillingPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const services = [
     {

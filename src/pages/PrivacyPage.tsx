@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { Shield, Lock, Eye, FileText, Users, Clock, Mail, Phone } from 'lucide-react';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const PrivacyPage: React.FC = () => {
-  usePrerenderReady(true);
 
   return (
 

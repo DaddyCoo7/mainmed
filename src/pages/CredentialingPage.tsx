@@ -25,10 +25,8 @@ import RelatedServices from '../components/RelatedServices';
 import HeroSection from '../components/HeroSection';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const CredentialingPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

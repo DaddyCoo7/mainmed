@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 import {
   FileText,
   Shield,
@@ -16,7 +15,6 @@ import {
 } from 'lucide-react';
 
 const TermsOfServicePage: React.FC = () => {
-  usePrerenderReady(true);
 
   return (
 

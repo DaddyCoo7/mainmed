@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Download, Star, AlertCircle } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AnimatedSection from '../../components/AnimatedSection';
-import { usePrerenderReady } from '../../hooks/usePrerenderReady';
 
 interface ICD10Code {
   id: string;
@@ -29,8 +28,6 @@ export default function ICD10CodesReferencePage() {
   useEffect(() => {
     filterCodes();
   }, [searchTerm, selectedCategory, commonOnly, codes]);
-
-  usePrerenderReady(!loading && codes.length > 0);
 
   const fetchICD10Codes = async () => {
     try {

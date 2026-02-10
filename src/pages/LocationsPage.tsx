@@ -6,7 +6,6 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import OrganizationSchema from '../components/OrganizationSchema';
 import { supabase } from '../lib/supabase';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface StateData {
   state_name: string;
@@ -44,8 +43,6 @@ const LocationsPage: React.FC = () => {
 
     fetchLocations();
   }, []);
-
-  usePrerenderReady(!loading && states.length > 0 && cities.length > 0);
 
   const filteredStates = states.filter(state =>
     state.state_name.toLowerCase().includes(searchQuery.toLowerCase())

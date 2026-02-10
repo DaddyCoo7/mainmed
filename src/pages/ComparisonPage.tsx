@@ -5,7 +5,6 @@ import { CheckCircle2, XCircle, Minus, ArrowRight, HelpCircle } from 'lucide-rea
 import { supabase } from '../lib/supabase';
 import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 interface ComparisonFactor {
   factor: string;
@@ -70,8 +69,6 @@ export default function ComparisonPage() {
       fetchComparisonData();
     }
   }, [slug]);
-
-  usePrerenderReady(!loading && !!pageData);
 
   if (loading) {
     return (

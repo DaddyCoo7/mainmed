@@ -23,10 +23,8 @@ import SEOHead from '../components/SEOHead';
 import AnimatedSection from '../components/AnimatedSection';
 import InteractiveCard from '../components/InteractiveCard';
 import SpecialtySchema from '../components/SpecialtySchema';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const DMEBillingPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

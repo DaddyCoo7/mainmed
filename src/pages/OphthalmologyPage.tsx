@@ -29,10 +29,8 @@ import RelatedServices from '../components/RelatedServices';
 import { getRelatedLinks } from '../config/internalLinks';
 import HeroSection from '../components/HeroSection';
 import SpecialtySchema from '../components/SpecialtySchema';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const OphthalmologyPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const painPoints = [
     {

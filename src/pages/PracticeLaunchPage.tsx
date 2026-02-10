@@ -5,7 +5,6 @@ import AnimatedSection from '../components/AnimatedSection';
 import RelatedServices from '../components/RelatedServices';
 import ServiceSchema from '../components/ServiceSchema';
 import { getRelatedLinks } from '../config/internalLinks';
-import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +32,6 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 };
 
 const PracticeLaunchPage: React.FC = () => {
-  usePrerenderReady(true);
 
   const timeline = [
     {
