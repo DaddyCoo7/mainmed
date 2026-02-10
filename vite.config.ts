@@ -1,9 +1,35 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { execSync } from 'child_process';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
+function prerenderPlugin(): Plugin {
+  return {
+    name: 'prerender-pages',
+    apply: 'build',
+    closeBundle: {
+      sequential: true,
+      order: 'post',
+      async handler() {
+        console.log('\n[prerender-plugin] Running prerender script...');
+        try {
+          execSync('npx tsx scripts/prerender-simple.ts', {
+            cwd: resolve(__dirname),
+            stdio: 'inherit',
+            timeout: 300000,
+          });
+          console.log('[prerender-plugin] Prerendering completed successfully.');
+        } catch (error) {
+          console.error('[prerender-plugin] Prerendering failed:', error);
+          process.exit(1);
+        }
+      },
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), prerenderPlugin()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
