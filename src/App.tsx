@@ -16,13 +16,6 @@ declare global {
   }
 }
 
-const PrerenderReady: React.FC = () => {
-  useEffect(() => {
-    window.prerenderReady = true;
-  }, []);
-  return null;
-};
-
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PakistanHomePage = lazy(() => import('./pages/PakistanHomePage'));
 const PhilippinesHomePage = lazy(() => import('./pages/PhilippinesHomePage'));
@@ -287,7 +280,6 @@ function App() {
 
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-          <PrerenderReady />
           </Suspense>
         </ScrollToTop>
         </main>

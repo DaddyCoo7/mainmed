@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SEOHead from '../components/SEOHead';
 import OrganizationSchema from '../components/OrganizationSchema';
 import Hero from '../components/Hero';
@@ -16,7 +16,19 @@ import ChoosingBillingPartner from '../components/ChoosingBillingPartner';
 import { usePrerenderReady } from '../hooks/usePrerenderReady';
 
 const HomePage: React.FC = () => {
-  usePrerenderReady(true);
+  const [isContentReady, setIsContentReady] = useState(false);
+
+  useEffect(() => {
+    // Wait for all components to mount and render before signaling ready
+    // This ensures lazy-loaded components and react-helmet-async have time to complete
+    const timeoutId = setTimeout(() => {
+      setIsContentReady(true);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  usePrerenderReady(isContentReady);
 
   return (
     <>
